@@ -26,91 +26,64 @@
 @section('content')
 
 {{-- ════════════════════════════════════════════
-     SECTION 1 : HERO PLEIN ÉCRAN
+     HERO SECTION - PLEIN ÉCRAN
 ════════════════════════════════════════════ --}}
-<section class="hero" aria-label="Présentation Factory & Co Toulouse-Blagnac">
-    <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1600&q=80')" aria-hidden="true"></div>
+<section class="hero" aria-label="Factory & Co Val d'Europe">
+    <div class="hero-bg" style="background-image:url('{{ asset('images/factory-val.webp') }}')" aria-hidden="true"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
         <p class="hero-location">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            Aéroport Toulouse-Blagnac · Hall C · Portes 30–36
+            CC Val d'Europe · 14 Rue du Danube · Serris
         </p>
         <h1 class="hero-title">
-            Factory &amp; Co Toulouse-Blagnac :<br>
-            Votre <em>Escale Gourmet</em><br>
-            en Zone d'Embarquement
+            Factory &amp; Co<br>
+            Val d'Europe :<br>
+            L'<em>Authentique Diner</em> Américain
         </h1>
-        <p class="hero-sub">Après la sécurité, Hall C · Proche Porte 30 · Tramway T2 Aéroport</p>
+        <p class="hero-sub">Smash Burgers · Bagels New-Yorkais · Cheesecake Factory · Healthy Bowls</p>
         <p class="hero-hours">Ouvert 7j/7 · 07:00 – 22:30 · Delicious since 2008</p>
         <div class="hero-ctas">
-            <a href="{{ route('click-collect') }}" class="btn btn-pink">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-                Commander en Click &amp; Collect
+            <a href="javascript:void(0)" onclick="window.factoryCoNav && window.factoryCoNav.openNavigationModal()" class="btn btn-pink">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Venir chez nous
             </a>
             <a href="{{ route('menu.burgers') }}" class="btn btn-outline-white">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
-                Consulter la Carte
+                Découvrir la Carte
             </a>
         </div>
     </div>
 </section>
 
 {{-- ════════════════════════════════════════════
-     SECTION 2 : TICKER CATÉGORIES
+     SECTION : LA PHILOSOPHIE
 ════════════════════════════════════════════ --}}
-<div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-        @foreach(range(1, 2) as $_)
-            <span>🍔 Smash Burgers</span>
-            <span class="ticker-dot">·</span>
-            <span>🥯 Bagels New-Yorkais</span>
-            <span class="ticker-dot">·</span>
-            <span>🍰 Cheesecake Factory</span>
-            <span class="ticker-dot">·</span>
-            <span>🥗 Healthy &amp; Bowls</span>
-            <span class="ticker-dot">·</span>
-            <span>☕ Coffee Shop</span>
-            <span class="ticker-dot">·</span>
-            <span>🌅 Breakfast dès 07h00</span>
-            <span class="ticker-dot">·</span>
-            <span>✅ Halal disponible</span>
-            <span class="ticker-dot">·</span>
-            <span>🌿 Options Végétariennes</span>
-            <span class="ticker-dot">·</span>
-            <span>📦 Click &amp; Collect</span>
-            <span class="ticker-dot">·</span>
-        @endforeach
-    </div>
-</div>
-
-{{-- ════════════════════════════════════════════
-     SECTION 3 : CONCEPT (SEO riche)
-════════════════════════════════════════════ --}}
-<section class="section section-light" id="concept">
+<section class="section section-light">
     <div class="container">
         <div class="concept-grid">
             <div class="concept-text">
-                <span class="section-tag">Only for New York Food Lovers</span>
+                <span class="section-tag">La Liberté de la Gastronomie</span>
                 <h2 class="section-title dark">
-                    Le goût de New York à Toulouse,<br>
-                    du bagel matinal au burger de minuit
+                    Une Escale Gourmande<br>
+                    Authentiquement Américaine
                 </h2>
-                <p>Derrière chaque assiette de Factory &amp; Co, il y a le savoir-faire de <strong>Jonathan Jablonski</strong>, chef formé à New York, qui a apporté l'ADN authentique du diner américain au cœur de l'Aéroport Toulouse-Blagnac. Ici, rien n'est surgelé, tout est préparé à la minute.</p>
-                <p>Notre concept <strong>"Bakery &amp; Burger"</strong> en service continu de <strong>07h00 à 22h30</strong> répond à chaque moment de votre journée : un <em>bagel &amp; café</em> avant l'embarquement, un <em>smash burger juteux</em> à l'escale, un <em>cheesecake</em> à emporter pour la famille.</p>
+                <p>Factory &amp; Co, c'est l'histoire d'une passion : celle du chef <strong>Jonathan Jablonski</strong>, formé aux côtés des plus grands cuisiniers de <strong>Brooklyn</strong>. En 2008, il a décidé de transporter l'âme authentique des diners new-yorkais au cœur du centre commercial Val d'Europe.</p>
+                <p>Chez nous, <strong>rien n'est surgelé, tout est préparé à la minute</strong>. Chaque burger est smashé sur plaque brûlante. Chaque bagel est frais du jour. Chaque cheesecake respire les meilleures traditions new-yorkaises.</p>
+                <p><strong>Factory &amp; Co, c'est la liberté de bien manger, sans compromis.</strong></p>
                 <a href="{{ route('menu.burgers') }}" class="btn btn-navy">
-                    Découvrir nos spécialités
+                    Explorer Notre Concept
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
             </div>
             <div class="concept-image">
-                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=700&q=80"
-                     alt="Ambiance diner américain Factory & Co Toulouse-Blagnac"
+                <img src="{{ asset('images/factory-val-interieur.webp') }}"
+                     alt="Ambiance diner américain Factory & Co Val d'Europe"
                      loading="lazy" width="700" height="500">
                 <div class="concept-badge">
                     <span class="concept-badge-title">Delicious</span>
                     <span class="concept-badge-sub">since 2008</span>
-                    <span class="concept-badge-detail">Fait maison · Préparé à la commande</span>
+                    <span class="concept-badge-detail">Fait maison · À la commande</span>
                 </div>
             </div>
         </div>
@@ -118,14 +91,41 @@
 </section>
 
 {{-- ════════════════════════════════════════════
-     SECTION 4 : SILOS PRODUITS (Vue.js)
+     SECTION : STATISTIQUES
+════════════════════════════════════════════ --}}
+<section class="section section-dark stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">2008</div>
+                <div class="stat-label">Année de Création</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Préparé à la Minute</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4.5★</div>
+                <div class="stat-label">Note Google</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">320+</div>
+                <div class="stat-label">Avis Clients</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     SECTION : GALERIE PRODUITS PREMIUM
 ════════════════════════════════════════════ --}}
 <section class="section section-dark" id="carte">
     <div class="container">
-        <div class="section-header">
-            <span class="section-tag">Notre Carte</span>
-            <h2 class="section-title light">Quatre univers gourmands, une seule adresse à l'Aéroport de Toulouse.</h2>
+        <div class="section-header text-center">
+            <span class="section-tag">Galerie</span>
+            <h2 class="section-title light">Le Meilleur de Factory &amp; Co Val d'Europe</h2>
         </div>
+
         {{-- Composant Vue.js : données injectées depuis Blade --}}
         <product-grid
             :products="{{ json_encode($featuredProducts) }}"
@@ -140,52 +140,34 @@
 </section>
 
 {{-- ════════════════════════════════════════════
-     SECTION 5 : FOCUS CHEESECAKE
+     SECTION : GALERIE PHOTOS
 ════════════════════════════════════════════ --}}
-<section class="section section-pink" id="cheesecake">
+<section class="section section-light">
     <div class="container">
-        <div class="cheesecake-grid">
-            <div>
-                <span class="section-tag dark">Signature</span>
-                <h2 class="section-title dark">Cheesecake Factory –<br>La Pâtisserie New-Yorkaise</h2>
-                <p class="text-dark">Chaque cheesecake est préparé selon les recettes originales du chef <strong>Jonathan Jablonski</strong>, formé dans les meilleures pâtisseries de New York. Texture crémeuse, base biscuitée croustillante, sans gélatine.</p>
-                <ul class="cheesecake-list">
-                    @if(isset($featuredProducts['cheesecake']))
-                        @foreach($featuredProducts['cheesecake'] as $product)
-                            <li>
-                                <span class="cheesecake-name">{{ $product->name }}</span>
-                                <span class="cheesecake-price">{{ $product->formatted_price }}</span>
-                            </li>
-                        @endforeach
-                    @else
-                        <li><span class="cheesecake-name">New-Yorkais Classique</span><span class="cheesecake-price">6,90 €</span></li>
-                        <li><span class="cheesecake-name">Oreo</span><span class="cheesecake-price">7,50 €</span></li>
-                        <li><span class="cheesecake-name">Kinder Bueno</span><span class="cheesecake-price">7,50 €</span></li>
-                        <li><span class="cheesecake-name">Spéculoos</span><span class="cheesecake-price">7,50 €</span></li>
-                    @endif
-                </ul>
-                <a href="{{ route('menu.cheesecake') }}" class="btn btn-navy">
-                    Voir tous les cheesecakes
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </a>
-            </div>
-            <div class="cheesecake-image">
-                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80"
-                     alt="Cheesecake New-Yorkais Factory & Co Toulouse-Blagnac"
-                     loading="lazy" width="600" height="450">
+        <div class="gallery-premium">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="{{ asset('images/factory-val-2.webp') }}" alt="Factory & Co Val d'Europe" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="{{ asset('images/factory-val-3.webp') }}" alt="Factory & Co Val d'Europe" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="{{ asset('images/factory-val-4.webp') }}" alt="Factory & Co Val d'Europe" loading="lazy">
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 {{-- ════════════════════════════════════════════
-     SECTION 6 : AVIS GOOGLE (Vue.js)
+     SECTION : AVIS CLIENTS
 ════════════════════════════════════════════ --}}
-<section class="section section-light" id="avis">
+<section class="section section-dark" id="avis">
     <div class="container">
-        <div class="section-header">
+        <div class="section-header text-center">
             <span class="section-tag">Google Reviews &amp; TripAdvisor</span>
-            <h2 class="section-title dark">Ce que disent nos voyageurs</h2>
+            <h2 class="section-title light">Pourquoi Ils Nous Font Confiance</h2>
         </div>
         <reviews-carousel
             :reviews="{{ json_encode($featuredReviews) }}"
@@ -196,56 +178,44 @@
 </section>
 
 {{-- ════════════════════════════════════════════
-     SECTION 7 : HORAIRES & LOCALISATION
+     SECTION : LOCALISATION
 ════════════════════════════════════════════ --}}
-<section class="section section-dark" id="horaires">
+<section class="section section-light" id="horaires">
     <div class="container">
-        <div class="hours-grid">
-            <div>
-                <span class="section-tag">Localisation &amp; Accès Hall C</span>
-                <h2 class="section-title light">
-                    Nous sommes situés <em>après le contrôle de sécurité</em>, dans la zone réservée Hall C
-                </h2>
-                <p class="text-light-muted">Accessible uniquement aux passagers munis d'une carte d'embarquement.</p>
+        <div class="section-header text-center">
+            <span class="section-tag">Nous Visiter</span>
+            <h2 class="section-title dark">Au Cœur de Val d'Europe</h2>
+        </div>
 
-                <div class="access-steps">
-                    <div class="access-step">
-                        <span class="access-step-num">1</span>
-                        <div>
-                            <h4>Tramway T2</h4>
-                            <p>Arrêt "Aéroport" depuis le centre de Toulouse</p>
-                        </div>
-                    </div>
-                    <div class="access-step">
-                        <span class="access-step-num">2</span>
-                        <div>
-                            <h4>Contrôle Sécurité</h4>
-                            <p>Passez la sécurité avec votre carte d'embarquement</p>
-                        </div>
-                    </div>
-                    <div class="access-step">
-                        <span class="access-step-num">3</span>
-                        <div>
-                            <h4>Hall C · Porte 30</h4>
-                            <p>Factory &amp; Co se trouve juste après, sur votre droite</p>
-                        </div>
-                    </div>
+        <div class="location-grid">
+            <div class="location-info">
+                <h3>Informations Pratiques</h3>
+
+                <div class="info-block">
+                    <h4>📍 Adresse</h4>
+                    <p>14 Rue du Danube<br>CC Val d'Europe<br>77700 Serris</p>
                 </div>
 
-                <table class="hours-table" aria-label="Horaires d'ouverture Factory & Co Toulouse-Blagnac">
-                    <thead>
-                        <tr><th>Jours</th><th>Ouverture</th><th>Fermeture</th></tr>
-                    </thead>
-                    <tbody>
-                        @foreach($openingHours as $hours)
-                            <tr>
-                                <td>{{ $hours->days_label }}</td>
-                                <td>{{ $hours->opens_at_formatted }}</td>
-                                <td>{{ $hours->closes_at_formatted }}</td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                <div class="info-block">
+                    <h4>🕐 Horaires</h4>
+                    <table class="hours-table">
+                        <tbody>
+                            @foreach($openingHours as $hours)
+                                <tr>
+                                    <td><strong>{{ $hours->days_label }}</strong></td>
+                                    <td>{{ $hours->opens_at_formatted }} – {{ $hours->closes_at_formatted }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-block">
+                    <h4>🚗 Accès</h4>
+                    <p><strong>Parking gratuit</strong> du centre commercial<br>
+                    <strong>RER E</strong> - Gare du Val d'Europe<br>
+                    <strong>Proche de Disneyland Paris</strong></p>
+                </div>
 
                 <div class="service-badges">
                     @foreach(['Sur place', 'À emporter', 'Click & Collect', 'Halal', 'Végétarien', 'Family Friendly', 'Accessible PMR'] as $badge)
@@ -256,8 +226,8 @@
 
             <div class="map-wrap">
                 <iframe
-                    title="Localisation Factory & Co Toulouse-Blagnac"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.0!2d1.3678!3d43.6290!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb6e6e6e6e6e%3A0x1!2sFactory+%26+Co+A%C3%A9roport+Toulouse-Blagnac!5e0!3m2!1sfr!2sfr!4v1"
+                    title="Localisation Factory & Co Val d'Europe"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.0!2d2.7758!3d48.8753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e614d4c8c8c8c8%3A0x1!2sFactory+%26+Co+Val+d%27Europe!5e0!3m2!1sfr!2sfr!4v1"
                     allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
@@ -266,23 +236,54 @@
 </section>
 
 {{-- ════════════════════════════════════════════
-     SECTION 8 : CTA FINAL
+     SECTION : CTA COMMANDER
 ════════════════════════════════════════════ --}}
-<section class="section section-cta">
+<section class="section section-cta-large">
     <div class="container">
-        <div class="cta-block">
-            <h2>Prêt à succomber ?</h2>
-            <p>Commandez en Click &amp; Collect pour récupérer votre repas sans attendre, ou installez-vous confortablement dans notre diner après la sécurité.</p>
-            <div class="cta-buttons">
-                <a href="{{ route('click-collect') }}" class="btn btn-navy">
+        <div class="cta-large-content">
+            <img src="{{ asset('images/ashley.webp') }}" alt="Commander chez Factory & Co" class="cta-image">
+            <div class="cta-text">
+                <h2>Commander pour Plus Tard</h2>
+                <p>Anticipez votre visite ! Commandez en ligne et récupérez votre repas au moment choisi. Parfait pour les visiteurs pressés ou ceux qui veulent optimiser leur temps au centre commercial.</p>
+                <a href="{{ route('click-collect') }}" class="btn btn-pink">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-                    Commander en Click &amp; Collect
-                </a>
-                <a href="{{ route('contact') }}" class="btn btn-outline-dark">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                    Nous contacter
+                    Commander Maintenant
                 </a>
             </div>
+        </div>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     SECTION : FAQ
+════════════════════════════════════════════ --}}
+<section class="section section-light" id="faq">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-tag">Questions ?</span>
+            <h2 class="section-title dark">Questions Fréquentes</h2>
+        </div>
+        <faq-accordion :faqs="{{ json_encode($faqs ?? []) }}"></faq-accordion>
+        <div class="faq-cta text-center">
+            <p>Vous avez d'autres questions ?</p>
+            <a href="{{ route('contact') }}" class="btn btn-outline-navy">Nous Contacter</a>
+        </div>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     SECTION : NEWSLETTER
+════════════════════════════════════════════ --}}
+<section class="section section-dark newsletter-section">
+    <div class="container">
+        <div class="newsletter-content">
+            <h2>Restez Connecté</h2>
+            <p>Recevez nos bons plans, nouveaux menus et actualités Factory &amp; Co en avant-première.</p>
+            <form class="newsletter-form" method="POST" action="#">
+                @csrf
+                <input type="email" placeholder="votre@email.com" required>
+                <button type="submit" class="btn btn-pink">S'abonner</button>
+            </form>
         </div>
     </div>
 </section>

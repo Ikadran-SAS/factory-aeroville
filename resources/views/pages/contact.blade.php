@@ -31,8 +31,8 @@
 <div class="page-hero">
     <div class="page-hero-inner">
         <span class="section-tag">NAP · Nom · Adresse · Téléphone</span>
-        <h1>Contactez-nous –<br><em>Factory &amp; Co Toulouse-Blagnac</em></h1>
-        <p>Une question, une commande traiteur ou un retour d'expérience ? Notre équipe vous répond sous 4 heures.</p>
+        <h1>Contactez-nous –<br><em>Factory &amp; Co Val d'Europe</em></h1>
+        <p>Une question, une commande ou un retour d'expérience ? Notre équipe vous répond sous 4 heures.</p>
     </div>
 </div>
 <section class="section section-light">
@@ -69,7 +69,6 @@
                         <label class="form-label" for="sujet">Sujet *</label>
                         <select id="sujet" name="sujet" class="form-select @error('sujet') is-invalid @enderror" required>
                             <option value="">Choisissez un sujet</option>
-                            <option value="traiteur"      @selected(old('sujet')=='traiteur')>Demande de devis traiteur</option>
                             <option value="allergenes"    @selected(old('sujet')=='allergenes')>Question sur les allergènes</option>
                             <option value="click-collect" @selected(old('sujet')=='click-collect')>Click &amp; Collect</option>
                             <option value="recrutement"   @selected(old('sujet')=='recrutement')>Recrutement</option>

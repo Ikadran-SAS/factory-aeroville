@@ -12,9 +12,9 @@ class BlogController extends Controller
         $featured = BlogPost::published()->featured()->first();
 
         $seo = [
-            'title'       => 'Guide du Voyageur Toulouse-Blagnac – Conseils & Astuces | Factory & Co',
-            'description' => 'Le guide pratique de l\'Aéroport Toulouse-Blagnac : accès tramway T2, conseils transit, breakfast américain, cheesecake à emporter. Par Factory & Co.',
-            'keywords'    => 'guide aéroport toulouse blagnac, conseils transit toulouse, tramway t2 aéroport toulouse, manger aéroport toulouse',
+            'title'       => 'Guide du Voyageur Val d\'Europe – Conseils & Astuces | Factory & Co',
+            'description' => 'Le guide pratique de Val d\'Europe à Serris : accès transports, conseils pratiques, breakfast américain, cheesecake à emporter. Par Factory & Co.',
+            'keywords'    => 'guide val d\'europe serris, conseils pratiques serris, transports val d\'europe, manger val d\'europe',
             'canonical'   => route('blog.index'),
         ];
 

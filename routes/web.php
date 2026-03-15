@@ -10,12 +10,12 @@ use App\Http\Controllers\SitemapController;
 
 /*
 |--------------------------------------------------------------------------
-| Factory & Co Toulouse-Blagnac — Routes Web
+| Factory & Co Val d'Europe — Routes Web
 |--------------------------------------------------------------------------
 | Architecture en silos SEO :
 |   Niveau 1 : Hub de marque (Accueil)
 |   Niveau 2 : Silos produits (Burgers, Bagels, Cheesecake, Bowls)
-|   Niveau 3 : Services & Engagement (Click & Collect, Traiteur, Blog, FAQ, Contact)
+|   Niveau 3 : Services & Engagement (Click & Collect, Blog, FAQ, Contact)
 */
 
 /* ── NIVEAU 1 : Hub de marque ── */
@@ -31,7 +31,6 @@ Route::prefix('carte')->name('menu.')->group(function () {
 
 /* ── NIVEAU 3 : Services & Engagement ── */
 Route::get('/click-collect', [HomeController::class, 'clickCollect'])->name('click-collect');
-Route::get('/traiteur',      [HomeController::class, 'traiteur'])->name('traiteur');
 
 // Blog / Guide du Voyageur
 Route::prefix('guide-voyageur')->name('blog.')->group(function () {

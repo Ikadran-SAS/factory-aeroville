@@ -22,7 +22,6 @@
                 </div>
             </li>
             <li><a href="{{ route('click-collect') }}" @class(['active' => request()->routeIs('click-collect')])>Click &amp; Collect</a></li>
-            <li><a href="{{ route('traiteur') }}"       @class(['active' => request()->routeIs('traiteur')])>Traiteur</a></li>
             <li><a href="{{ route('blog.index') }}"     @class(['active' => request()->routeIs('blog.*')])>Blog</a></li>
             <li><a href="{{ route('faq') }}"            @class(['active' => request()->routeIs('faq')])>FAQ</a></li>
             <li><a href="{{ route('contact') }}"        @class(['active' => request()->routeIs('contact')])>Contact</a></li>
@@ -47,7 +46,6 @@
         <a href="{{ route('menu.cheesecake') }}">🍰 Cheesecake</a>
         <a href="{{ route('menu.bowls') }}">🥗 Bowls</a>
         <a href="{{ route('click-collect') }}">Click &amp; Collect</a>
-        <a href="{{ route('traiteur') }}">Traiteur</a>
         <a href="{{ route('blog.index') }}">Blog</a>
         <a href="{{ route('faq') }}">FAQ</a>
         <a href="{{ route('contact') }}">Contact</a>

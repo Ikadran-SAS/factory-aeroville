@@ -1,7 +1,7 @@
-# Factory & Co Toulouse-Blagnac — Mini-Site SEO
-## Laravel 11 + Vue.js 3 + Vite + Tailwind CSS
+# Factory & Co Val d'Europe — Mini-Site SEO
+## Laravel 12 + Vue.js 3 + Vite + Tailwind CSS
 
-> Projet développé selon l'étude SEO & Architecture du mini-site Factory & Co Toulouse-Blagnac.
+> Projet développé selon l'étude SEO & Architecture du mini-site Factory & Co Val d'Europe.
 > Architecture en silos sémantiques — 10 pages — JSON-LD Schema.org complet.
 
 ---
@@ -28,7 +28,6 @@
 ├── /carte/cheesecake       → Silo 3 : Cheesecake Factory
 ├── /carte/bowls            → Silo 4 : Healthy & Bowls
 ├── /click-collect          → Service : Click & Collect
-├── /traiteur               → Service : Traiteur Business
 ├── /guide-voyageur/        → Blog : Guide du Voyageur
 │   └── /guide-voyageur/{slug}
 ├── /faq                    → FAQ (FAQPage Schema)
@@ -127,7 +126,7 @@ Accéder à : **http://localhost:8000**
 factory-co/
 ├── app/
 │   ├── Http/Controllers/
-│   │   ├── HomeController.php       # Accueil, Click & Collect, Traiteur
+│   │   ├── HomeController.php       # Accueil, Click & Collect
 │   │   ├── MenuController.php       # 4 silos produits
 │   │   ├── BlogController.php       # Guide du Voyageur
 │   │   ├── FaqController.php        # FAQ
@@ -165,7 +164,7 @@ factory-co/
 │       ├── layouts/
 │       │   ├── app.blade.php        # Layout principal (SEO, JSON-LD, Vue.js)
 │       │   └── partials/
-│       │       ├── topbar.blade.php # Topbar rose (Click & Collect, Horaires, Traiteur)
+│       │       ├── topbar.blade.php # Topbar rose (Click & Collect, Horaires)
 │       │       ├── navbar.blade.php # Navbar navy sticky avec dropdown
 │       │       └── footer.blade.php # Footer rose (NAP, maillage interne)
 │       ├── pages/
@@ -173,7 +172,6 @@ factory-co/
 │       │   ├── faq.blade.php        # FAQ (FAQPage Schema)
 │       │   ├── contact.blade.php    # Contact (formulaire + carte)
 │       │   ├── click-collect.blade.php
-│       │   ├── traiteur.blade.php
 │       │   └── menu/
 │       │       ├── burgers.blade.php
 │       │       ├── bagels.blade.php
@@ -227,7 +225,7 @@ factory-co/
 ### Maillage Interne
 - Bloc de 4 liens silos dans le footer sur toutes les pages
 - Section "Découvrez aussi" sur chaque page silo (3 liens vers les autres silos)
-- Topbar avec liens Click & Collect, Horaires, Traiteur
+- Topbar avec liens Click & Collect et Horaires
 - Sitemap XML avec priorités et fréquences
 
 ### Accessibilité
@@ -270,8 +268,8 @@ OpeningHour::orderBy('sort_order')->get()
 ## Variables d'Environnement
 
 ```env
-APP_NAME="Factory & Co Toulouse-Blagnac"
-APP_URL=https://toulouse-blagnac.factoryandco.com
+APP_NAME="Factory & Co Val d'Europe"
+APP_URL=https://val-deurope.factoryandco.com
 
 # Mail (pour le formulaire de contact)
 MAIL_MAILER=smtp
@@ -303,4 +301,4 @@ chmod -R 755 storage bootstrap/cache
 
 ---
 
-*Développé pour Factory & Co Toulouse-Blagnac — © 2026*
+*Développé pour Factory & Co Val d'Europe — © 2026*

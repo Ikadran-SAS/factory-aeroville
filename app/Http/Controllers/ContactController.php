@@ -12,9 +12,9 @@ class ContactController extends Controller
         $openingHours = OpeningHour::orderBy('sort_order')->get();
 
         $seo = [
-            'title'       => 'Contact – Factory & Co Toulouse-Blagnac | Aéroport Hall C',
-            'description' => 'Contactez Factory & Co Toulouse-Blagnac. Adresse : Aéroport Toulouse-Blagnac, Zone réservée Hall C, Portes 30-36, 31700 Blagnac. Ouvert 7j/7 de 07h00 à 22h30.',
-            'keywords'    => 'contact factory and co toulouse, adresse factory co blagnac, téléphone restaurant aéroport toulouse',
+            'title'       => 'Contact – Factory & Co Val d\'Europe | Serris',
+            'description' => 'Contactez Factory & Co Val d\'Europe. Adresse : 14 Rue du Danube, CC Val d\'Europe, 77700 Serris. Ouvert 7j/7.',
+            'keywords'    => 'contact factory and co serris, adresse factory co val d\'europe, téléphone restaurant serris',
             'canonical'   => route('contact'),
         ];
 

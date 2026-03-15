@@ -6,7 +6,6 @@
     <url><loc>{{ route('menu.cheesecake') }}</loc><lastmod>{{ now()->toDateString() }}</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
     <url><loc>{{ route('menu.bowls') }}</loc><lastmod>{{ now()->toDateString() }}</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
     <url><loc>{{ route('click-collect') }}</loc><lastmod>{{ now()->toDateString() }}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>{{ route('traiteur') }}</loc><lastmod>{{ now()->toDateString() }}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
     <url><loc>{{ route('blog.index') }}</loc><lastmod>{{ now()->toDateString() }}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
     @foreach($posts as $post)
     <url><loc>{{ route('blog.show', $post->slug) }}</loc><lastmod>{{ $post->updated_at->toDateString() }}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>

@@ -6,29 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     {{-- ── SEO Meta ── --}}
-    <title>{{ $__env->yieldContent('title', 'Factory & Co Toulouse-Blagnac – Restaurant Burger Aéroport Toulouse') }}</title>
-    <meta name="description" content="{{ $__env->yieldContent('description', 'Factory & Co, restaurant burger, bagel et cheesecake à l Aéroport Toulouse-Blagnac. Zone réservée Hall C, Portes 30-36. Ouvert 7j/7 de 07h00 à 22h30.') }}">
-    <meta name="keywords"    content="{{ $__env->yieldContent('keywords', 'restaurant burger aéroport toulouse, factory and co blagnac, manger aéroport toulouse') }}">
+    <title>{{ $__env->yieldContent('title', 'Factory & Co Val d\'Europe – Restaurant Burger Serris') }}</title>
+    <meta name="description" content="{{ $__env->yieldContent('description', 'Factory & Co, restaurant burger, bagel et cheesecake à Val d\'Europe à Serris. 14 Rue du Danube. Ouvert 7j/7.') }}">
+    <meta name="keywords"    content="{{ $__env->yieldContent('keywords', 'restaurant burger val d\'europe serris, factory and co serris, manger val d\'europe') }}">
     <link rel="canonical"    href="{{ $__env->yieldContent('canonical', url()->current()) }}">
     <meta name="robots"      content="@yield('robots', 'index, follow')">
-    <meta name="geo.region"      content="FR-31">
-    <meta name="geo.placename"   content="Blagnac, Toulouse">
-    <meta name="geo.position"    content="43.6290;1.3678">
+    <meta name="geo.region"      content="FR-75">
+    <meta name="geo.placename"   content="Serris, Île-de-France">
+    <meta name="geo.position"    content="48.8753;2.7758">
     <meta name="ICBM"            content="43.6290, 1.3678">
 
     {{-- ── Open Graph ── --}}
     <meta property="og:type"        content="restaurant">
-    <meta property="og:site_name"   content="Factory & Co Toulouse-Blagnac">
-    <meta property="og:title"       content="@yield('og_title', 'Factory & Co – Restaurant Burger Aéroport Toulouse-Blagnac')">
-    <meta property="og:description" content="@yield('og_description', 'Burgers, bagels et cheesecakes à l\'Aéroport Toulouse-Blagnac. Hall C, Portes 30-36. Ouvert 7j/7.')">
+    <meta property="og:site_name"   content="Factory & Co Val d'Europe">
+    <meta property="og:title"       content="@yield('og_title', 'Factory & Co – Restaurant Burger Val d\'Europe')">
+    <meta property="og:description" content="@yield('og_description', 'Burgers, bagels et cheesecakes à Val d\'Europe à Serris. 14 Rue du Danube. Ouvert 7j/7.')">
     <meta property="og:image"       content="@yield('og_image', asset('images/og-factory-co.jpg'))">
     <meta property="og:url"         content="{{ url()->current() }}">
     <meta property="og:locale"      content="fr_FR">
 
     {{-- ── Twitter Card ── --}}
     <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:title"       content="@yield('og_title', 'Factory & Co Toulouse-Blagnac')">
-    <meta name="twitter:description" content="@yield('og_description', 'Burgers, bagels et cheesecakes à l\'Aéroport Toulouse-Blagnac.')">
+    <meta name="twitter:title"       content="@yield('og_title', 'Factory & Co Val d\'Europe')">
+    <meta name="twitter:description" content="@yield('og_description', 'Burgers, bagels et cheesecakes à Val d\'Europe à Serris.')">
     <meta name="twitter:image"       content="@yield('og_image', asset('images/og-factory-co.jpg'))">
 
     {{-- ── JSON-LD Schema.org Restaurant (global) ── --}}
@@ -36,8 +36,8 @@
         $schemaData = [
             '@context' => 'https://schema.org',
             '@type' => 'Restaurant',
-            'name' => 'Factory & Co Toulouse-Blagnac',
-            'description' => 'Restaurant burger, bagel et cheesecake à l\'Aéroport de Toulouse-Blagnac. Fast-casual américain, ouvert 7j/7 de 07h00 à 22h30.',
+            'name' => 'Factory & Co Val d\'Europe',
+            'description' => 'Restaurant burger, bagel et cheesecake à Val d\'Europe à Serris. Fast-casual américain, ouvert 7j/7.',
             'url' => url('/'),
             'telephone' => '+33561000000',
             'email' => 'contact@factoryandco.com',
@@ -45,15 +45,15 @@
             'logo' => asset('images/logo.png'),
             'address' => [
                 '@type' => 'PostalAddress',
-                'streetAddress' => 'Aéroport Toulouse-Blagnac, Zone réservée Hall C, Portes 30-36',
-                'addressLocality' => 'Blagnac',
-                'postalCode' => '31700',
+                'streetAddress' => '14 Rue du Danube, CC Val d\'Europe',
+                'addressLocality' => 'Serris',
+                'postalCode' => '77700',
                 'addressCountry' => 'FR'
             ],
             'geo' => [
                 '@type' => 'GeoCoordinates',
-                'latitude' => 43.6290,
-                'longitude' => 1.3678
+                'latitude' => 48.8753,
+                'longitude' => 2.7758
             ],
             'servesCuisine' => ['American', 'Burger', 'Bagel', 'Cheesecake', 'Fast Casual', 'Healthy'],
             'priceRange' => '€€',

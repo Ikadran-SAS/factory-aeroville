@@ -11,9 +11,9 @@ class FaqController extends Controller
         $faqs = FaqItem::grouped();
 
         $seo = [
-            'title'       => 'FAQ – Questions Fréquentes | Factory & Co Toulouse-Blagnac',
-            'description' => 'Toutes les réponses à vos questions sur Factory & Co Toulouse-Blagnac : horaires, accès Hall C, options Halal, allergènes, Click & Collect, traiteur.',
-            'keywords'    => 'faq factory and co toulouse, halal aéroport toulouse, allergènes restaurant blagnac, horaires factory co toulouse',
+            'title'       => 'FAQ – Questions Fréquentes | Factory & Co Val d\'Europe',
+            'description' => 'Toutes les réponses à vos questions sur Factory & Co Val d\'Europe : horaires, accès, options Halal, allergènes, Click & Collect.',
+            'keywords'    => 'faq factory and co serris, halal val d\'europe, allergènes restaurant serris, horaires factory co val d\'europe',
             'canonical'   => route('faq'),
         ];
 

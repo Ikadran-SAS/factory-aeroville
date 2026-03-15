@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->command->info('');
-        $this->command->info('🍔 Factory & Co Toulouse-Blagnac — Seeding de la base de données...');
+        $this->command->info('🍔 Factory & Co Val d\'Europe — Seeding de la base de données...');
         $this->command->info('');
 
         $this->call([

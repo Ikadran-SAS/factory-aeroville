@@ -31,6 +31,6 @@ class BlogPost extends Model
 
     public function getMetaTitleAttribute($value): string
     {
-        return $value ?: $this->title . ' | Factory & Co Toulouse-Blagnac';
+        return $value ?: $this->title . ' | Factory & Co Val d\'Europe';
     }
 }

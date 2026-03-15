@@ -33,14 +33,14 @@
                 <p class="footer-tagline">Delicious since 2008</p>
                 {{-- NAP cohérent pour le SEO local --}}
                 <address class="footer-address" itemscope itemtype="https://schema.org/Restaurant">
-                    <span itemprop="name" style="display:none">Factory &amp; Co Toulouse-Blagnac</span>
+                    <span itemprop="name" style="display:none">Factory &amp; Co Val d'Europe</span>
                     <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                        <span itemprop="streetAddress">Aéroport Toulouse-Blagnac, Zone réservée Hall C, Portes 30–36</span><br>
-                        <span itemprop="postalCode">31700</span>
-                        <span itemprop="addressLocality">Blagnac</span>,
+                        <span itemprop="streetAddress">14 Rue du Danube, CC Val d'Europe</span><br>
+                        <span itemprop="postalCode">77700</span>
+                        <span itemprop="addressLocality">Serris</span>,
                         <span itemprop="addressCountry">France</span>
                     </span><br>
-                    <em style="color:var(--pink-dark)">Tramway T2 – Arrêt Aéroport</em><br><br>
+                    <em style="color:var(--pink-dark)">Parking gratuit – Gare RER Val d'Europe</em><br><br>
                     <a href="tel:+33561000000" itemprop="telephone" style="color:var(--navy);font-weight:600">+33 (0)5 61 00 00 00</a><br>
                     <a href="mailto:contact@factoryandco.com" itemprop="email" style="color:var(--navy);font-weight:600">contact@factoryandco.com</a>
                 </address>
@@ -62,7 +62,6 @@
                 <h4>Services</h4>
                 <ul>
                     <li><a href="{{ route('click-collect') }}">Click &amp; Collect</a></li>
-                    <li><a href="{{ route('traiteur') }}">Offre Traiteur</a></li>
                     <li><a href="{{ route('faq') }}">FAQ Allergènes</a></li>
                     <li><a href="{{ route('contact') }}">Contactez-nous</a></li>
                 </ul>
@@ -82,8 +81,8 @@
 
         <div class="footer-bottom">
             <p class="footer-copy">
-                © {{ date('Y') }} Factory &amp; Co Toulouse-Blagnac. Tous droits réservés. —
-                <span class="nap-block">Factory &amp; Co · Aéroport Toulouse-Blagnac Hall C · 31700 Blagnac</span>
+                © {{ date('Y') }} Factory &amp; Co Val d'Europe. Tous droits réservés. —
+                <span class="nap-block">Factory &amp; Co · 14 Rue du Danube · 77700 Serris</span>
             </p>
             <div class="footer-social">
                 <a href="https://www.instagram.com/factoryandco/" target="_blank" rel="noopener" aria-label="Instagram">
