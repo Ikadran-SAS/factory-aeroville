@@ -60,24 +60,22 @@
      SECTION : STATISTIQUES
 ════════════════════════════════════════════ --}}
 <section class="section section-dark stats-section">
-    <div class="container">
-        <div class="stats-grid">
-            <div class="stat-item">
-                <div class="stat-number">2008</div>
-                <div class="stat-label">Année de création</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Préparé à la minute</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">4.5★</div>
-                <div class="stat-label">Note Google</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">320+</div>
-                <div class="stat-label">Avis clients</div>
-            </div>
+    <div class="stats-grid">
+        <div class="stat-item">
+            <div class="stat-number">2008</div>
+            <div class="stat-label">Année de création</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Préparé à la minute</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">4.5★</div>
+            <div class="stat-label">Note Google</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">320+</div>
+            <div class="stat-label">Avis clients</div>
         </div>
     </div>
 </section>
