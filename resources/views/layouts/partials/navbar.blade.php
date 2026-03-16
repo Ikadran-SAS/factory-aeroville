@@ -15,7 +15,7 @@
                 <a href="{{ route('menu.burgers') }}" @class(['navbar-link', 'navbar-link-active' => request()->routeIs('menu.*')])>
                     La carte
                 </a>
-                <a href="{{ route('home') }}#concept" class="navbar-link">
+                <a href="{{ route('concept') }}" @class(['navbar-link', 'navbar-link-active' => request()->routeIs('concept')])>
                     Notre concept
                 </a>
                 <a href="{{ route('home') }}#specialites" class="navbar-link">
@@ -59,7 +59,7 @@
         </button>
         <a href="{{ route('home') }}" @click="mobileOpen = false" @class(['navbar-mobile-link', 'active' => request()->routeIs('home')])>Accueil</a>
         <a href="{{ route('menu.burgers') }}" @click="mobileOpen = false" @class(['navbar-mobile-link', 'active' => request()->routeIs('menu.*')])>La carte</a>
-        <a href="{{ route('home') }}#concept" @click="mobileOpen = false" class="navbar-mobile-link">Notre concept</a>
+        <a href="{{ route('concept') }}" @click="mobileOpen = false" @class(['navbar-mobile-link', 'active' => request()->routeIs('concept')])>Notre concept</a>
         <a href="{{ route('home') }}#specialites" @click="mobileOpen = false" class="navbar-mobile-link">Nos spécialités</a>
         <a href="{{ route('home') }}#avis" @click="mobileOpen = false" class="navbar-mobile-link">Avis</a>
         <a href="{{ route('blog.index') }}" @click="mobileOpen = false" @class(['navbar-mobile-link', 'active' => request()->routeIs('blog.*')])>Le blog</a>

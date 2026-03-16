@@ -6,6 +6,7 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ConceptController;
 use App\Http\Controllers\SitemapController;
 
 /*
@@ -20,6 +21,7 @@ use App\Http\Controllers\SitemapController;
 
 /* ── NIVEAU 1 : Hub de marque ── */
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/concept', [ConceptController::class, 'index'])->name('concept');
 
 /* ── NIVEAU 2 : Silos produits ── */
 Route::prefix('carte')->name('menu.')->group(function () {
