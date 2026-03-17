@@ -292,78 +292,188 @@
             Chaque assiette est une promesse de gourmandise, chaque détail pensé pour créer un moment mémorable.
         </blockquote>
 
-        {{-- Grille 4 Catégories (2x2) avec cartes animées --}}
+        {{-- Grille 4 Catégories (2x2) avec cartes PREMIUM redesignées --}}
         <div class="cuisine-categories-grid">
             {{-- Catégorie 1: Burgers --}}
-            <div class="cuisine-category-card">
-                <div class="category-image">
-                    <img src="/images/burger.webp" alt="Délicieux burger gourmand" />
+            <div class="cuisine-card-premium">
+                {{-- Background Layer avec Ashley.webp blurred + Image produit + Overlay --}}
+                <div class="card-bg-container">
+                    <div class="card-bg-ashley"></div>
+                    <div class="card-bg-image" style="background-image: url('/images/burger.webp')"></div>
+                    <div class="card-overlay"></div>
                 </div>
-                <div class="category-emoji-wrapper">
-                    <span class="category-emoji">🍔</span>
+
+                {{-- Glow Effect Border --}}
+                <div class="card-glow-border"></div>
+
+                {{-- Content Layer avec Glass-morphism --}}
+                <div class="card-content-glass">
+                    {{-- SVG Icon Premium --}}
+                    <svg class="card-icon-premium" viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-burger" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        {{-- Burger: 2 buns + 3 layers --}}
+                        <circle cx="32" cy="20" r="11" stroke="url(#grad-burger)" stroke-width="2.5" fill="none"/>
+                        <path d="M 21 20 L 43 20" stroke="url(#grad-burger)" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="32" cy="28" r="10" stroke="url(#grad-burger)" stroke-width="2.5" fill="none"/>
+                        <path d="M 22 28 L 42 28" stroke="url(#grad-burger)" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="32" cy="36" r="11" stroke="url(#grad-burger)" stroke-width="2.5" fill="none"/>
+                        <path d="M 21 36 L 43 36" stroke="url(#grad-burger)" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+
+                    {{-- Content --}}
+                    <div class="card-text-content">
+                        <h3 class="card-title">Burgers</h3>
+                        <p class="card-description">Généreux au pain moelleux</p>
+                    </div>
+
+                    {{-- Accent Line --}}
+                    <div class="card-accent-line"></div>
                 </div>
-                <div class="category-content">
-                    <h3 class="category-title">Burgers</h3>
-                    <p class="category-description">
-                        Généreux au pain moelleux
-                    </p>
-                    <div class="category-accent-line"></div>
-                </div>
-                <div class="category-accent-bar"></div>
+
+                {{-- Shimmer Effect --}}
+                <div class="card-shimmer"></div>
             </div>
 
             {{-- Catégorie 2: Recettes --}}
-            <div class="cuisine-category-card">
-                <div class="category-image">
-                    <img src="/images/recettes.webp" alt="Recettes travaillées et savoureuses" />
+            <div class="cuisine-card-premium">
+                {{-- Background Layer --}}
+                <div class="card-bg-container">
+                    <div class="card-bg-ashley"></div>
+                    <div class="card-bg-image" style="background-image: url('/images/recettes.webp')"></div>
+                    <div class="card-overlay"></div>
                 </div>
-                <div class="category-emoji-wrapper">
-                    <span class="category-emoji">🍽️</span>
+
+                {{-- Glow Effect Border --}}
+                <div class="card-glow-border"></div>
+
+                {{-- Content Layer --}}
+                <div class="card-content-glass">
+                    {{-- SVG Icon Premium --}}
+                    <svg class="card-icon-premium" viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-recettes" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        {{-- Fork & Knife Art Deco --}}
+                        {{-- Fork left --}}
+                        <path d="M 18 42 L 18 22 M 18 22 L 14 18 M 18 22 L 18 18 M 18 22 L 22 18 M 14 18 L 14 22 M 22 18 L 22 22" stroke="url(#grad-recettes)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        {{-- Knife right --}}
+                        <path d="M 46 42 L 46 18 M 46 18 L 44 16 L 48 16 M 48 18 L 50 20 L 50 40" stroke="url(#grad-recettes)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        {{-- Plate center --}}
+                        <circle cx="32" cy="36" r="14" stroke="url(#grad-recettes)" stroke-width="2.5" fill="none"/>
+                        <circle cx="32" cy="36" r="10" stroke="url(#grad-recettes)" stroke-width="1.5" fill="none" opacity="0.5"/>
+                    </svg>
+
+                    {{-- Content --}}
+                    <div class="card-text-content">
+                        <h3 class="card-title">Recettes</h3>
+                        <p class="card-description">Travaillées et savoureuses</p>
+                    </div>
+
+                    {{-- Accent Line --}}
+                    <div class="card-accent-line"></div>
                 </div>
-                <div class="category-content">
-                    <h3 class="category-title">Recettes</h3>
-                    <p class="category-description">
-                        Travaillées et savoureuses
-                    </p>
-                    <div class="category-accent-line"></div>
-                </div>
-                <div class="category-accent-bar"></div>
+
+                {{-- Shimmer Effect --}}
+                <div class="card-shimmer"></div>
             </div>
 
             {{-- Catégorie 3: Desserts --}}
-            <div class="cuisine-category-card">
-                <div class="category-image">
-                    <img src="/images/desserts.webp" alt="Desserts iconiques et régressifs" />
+            <div class="cuisine-card-premium">
+                {{-- Background Layer --}}
+                <div class="card-bg-container">
+                    <div class="card-bg-ashley"></div>
+                    <div class="card-bg-image" style="background-image: url('/images/desserts.webp')"></div>
+                    <div class="card-overlay"></div>
                 </div>
-                <div class="category-emoji-wrapper">
-                    <span class="category-emoji">🍰</span>
+
+                {{-- Glow Effect Border --}}
+                <div class="card-glow-border"></div>
+
+                {{-- Content Layer --}}
+                <div class="card-content-glass">
+                    {{-- SVG Icon Premium --}}
+                    <svg class="card-icon-premium" viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-desserts" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        {{-- Cake: 3 layers + cherry on top --}}
+                        <rect x="16" y="28" width="32" height="8" rx="1" stroke="url(#grad-desserts)" stroke-width="2.5" fill="none"/>
+                        <rect x="18" y="20" width="28" height="8" rx="1" stroke="url(#grad-desserts)" stroke-width="2.5" fill="none"/>
+                        <rect x="20" y="12" width="24" height="8" rx="1" stroke="url(#grad-desserts)" stroke-width="2.5" fill="none"/>
+                        {{-- Cherry on top --}}
+                        <circle cx="32" cy="10" r="3" stroke="url(#grad-desserts)" stroke-width="2" fill="none"/>
+                        <path d="M 32 7 Q 30 5 28 4" stroke="url(#grad-desserts)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                        {{-- Plate base --}}
+                        <ellipse cx="32" cy="38" rx="18" ry="4" stroke="url(#grad-desserts)" stroke-width="2" fill="none"/>
+                    </svg>
+
+                    {{-- Content --}}
+                    <div class="card-text-content">
+                        <h3 class="card-title">Desserts</h3>
+                        <p class="card-description">Iconiques et régressifs</p>
+                    </div>
+
+                    {{-- Accent Line --}}
+                    <div class="card-accent-line"></div>
                 </div>
-                <div class="category-content">
-                    <h3 class="category-title">Desserts</h3>
-                    <p class="category-description">
-                        Iconiques et régressifs
-                    </p>
-                    <div class="category-accent-line"></div>
-                </div>
-                <div class="category-accent-bar"></div>
+
+                {{-- Shimmer Effect --}}
+                <div class="card-shimmer"></div>
             </div>
 
             {{-- Catégorie 4: Boissons --}}
-            <div class="cuisine-category-card">
-                <div class="category-image">
-                    <img src="/images/boissons.webp" alt="Boissons gourmandes et rafraîchissantes" />
+            <div class="cuisine-card-premium">
+                {{-- Background Layer --}}
+                <div class="card-bg-container">
+                    <div class="card-bg-ashley"></div>
+                    <div class="card-bg-image" style="background-image: url('/images/boissons.webp')"></div>
+                    <div class="card-overlay"></div>
                 </div>
-                <div class="category-emoji-wrapper">
-                    <span class="category-emoji">🥤</span>
+
+                {{-- Glow Effect Border --}}
+                <div class="card-glow-border"></div>
+
+                {{-- Content Layer --}}
+                <div class="card-content-glass">
+                    {{-- SVG Icon Premium --}}
+                    <svg class="card-icon-premium" viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-boissons" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        {{-- Glass: minimaliste --}}
+                        <path d="M 22 18 L 26 40 Q 26 42 28 42 L 36 42 Q 38 42 38 40 L 42 18 Z" stroke="url(#grad-boissons)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                        {{-- Straw --}}
+                        <line x1="30" y1="16" x2="28" y2="42" stroke="url(#grad-boissons)" stroke-width="1.5" stroke-linecap="round"/>
+                        {{-- Liquid level inside --}}
+                        <path d="M 27 32 Q 28 32 32 32 Q 36 32 37 32" stroke="url(#grad-boissons)" stroke-width="1.5" fill="none" opacity="0.6"/>
+                    </svg>
+
+                    {{-- Content --}}
+                    <div class="card-text-content">
+                        <h3 class="card-title">Boissons</h3>
+                        <p class="card-description">Gourmandes et rafraîchissantes</p>
+                    </div>
+
+                    {{-- Accent Line --}}
+                    <div class="card-accent-line"></div>
                 </div>
-                <div class="category-content">
-                    <h3 class="category-title">Boissons</h3>
-                    <p class="category-description">
-                        Gourmandes et rafraîchissantes
-                    </p>
-                    <div class="category-accent-line"></div>
-                </div>
-                <div class="category-accent-bar"></div>
+
+                {{-- Shimmer Effect --}}
+                <div class="card-shimmer"></div>
             </div>
         </div>
 
