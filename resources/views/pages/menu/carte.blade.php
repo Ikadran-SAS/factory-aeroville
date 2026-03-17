@@ -120,10 +120,6 @@
                 <p class="text-center">Aucun burger disponible</p>
             @endforelse
         </div>
-
-        <a href="{{ route('menu.burgers') }}" class="btn btn-pink btn-lg">
-            Voir tous les burgers →
-        </a>
     </div>
 </section>
 
@@ -157,10 +153,6 @@
                 <p class="text-center">Aucun bagel disponible</p>
             @endforelse
         </div>
-
-        <a href="{{ route('menu.bagels') }}" class="btn btn-pink btn-lg">
-            Voir tous les bagels →
-        </a>
     </div>
 </section>
 
@@ -194,10 +186,6 @@
                 <p class="text-center">Aucun cheesecake disponible</p>
             @endforelse
         </div>
-
-        <a href="{{ route('menu.cheesecake') }}" class="btn btn-pink btn-lg">
-            Voir tous les cheesecakes →
-        </a>
     </div>
 </section>
 
@@ -231,10 +219,6 @@
                 <p class="text-center">Aucun bowl disponible</p>
             @endforelse
         </div>
-
-        <a href="{{ route('menu.bowls') }}" class="btn btn-pink btn-lg">
-            Voir tous les bowls →
-        </a>
     </div>
 </section>
 
