@@ -474,6 +474,32 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
   color: rgba(255, 255, 255, 0.7);
 }
 
+/* Concept Page Titles */
+.concept-title {
+  text-align: center;
+  margin-block-start: 0.5rem;
+  margin-block-end: 1rem;
+  box-sizing: border-box;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #F5C3DB;
+  font-family: 'Homestead';
+  text-transform: none;
+  letter-spacing: 0px !important;
+  font-size: clamp(1.5rem, 5vw, 30px) !important;
+  font-weight: 400 !important;
+}
+
+.concept-title.light {
+  color: var(--white);
+}
+
+.concept-title-small {
+  text-align: left;
+  font-size: clamp(1.2rem, 3vw, 24px) !important;
+}
+
 @media (max-width: 768px) {
   .topbar {
     overflow: hidden;

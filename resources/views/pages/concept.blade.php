@@ -53,7 +53,7 @@
     <div class="container">
         <div class="concept-grid">
             <div class="concept-text">
-                <h2 class="section-title dark">Une Histoire de Passion</h2>
+                <h2 class="concept-title concept-title-small">Une Histoire de Passion</h2>
                 <p>En 2008, <strong>Jonathan Jablonski</strong>, un chef formé aux côtés des plus grands cuisiniers de Brooklyn, a décidé de transporter l'âme authentique des diners new-yorkais au cœur du centre commercial Val d'Europe.</p>
                 <p>Pas de recettes figées, pas de surgelé. Juste une conviction : <strong>chaque plat doit respirer la passion et la qualité</strong>.</p>
                 <p style="margin-top: 2rem; font-style: italic; color: var(--pink-dark);">"Factory & Co, c'est l'histoire d'une liberté : celle de bien manger, sans compromis."</p>
@@ -71,7 +71,7 @@
 <section class="section section-dark">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title light">Les Trois Piliers de notre Concept</h2>
+            <h2 class="concept-title light">Les Trois Piliers de notre Concept</h2>
             <p class="text-light-muted">Ce qui fait de Factory & Co un endroit unique</p>
         </div>
         <div class="pillars-grid">
@@ -114,7 +114,7 @@
 ════════════════════════════════════════════ --}}
 <section class="section section-light">
     <div class="container">
-        <h2 class="section-title dark" style="text-align: center; margin-bottom: 3rem;">Comment on Prépare un Burger Factory & Co</h2>
+        <h2 class="concept-title">Comment on Prépare un Burger Factory & Co</h2>
         <div class="process-timeline">
             <div class="process-step">
                 <div class="process-number">1</div>
@@ -152,7 +152,7 @@
                 </div>
             </div>
             <div class="concept-text">
-                <h2 class="section-title light">Une Expérience, Pas Juste un Repas</h2>
+                <h2 class="concept-title light">Une Expérience, Pas Juste un Repas</h2>
                 <p class="text-light-muted">Factory & Co c'est aussi une atmosphère. Des murs couleur navy, des néons rose, une musique qui respire l'âme new-yorkaise.</p>
                 <p class="text-light-muted" style="margin-top: 1.5rem;">C'est l'endroit où les voyageurs avant leur vol peuvent prendre une vraie pause. Pas une chaîne anonyme. Une adresse authentique avec du caractère.</p>
                 <div style="margin-top: 2rem; display: flex; gap: 1.5rem; flex-wrap: wrap;">
@@ -180,7 +180,7 @@
 <section class="section section-light">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title dark">Ce en Quoi On Croit</h2>
+            <h2 class="concept-title">Ce en Quoi On Croit</h2>
         </div>
         <div class="values-grid">
             <div class="value-item">
