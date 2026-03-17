@@ -105,33 +105,75 @@
 
 
 {{-- ════════════════════════════════════════════
-     SECTION : NOTRE CONCEPT
+     SECTION : NOTRE CONCEPT (REDESIGNÉ)
 ════════════════════════════════════════════ --}}
-<section class="section section-dark">
+<section class="section section-dark concept-section-redesigned">
     <div class="container">
-        <div class="section-header">
-            <h2 class="concept-title light">🧠 Notre Concept</h2>
-            <p class="text-light-muted" style="font-size: 1.1rem; margin-top: 0.5rem;">L'énergie new-yorkaise, le savoir-faire français</p>
+        {{-- Header Premium --}}
+        <div class="concept-header-redesigned">
+            <h2 class="concept-title-redesigned">
+                Notre <span class="concept-highlight">Concept</span>
+            </h2>
+            <p class="concept-subtitle-redesigned">L'énergie new-yorkaise, le savoir-faire français</p>
         </div>
 
-        <div class="concept-content">
-            <p class="text-light-muted" style="margin-bottom: 2rem; font-size: 1.05rem;">
-                Notre concept repose sur une idée simple : proposer une cuisine gourmande et qualitative, dans un univers inspiré des diners new-yorkais.
-            </p>
+        {{-- Intro text en citation --}}
+        <blockquote class="concept-quote">
+            Notre concept repose sur une idée simple : proposer une cuisine gourmande et qualitative, dans un univers inspiré des diners new-yorkais.
+        </blockquote>
 
-            <div class="concept-grid-simple">
-                <div class="concept-item">
-                    <h3 style="color: var(--pink); margin-bottom: 0.5rem;">Nous avons imaginé un lieu où :</h3>
-                    <ul class="concept-list">
-                        <li>la rapidité rencontre la qualité</li>
-                        <li>la street food devient une expérience</li>
-                        <li>chaque détail est pensé pour le plaisir</li>
-                    </ul>
+        {{-- 3 Piliers en cards --}}
+        <div class="concept-pillars-grid">
+            {{-- Pilier 1 --}}
+            <div class="concept-pillar-card">
+                <svg class="pillar-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="32" height="32">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <div class="pillar-content">
+                    <h3 class="pillar-title">La rapidité<br>rencontre la qualité</h3>
+                    <p class="pillar-description">
+                        Chaque burger smashé sur plaque brûlante, chaque commande préparée à la minute. Fast, mais premium.
+                    </p>
                 </div>
+                <div class="pillar-accent-bar"></div>
             </div>
 
-            <p class="text-light-muted" style="margin-top: 2rem; font-style: italic; font-size: 1rem;">
-                Ici, tout est préparé avec exigence, dans un esprit fast casual premium : rapide, mais jamais bâclé.
+            {{-- Pilier 2 --}}
+            <div class="concept-pillar-card">
+                <svg class="pillar-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="32" height="32">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <div class="pillar-content">
+                    <h3 class="pillar-title">La street food<br>devient expérience</h3>
+                    <p class="pillar-description">
+                        Plus qu'un repas, c'est un moment. Chaque détail immersif crée une véritable parenthèse gourmande.
+                    </p>
+                </div>
+                <div class="pillar-accent-bar"></div>
+            </div>
+
+            {{-- Pilier 3 --}}
+            <div class="concept-pillar-card">
+                <svg class="pillar-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="32" height="32">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+                <div class="pillar-content">
+                    <h3 class="pillar-title">Chaque détail<br>pensé pour vous</h3>
+                    <p class="pillar-description">
+                        De l'ambiance au service, tout est conçu pour transformer un simple repas en souvenir délicieux.
+                    </p>
+                </div>
+                <div class="pillar-accent-bar"></div>
+            </div>
+        </div>
+
+        {{-- Conclusion impactante --}}
+        <div class="concept-conclusion">
+            <p class="concept-conclusion-text">
+                Ici, tout est préparé avec exigence, dans un esprit <span class="concept-conclusion-highlight">fast casual premium</span> : rapide, mais jamais bâclé.
+            </p>
+            <p class="concept-conclusion-subtext">
+                ✓ Factory & Co Depuis 2008
             </p>
         </div>
     </div>
