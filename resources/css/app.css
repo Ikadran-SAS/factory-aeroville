@@ -7453,17 +7453,15 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   AVIS PAGE — Premium Testimonials & Reviews
+   AVIS PAGE — Reviews Section (reuses home page styles)
    ═══════════════════════════════════════════════════════════════ */
 
-/* Hero Section */
 .avis-hero {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
   position: relative;
   overflow: hidden;
-  padding: 5rem 0;
+  padding: 4rem 0;
   color: var(--white);
-  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7480,501 +7478,66 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 700px;
+  max-width: 600px;
   padding: 0 1.5rem;
 }
 
 .avis-hero h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
-  line-height: 1.2;
   color: var(--white);
+  margin-bottom: 1rem;
 }
 
 .avis-hero p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
-.section-tag {
-  display: inline-block;
-  background: rgba(245, 195, 219, 0.15);
-  border: 1px solid rgba(245, 195, 219, 0.3);
-  color: var(--pink);
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  backdrop-filter: blur(10px);
-}
-
-/* Trust Metrics */
 .avis-trust-metrics {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid rgba(245, 195, 219, 0.2);
 }
 
-.metric {
-  text-align: center;
+.reviews-stars {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: var(--pink);
 }
 
-.metric-value {
-  display: block;
-  font-size: clamp(2rem, 4vw, 3rem);
+.reviews-score {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 700;
   color: var(--pink);
   font-family: var(--font-title);
-  margin-bottom: 0.5rem;
 }
 
-.metric-label {
+.reviews-score span {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 400;
   display: block;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 500;
-}
-
-.metric-stars {
-  display: block;
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-  letter-spacing: 2px;
+  margin-top: 0.25rem;
 }
 
 @media (max-width: 768px) {
   .avis-hero {
     padding: 3rem 0;
-    min-height: auto;
-  }
-  
-  .avis-trust-metrics {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
   }
 }
 
-/* Filter Bar */
-.avis-filter-bar {
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  box-shadow: 0 2px 8px rgba(27, 38, 58, 0.08);
-}
-
-.filter-controls {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.filter-group {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.filter-group label {
-  font-weight: 600;
-  color: var(--navy);
-  font-size: 0.95rem;
-  white-space: nowrap;
-}
-
-.filter-select {
-  padding: 0.65rem 1rem;
-  border: 1px solid var(--border);
-  border-radius: 2px;
-  background: var(--white);
-  color: var(--text);
-  font-family: inherit;
-  cursor: pointer;
-  transition: var(--transition);
-  font-size: 0.95rem;
-}
-
-.filter-select:hover {
-  border-color: var(--pink-dark);
-}
-
-.filter-select:focus {
-  outline: none;
-  border-color: var(--pink-dark);
-  box-shadow: 0 0 0 3px rgba(204, 51, 102, 0.1);
-}
-
-.btn-reset-filters {
-  padding: 0.65rem 1.25rem;
-  border: 1px solid var(--border);
-  border-radius: 2px;
-  background: var(--bg-light);
-  color: var(--navy);
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: var(--transition);
-}
-
-.btn-reset-filters:hover {
-  background: var(--white);
-  border-color: var(--pink-dark);
-  color: var(--pink-dark);
-}
-
-@media (max-width: 768px) {
-  .filter-controls {
-    gap: 0.75rem;
-  }
-  
-  .filter-group label {
-    font-size: 0.85rem;
-  }
-  
-  .filter-select,
-  .btn-reset-filters {
-    font-size: 0.85rem;
-    padding: 0.5rem 0.75rem;
-  }
-}
-
-/* Testimonials Section */
+/* Reviews Grid - uses home page styles */
 .avis-section {
-  padding: 4rem 0;
-  background: var(--bg-light);
+  padding: 3rem 0;
 }
 
-.avis-grid {
+.reviews-grid-clean {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
   margin-top: 2rem;
-}
-
-/* Testimonial Card */
-.avis-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 2px;
-  padding: 2rem;
-  transition: all var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-
-.avis-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--pink) 0%, var(--pink-dark) 100%);
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-
-.avis-card:hover {
-  border-color: var(--pink);
-  box-shadow: 0 12px 32px rgba(204, 51, 102, 0.12);
-  transform: translateY(-4px);
-}
-
-.avis-card:hover::before {
-  opacity: 1;
-}
-
-/* Card Header */
-.avis-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1.5rem;
-  gap: 1rem;
-}
-
-.avis-author {
-  display: flex;
-  gap: 1rem;
-  flex: 1;
-}
-
-.author-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  color: var(--white);
-  font-size: 1rem;
-  flex-shrink: 0;
-}
-
-.author-info h3 {
-  margin: 0;
-  font-size: 1rem;
-  color: var(--navy);
-}
-
-.author-info p {
-  margin: 0.25rem 0 0 0;
-  font-size: 0.85rem;
-  color: var(--text-light);
-}
-
-.avis-rating {
-  text-align: right;
-  flex-shrink: 0;
-}
-
-.avis-rating .stars {
-  display: block;
-  color: #FFC107;
-  font-size: 0.95rem;
-  letter-spacing: 1px;
-  margin-bottom: 0.25rem;
-}
-
-.avis-rating .rating-value {
-  display: block;
-  font-size: 0.85rem;
-  color: var(--text-light);
-  font-weight: 600;
-}
-
-/* Card Content */
-.avis-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 0.75rem;
-  line-height: 1.4;
-}
-
-.avis-text {
-  margin-bottom: 1.25rem;
-  color: var(--text-light);
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
-/* Card Meta */
-.avis-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.avis-category {
-  display: inline-block;
-  font-size: 0.85rem;
-  color: var(--text-light);
-  background: var(--bg-light);
-  padding: 0.35rem 0.75rem;
-  border-radius: 50px;
-  font-weight: 500;
-}
-
-.avis-date {
-  font-size: 0.85rem;
-  color: var(--text-light);
-}
-
-/* Badges */
-.avis-badges {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.badge {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.4rem 0.75rem;
-  border-radius: 50px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.badge-verified {
-  background: rgba(204, 51, 102, 0.08);
-  color: var(--pink-dark);
-  border: 1px solid rgba(204, 51, 102, 0.2);
-}
-
-@media (max-width: 768px) {
-  .avis-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .avis-card {
-    padding: 1.5rem;
-  }
-  
-  .avis-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .avis-rating {
-    text-align: left;
-    width: 100%;
-  }
-}
-
-/* CTA Section */
-.avis-cta-section {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-  color: var(--white);
-  padding: 4rem 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.avis-cta-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 70% 30%, rgba(245, 195, 219, 0.05) 0%, transparent 50%);
-  pointer-events: none;
-}
-
-.cta-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.avis-cta-section h2 {
-  margin-bottom: 0.75rem;
-  color: var(--white);
-}
-
-.avis-cta-section p {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1.05rem;
-  margin-bottom: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .avis-cta-section {
-    padding: 3rem 0;
-  }
-  
-  .avis-cta-section h2 {
-    font-size: 1.75rem;
-  }
-}
-
-/* FAQ Section */
-.avis-faq-section {
-  padding: 4rem 0;
-}
-
-.avis-faq-section h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--navy);
-}
-
-.faq-list {
-  max-width: 700px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.faq-item {
-  border: 1px solid var(--border);
-  border-radius: 2px;
-  overflow: hidden;
-  background: var(--white);
-  transition: var(--transition);
-}
-
-.faq-item:hover {
-  border-color: var(--pink);
-  box-shadow: 0 4px 16px rgba(204, 51, 102, 0.08);
-}
-
-.faq-toggle {
-  width: 100%;
-  padding: 1.5rem;
-  text-align: left;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--navy);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: var(--transition);
-  background: var(--white);
-}
-
-.faq-toggle::after {
-  content: '▼';
-  transition: var(--transition);
-  font-size: 0.75rem;
-  margin-left: 1rem;
-  flex-shrink: 0;
-}
-
-.faq-item.active .faq-toggle::after {
-  transform: rotate(180deg);
-}
-
-.faq-item.active .faq-toggle {
-  color: var(--pink-dark);
-  background: var(--bg-pink);
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height var(--transition);
-}
-
-.faq-item.active .faq-answer {
-  max-height: 300px;
-}
-
-.faq-answer p {
-  padding: 0 1.5rem 1.5rem;
-  color: var(--text-light);
-  line-height: 1.7;
-}
-
-@media (max-width: 768px) {
-  .avis-faq-section {
-    padding: 3rem 0;
-  }
-  
-  .faq-toggle {
-    padding: 1.25rem;
-    font-size: 0.95rem;
-  }
-  
-  .faq-answer p {
-    padding: 0 1.25rem 1.25rem;
-    font-size: 0.9rem;
-  }
 }

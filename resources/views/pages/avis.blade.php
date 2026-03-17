@@ -20,271 +20,142 @@
     <div class="avis-hero-overlay"></div>
     <div class="avis-hero-content">
         <span class="section-tag">⭐ CE QUE NOS CLIENTS DISENT</span>
-        <h1>La Satisfaction de Nos Clients<br>Est Notre Meilleure Publicité</h1>
+        <h1>Pourquoi ils nous<br><em>ont choisi</em></h1>
         <p>Découvrez pourquoi les clients de Factory & Co nous font confiance</p>
 
         <div class="avis-trust-metrics">
-            <div class="metric">
-                <span class="metric-value">4.8</span>
-                <span class="metric-label">Étoiles moyennes</span>
-                <div class="metric-stars">★★★★★</div>
-            </div>
-            <div class="metric">
-                <span class="metric-value">500+</span>
-                <span class="metric-label">Avis vérifiés</span>
-            </div>
-            <div class="metric">
-                <span class="metric-value">97%</span>
-                <span class="metric-label">Clients satisfaits</span>
-            </div>
-            <div class="metric">
-                <span class="metric-value">2024</span>
-                <span class="metric-label">Année de confiance</span>
-            </div>
+            <div class="reviews-stars">★★★★★</div>
+            <div class="reviews-score">4.8 <span>/5 · +500 avis vérifiés</span></div>
         </div>
     </div>
 </section>
 
-{{-- FILTER BAR --}}
-<div class="avis-filter-bar sticky">
-    <div class="container">
-        <div class="filter-controls">
-            <div class="filter-group">
-                <label for="sort">Trier par:</label>
-                <select id="sort" class="filter-select">
-                    <option value="recent">Les plus récents</option>
-                    <option value="rating-high">Note: Élevée à basse</option>
-                </select>
-            </div>
-
-            <div class="filter-group">
-                <label for="rating">Note:</label>
-                <select id="rating" class="filter-select">
-                    <option value="">Tous les avis</option>
-                    <option value="5">⭐⭐⭐⭐⭐ (5 étoiles)</option>
-                    <option value="4">⭐⭐⭐⭐ (4+ étoiles)</option>
-                </select>
-            </div>
-
-            <button class="btn btn-reset-filters">Réinitialiser</button>
-        </div>
-    </div>
-</div>
-
 {{-- TESTIMONIALS GRID --}}
 <section class="avis-section">
     <div class="container">
-        <div class="avis-grid">
-            <div class="avis-card">
-                <div class="avis-header">
-                    <div class="avis-author">
-                        <div class="author-avatar" style="background: linear-gradient(135deg, #F5C3DB 0%, #E8A0C0 100%)">JM</div>
-                        <div class="author-info">
-                            <h3>Jean-Marc D.</h3>
-                            <p>Clients réguliers depuis 2022</p>
-                        </div>
+        <div class="reviews-grid-clean">
+            <div class="review-card-clean">
+                <div class="review-card-header-clean">
+                    <div class="review-avatar-clean">JM</div>
+                    <div class="review-info-clean">
+                        <h4>Jean-Marc D.</h4>
+                        <p class="review-time">Il y a 2 semaines</p>
                     </div>
-                    <div class="avis-rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-value">5/5</span>
-                    </div>
+                    <svg class="google-logo-clean" viewBox="0 0 24 24" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path></svg>
                 </div>
-                <div class="avis-title">Les meilleurs burgers de Val d'Europe!</div>
-                <p class="avis-text">J'ai essayé les burgers de Factory & Co et c'est tout simplement délicieux. La viande est de qualité, les garnitures fraîches, et l'équipe toujours souriante. Je reviens au moins une fois par semaine!</p>
-                <div class="avis-meta">
-                    <span class="avis-category">🍔 Burgers</span>
-                    <span class="avis-date">Il y a 2 semaines</span>
+                <div class="review-stars-clean">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
-                <div class="avis-badges">
-                    <span class="badge badge-verified">✓ Achat vérifiés</span>
-                </div>
+                <p class="review-text-clean">J'ai essayé les burgers de Factory & Co et c'est tout simplement délicieux. La viande est de qualité, les garnitures fraîches, et l'équipe toujours souriante.</p>
             </div>
 
-            <div class="avis-card">
-                <div class="avis-header">
-                    <div class="avis-author">
-                        <div class="author-avatar" style="background: linear-gradient(135deg, #90EE90 0%, #7CFC00 100%)">SL</div>
-                        <div class="author-info">
-                            <h3>Sandrine L.</h3>
-                            <p>Mère de 2 enfants</p>
-                        </div>
+            <div class="review-card-clean">
+                <div class="review-card-header-clean">
+                    <div class="review-avatar-clean">SL</div>
+                    <div class="review-info-clean">
+                        <h4>Sandrine L.</h4>
+                        <p class="review-time">Il y a 3 semaines</p>
                     </div>
-                    <div class="avis-rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-value">5/5</span>
-                    </div>
+                    <svg class="google-logo-clean" viewBox="0 0 24 24" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path></svg>
                 </div>
-                <div class="avis-title">Parfait pour les enfants ET les adultes</div>
-                <p class="avis-text">Les bagels de Factory & Co sont parfaits pour un petit-déj en famille. Les enfants adorent, c'est sain, et c'est frais! En plus, l'accueil est charmant.</p>
-                <div class="avis-meta">
-                    <span class="avis-category">🥯 Bagels</span>
-                    <span class="avis-date">Il y a 3 semaines</span>
+                <div class="review-stars-clean">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
-                <div class="avis-badges">
-                    <span class="badge badge-verified">✓ Achat vérifiés</span>
-                </div>
+                <p class="review-text-clean">Les bagels de Factory & Co sont parfaits pour un petit-déj en famille. Les enfants adorent, c'est sain, et c'est frais!</p>
             </div>
 
-            <div class="avis-card">
-                <div class="avis-header">
-                    <div class="avis-author">
-                        <div class="author-avatar" style="background: linear-gradient(135deg, #FFA500 0%, #FF6347 100%)">MV</div>
-                        <div class="author-info">
-                            <h3>Marie V.</h3>
-                            <p>Fan de cheesecake notoire</p>
-                        </div>
+            <div class="review-card-clean">
+                <div class="review-card-header-clean">
+                    <div class="review-avatar-clean">MV</div>
+                    <div class="review-info-clean">
+                        <h4>Marie V.</h4>
+                        <p class="review-time">Il y a 1 mois</p>
                     </div>
-                    <div class="avis-rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-value">5/5</span>
-                    </div>
+                    <svg class="google-logo-clean" viewBox="0 0 24 24" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path></svg>
                 </div>
-                <div class="avis-title">Le meilleur cheesecake de ma vie!</div>
-                <p class="avis-text">J'ai goûté du cheesecake un peu partout, et celui de Factory & Co est vraiment exceptionnel. Texture crémeuse, recette authentique.</p>
-                <div class="avis-meta">
-                    <span class="avis-category">🍰 Cheesecake</span>
-                    <span class="avis-date">Il y a 1 mois</span>
+                <div class="review-stars-clean">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
-                <div class="avis-badges">
-                    <span class="badge badge-verified">✓ Achat vérifiés</span>
-                </div>
+                <p class="review-text-clean">J'ai goûté du cheesecake un peu partout, et celui de Factory & Co est vraiment exceptionnel. Texture crémeuse, recette authentique.</p>
             </div>
 
-            <div class="avis-card">
-                <div class="avis-header">
-                    <div class="avis-author">
-                        <div class="author-avatar" style="background: linear-gradient(135deg, #87CEEB 0%, #4169E1 100%)">TP</div>
-                        <div class="author-info">
-                            <h3>Thierry P.</h3>
-                            <p>Vegan, proche du centre commercial</p>
-                        </div>
+            <div class="review-card-clean">
+                <div class="review-card-header-clean">
+                    <div class="review-avatar-clean">TP</div>
+                    <div class="review-info-clean">
+                        <h4>Thierry P.</h4>
+                        <p class="review-time">Il y a 1 mois</p>
                     </div>
-                    <div class="avis-rating">
-                        <span class="stars">★★★★☆</span>
-                        <span class="rating-value">4.5/5</span>
-                    </div>
+                    <svg class="google-logo-clean" viewBox="0 0 24 24" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path></svg>
                 </div>
-                <div class="avis-title">Excellente option vegan!</div>
-                <p class="avis-text">En tant que vegan, je suis ravi d'avoir un endroit où je peux manger de bons burgers et bowls sans compromis. Le personnel est attentif.</p>
-                <div class="avis-meta">
-                    <span class="avis-category">🥗 Bowls</span>
-                    <span class="avis-date">Il y a 1 mois</span>
+                <div class="review-stars-clean">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
                 </div>
-                <div class="avis-badges">
-                    <span class="badge badge-verified">✓ Achat vérifiés</span>
-                </div>
+                <p class="review-text-clean">En tant que vegan, je suis ravi d'avoir un endroit où je peux manger de bons burgers et bowls sans compromis. Le personnel est attentif.</p>
             </div>
 
-            <div class="avis-card">
-                <div class="avis-header">
-                    <div class="avis-author">
-                        <div class="author-avatar" style="background: linear-gradient(135deg, #DDA0DD 0%, #DA70D6 100%)">CJ</div>
-                        <div class="author-info">
-                            <h3>Céline J.</h3>
-                            <p>Bureau aux alentours</p>
-                        </div>
+            <div class="review-card-clean">
+                <div class="review-card-header-clean">
+                    <div class="review-avatar-clean">CJ</div>
+                    <div class="review-info-clean">
+                        <h4>Céline J.</h4>
+                        <p class="review-time">Il y a 2 semaines</p>
                     </div>
-                    <div class="avis-rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-value">5/5</span>
-                    </div>
+                    <svg class="google-logo-clean" viewBox="0 0 24 24" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path></svg>
                 </div>
-                <div class="avis-title">Mon pause-déj préférée</div>
-                <p class="avis-text">Factory & Co est devenu mon incontournable pour la pause déjeuner. Service rapide, food de qualité, lieu agréable. Les prix sont justes.</p>
-                <div class="avis-meta">
-                    <span class="avis-category">🍔 Burgers</span>
-                    <span class="avis-date">Il y a 2 semaines</span>
+                <div class="review-stars-clean">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
-                <div class="avis-badges">
-                    <span class="badge badge-verified">✓ Achat vérifiés</span>
-                </div>
+                <p class="review-text-clean">Factory & Co est devenu mon incontournable pour la pause déjeuner. Service rapide, food de qualité, lieu agréable. Les prix sont justes.</p>
             </div>
 
-            <div class="avis-card">
-                <div class="avis-header">
-                    <div class="avis-author">
-                        <div class="author-avatar" style="background: linear-gradient(135deg, #98FB98 0%, #50C878 100%)">AM</div>
-                        <div class="author-info">
-                            <h3>Antoine M.</h3>
-                            <p>Foodie, street food premium</p>
-                        </div>
+            <div class="review-card-clean">
+                <div class="review-card-header-clean">
+                    <div class="review-avatar-clean">AM</div>
+                    <div class="review-info-clean">
+                        <h4>Antoine M.</h4>
+                        <p class="review-time">Il y a 3 semaines</p>
                     </div>
-                    <div class="avis-rating">
-                        <span class="stars">★★★★★</span>
-                        <span class="rating-value">5/5</span>
-                    </div>
+                    <svg class="google-logo-clean" viewBox="0 0 24 24" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path></svg>
                 </div>
-                <div class="avis-title">De la vraie qualité street food</div>
-                <p class="avis-text">Factory & Co apporte une vraie dimension "street food premium" à Val d'Europe. Ingrédients frais, préparation soignée, saveurs authentiques.</p>
-                <div class="avis-meta">
-                    <span class="avis-category">🍔 Service</span>
-                    <span class="avis-date">Il y a 3 semaines</span>
+                <div class="review-stars-clean">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
-                <div class="avis-badges">
-                    <span class="badge badge-verified">✓ Achat vérifiés</span>
-                </div>
+                <p class="review-text-clean">Factory & Co apporte une vraie dimension "street food premium" à Val d'Europe. Ingrédients frais, préparation soignée, saveurs authentiques.</p>
             </div>
         </div>
     </div>
 </section>
 
 {{-- CTA SECTION --}}
-<section class="avis-cta-section">
+<section class="section section-light" id="faq">
     <div class="container">
-        <div class="cta-content">
-            <h2>Vous avez testé Factory & Co?</h2>
-            <p>Partagez votre expérience avec notre communauté</p>
-            <button class="btn btn-pink btn-lg">Écrire un avis</button>
+        <div class="section-header text-center">
+            <span class="section-tag">Questions ?</span>
+            <h2 class="section-title dark">Questions fréquentes</h2>
+        </div>
+        {{-- Accordéon FAQs avec Vue --}}
+        <div id="faq-accordion-app" data-faqs="{{ base64_encode(json_encode($faqs ?? [])) }}"></div>
+        <div class="faq-cta text-center">
+            <p>Vous avez d'autres questions ?</p>
+            <a href="{{ route('contact') }}" class="btn btn-outline-pink">Nous contacter</a>
         </div>
     </div>
 </section>
 
-{{-- FAQ SECTION --}}
-<section class="avis-faq-section">
+{{-- NEWSLETTER SECTION --}}
+<section class="section section-dark newsletter-section">
     <div class="container">
-        <h2>Questions Fréquentes</h2>
-        <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-toggle">Comment vérifiez-vous les avis?</button>
-                <div class="faq-answer">
-                    <p>Nous vérifions que les avis proviennent de clients qui ont réellement effectué un achat chez Factory & Co. Cela garantit l'authenticité et la fiabilité de tous les avis.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-toggle">Combien de temps faut-il pour qu'un avis soit publié?</button>
-                <div class="faq-answer">
-                    <p>Les avis sont généralement publiés dans les 24 à 48 heures après soumission.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-toggle">Puis-je modifier mon avis après l'avoir posté?</button>
-                <div class="faq-answer">
-                    <p>Oui, vous pouvez modifier votre avis dans les 30 jours suivant sa publication.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-toggle">Acceptez-vous les avis négatifs?</button>
-                <div class="faq-answer">
-                    <p>Absolument! Les avis constructifs nous aident à améliorer notre service. Nous prenons tous les commentaires au sérieux.</p>
-                </div>
-            </div>
+        <div class="newsletter-content">
+            <h2>Restez connecté</h2>
+            <p>Recevez nos bons plans, nouveaux menus et actualités Factory &amp; Co en avant-première.</p>
+            <form class="newsletter-form" method="POST" action="#">
+                @csrf
+                <input type="email" placeholder="votre@email.com" required>
+                <button type="submit" class="btn btn-pink">S'abonner</button>
+            </form>
         </div>
     </div>
 </section>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const faqToggles = document.querySelectorAll('.faq-toggle');
-    faqToggles.forEach(toggle => {
-        toggle.addEventListener('click', function() {
-            const item = this.parentElement;
-            item.classList.toggle('active');
-        });
-    });
-});
-</script>
 
 @endsection
