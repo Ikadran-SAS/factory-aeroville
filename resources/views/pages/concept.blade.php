@@ -521,162 +521,140 @@
 </section>
 
 {{-- ════════════════════════════════════════════
-     SECTION : POURQUOI NOUS CHOISIR (REDESIGNÉE)
+     SECTION : POURQUOI NOUS CHOISIR - VISUELS FORTS
 ════════════════════════════════════════════ --}}
-<section class="section why-choose-section-redesigned">
+<section class="section why-choose-visual-hero">
     <div class="container">
         {{-- Header Premium --}}
         <div class="why-choose-header">
             <span class="why-choose-badge">
-                <span class="why-choose-badge-icon">💥</span>
+                <span class="why-choose-badge-icon">⭐</span>
                 Pourquoi Nous Choisir
             </span>
             <h2 class="why-choose-title">
-                Bien plus qu'un <span class="why-choose-highlight">fast-food</span>
+                <span class="why-choose-highlight">L'expérience</span> fait la différence
             </h2>
-            <p class="why-choose-subtitle">Une vraie alternative aux chaînes classiques</p>
+            <p class="why-choose-subtitle">Plus qu'un restaurant, une destination mémorable</p>
         </div>
 
-        {{-- Intro text premium --}}
-        <blockquote class="why-choose-intro-quote">
-            Nous ne sommes pas un fast-food comme les autres.
-        </blockquote>
-
-        {{-- Premium Counter Cards Grid --}}
-        <div class="why-choose-cards-grid">
-            {{-- Card 1: Identité forte --}}
-            <div class="why-choose-card">
-                {{-- Counter Badge (01) --}}
-                <div class="card-counter-badge">01</div>
-
-                {{-- Icon --}}
-                <div class="card-icon-wrapper">
-                    <svg class="card-icon-premium" viewBox="0 0 64 64" fill="none">
-                        <defs>
-                            <linearGradient id="grad-why-identity" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        {{-- Flame/Identity Icon --}}
-                        <path d="M32 8 C32 8, 26 18, 26 26 C26 33.732, 28.686 40, 32 40 C35.314 40, 38 33.732, 38 26 C38 18, 32 8, 32 8 Z" stroke="url(#grad-why-identity)" stroke-width="2" fill="none" stroke-linejoin="round"/>
-                        <path d="M32 18 C32 18, 28 24, 28 28 C28 31.314, 29.791 34, 32 34 C34.209 34, 36 31.314, 36 28 C36 24, 32 18, 32 18 Z" stroke="url(#grad-why-identity)" stroke-width="2" fill="none" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-
-                {{-- Content --}}
-                <div class="card-text-content">
-                    <h3 class="card-title">Identité forte</h3>
-                    <p class="card-description">Reconnaissable et mémorable</p>
-                </div>
-
-                {{-- Accent line --}}
-                <div class="card-accent-line"></div>
+        {{-- CARD 1: Identité Forte --}}
+        <div class="why-choose-card-visual">
+            <div class="card-visual-image">
+                <img src="{{ asset('images/factory-val-interieur.webp') }}" alt="Intérieur Factory & Co Toulouse - Design unique et mémorable" loading="lazy">
+                <div class="card-visual-overlay-dark"></div>
             </div>
-
-            {{-- Card 2: Ambiance immersive --}}
-            <div class="why-choose-card">
-                {{-- Counter Badge (02) --}}
-                <div class="card-counter-badge">02</div>
-
-                {{-- Icon --}}
-                <div class="card-icon-wrapper">
-                    <svg class="card-icon-premium" viewBox="0 0 64 64" fill="none">
+            <div class="card-visual-content">
+                <div class="card-visual-counter">01</div>
+                <div class="card-visual-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
                         <defs>
-                            <linearGradient id="grad-why-ambiance" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <linearGradient id="grad-visual-1" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
                                 <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
                             </linearGradient>
                         </defs>
-                        {{-- Room/Window Icon --}}
-                        <rect x="12" y="16" width="40" height="32" rx="2" stroke="url(#grad-why-ambiance)" stroke-width="2" fill="none"/>
-                        <path d="M12 24 L52 24" stroke="url(#grad-why-ambiance)" stroke-width="2"/>
-                        <rect x="18" y="18" width="12" height="6" stroke="url(#grad-why-ambiance)" stroke-width="2" fill="none"/>
-                        <rect x="34" y="18" width="12" height="6" stroke="url(#grad-why-ambiance)" stroke-width="2" fill="none"/>
+                        <path d="M32 8 C32 8, 26 18, 26 26 C26 33.732, 28.686 40, 32 40 C35.314 40, 38 33.732, 38 26 C38 18, 32 8, 32 8 Z" stroke="url(#grad-visual-1)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                        <path d="M32 18 C32 18, 28 24, 28 28 C28 31.314, 29.791 34, 32 34 C34.209 34, 36 31.314, 36 28 C36 24, 32 18, 32 18 Z" stroke="url(#grad-visual-1)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
                     </svg>
                 </div>
-
-                {{-- Content --}}
-                <div class="card-text-content">
-                    <h3 class="card-title">Ambiance immersive</h3>
-                    <p class="card-description">Qui captive dès l'entrée</p>
-                </div>
-
-                {{-- Accent line --}}
-                <div class="card-accent-line"></div>
-            </div>
-
-            {{-- Card 3: Cuisine généreuse --}}
-            <div class="why-choose-card">
-                {{-- Counter Badge (03) --}}
-                <div class="card-counter-badge">03</div>
-
-                {{-- Icon --}}
-                <div class="card-icon-wrapper">
-                    <svg class="card-icon-premium" viewBox="0 0 64 64" fill="none">
-                        <defs>
-                            <linearGradient id="grad-why-cuisine" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        {{-- Plate with food --}}
-                        <circle cx="32" cy="32" r="18" stroke="url(#grad-why-cuisine)" stroke-width="2" fill="none"/>
-                        <circle cx="32" cy="32" r="12" stroke="url(#grad-why-cuisine)" stroke-width="1.5" fill="none" opacity="0.5"/>
-                        <path d="M24 28 Q32 22, 40 28" stroke="url(#grad-why-cuisine)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M20 35 Q32 40, 44 35" stroke="url(#grad-why-cuisine)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-
-                {{-- Content --}}
-                <div class="card-text-content">
-                    <h3 class="card-title">Cuisine généreuse</h3>
-                    <p class="card-description">Qualitative et satisfaisante</p>
-                </div>
-
-                {{-- Accent line --}}
-                <div class="card-accent-line"></div>
-            </div>
-
-            {{-- Card 4: Expérience complète --}}
-            <div class="why-choose-card">
-                {{-- Counter Badge (04) --}}
-                <div class="card-counter-badge">04</div>
-
-                {{-- Icon --}}
-                <div class="card-icon-wrapper">
-                    <svg class="card-icon-premium" viewBox="0 0 64 64" fill="none">
-                        <defs>
-                            <linearGradient id="grad-why-experience" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        {{-- Heart/Experience Icon --}}
-                        <path d="M32 48 C32 48, 16 36, 16 26 C16 20, 20 16, 24 16 C26.5 16, 28.8 17.2, 30.4 19 C31.2 19.9, 32 20.8, 32 20.8 C32 20.8, 32.8 19.9, 33.6 19 C35.2 17.2, 37.5 16, 40 16 C44 16, 48 20, 48 26 C48 36, 32 48, 32 48 Z" stroke="url(#grad-why-experience)" stroke-width="2" fill="none" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-
-                {{-- Content --}}
-                <div class="card-text-content">
-                    <h3 class="card-title">Expérience complète</h3>
-                    <p class="card-description">Repas + dessert + moment</p>
-                </div>
-
-                {{-- Accent line --}}
-                <div class="card-accent-line"></div>
+                <h3 class="card-visual-title">Identité Forte</h3>
+                <p class="card-visual-description">Un design unique et reconnaissable qui marque les esprits dès l'entrée</p>
+                <div class="card-visual-accent"></div>
             </div>
         </div>
 
-        {{-- Conclusion impactante --}}
-        <div class="why-choose-conclusion">
-            <p class="why-choose-conclusion-text">
-                Ici, vous ne consommez pas.<br>
-                <span class="why-choose-conclusion-highlight">Vous vivez une expérience.</span>
-            </p>
+        {{-- CARD 2: Ambiance Immersive --}}
+        <div class="why-choose-card-visual card-visual-reverse">
+            <div class="card-visual-image">
+                <img src="{{ asset('images/burger.webp') }}" alt="Burger Factory & Co - Qualité et générosité" loading="lazy">
+                <div class="card-visual-overlay-dark"></div>
+            </div>
+            <div class="card-visual-content">
+                <div class="card-visual-counter">02</div>
+                <div class="card-visual-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-visual-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="12" y="16" width="40" height="32" rx="2" stroke="url(#grad-visual-2)" stroke-width="2.5" fill="none"/>
+                        <path d="M12 24 L52 24" stroke="url(#grad-visual-2)" stroke-width="2.5"/>
+                        <rect x="18" y="18" width="12" height="6" stroke="url(#grad-visual-2)" stroke-width="2.5" fill="none"/>
+                        <rect x="34" y="18" width="12" height="6" stroke="url(#grad-visual-2)" stroke-width="2.5" fill="none"/>
+                    </svg>
+                </div>
+                <h3 class="card-visual-title">Ambiance Immersive</h3>
+                <p class="card-visual-description">Une atmosphère energique qui vous transporte loin de l'ordinaire</p>
+                <div class="card-visual-accent"></div>
+            </div>
+        </div>
+
+        {{-- CARD 3: Cuisine Généreuse --}}
+        <div class="why-choose-card-visual">
+            <div class="card-visual-image">
+                <img src="{{ asset('images/desserts.webp') }}" alt="Cheesecake Factory & Co - Desserts gourmands" loading="lazy">
+                <div class="card-visual-overlay-dark"></div>
+            </div>
+            <div class="card-visual-content">
+                <div class="card-visual-counter">03</div>
+                <div class="card-visual-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-visual-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="32" cy="32" r="18" stroke="url(#grad-visual-3)" stroke-width="2.5" fill="none"/>
+                        <path d="M24 28 Q32 22, 40 28" stroke="url(#grad-visual-3)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 35 Q32 40, 44 35" stroke="url(#grad-visual-3)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="card-visual-title">Cuisine Généreuse</h3>
+                <p class="card-visual-description">Des produits frais, des portions généreuses, une qualité sans compromis</p>
+                <div class="card-visual-accent"></div>
+            </div>
+        </div>
+
+        {{-- CARD 4: Expérience Complète --}}
+        <div class="why-choose-card-visual card-visual-reverse">
+            <div class="card-visual-image">
+                <img src="{{ asset('images/factory-val-3.webp') }}" alt="Ambiance Factory & Co - Moments en famille et entre amis" loading="lazy">
+                <div class="card-visual-overlay-dark"></div>
+            </div>
+            <div class="card-visual-content">
+                <div class="card-visual-counter">04</div>
+                <div class="card-visual-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-visual-4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M32 48 C32 48, 16 36, 16 26 C16 20, 20 16, 24 16 C26.5 16, 28.8 17.2, 30.4 19 C31.2 19.9, 32 20.8, 32 20.8 C32 20.8, 32.8 19.9, 33.6 19 C35.2 17.2, 37.5 16, 40 16 C44 16, 48 20, 48 26 C48 36, 32 48, 32 48 Z" stroke="url(#grad-visual-4)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="card-visual-title">Expérience Complète</h3>
+                <p class="card-visual-description">Entrée, plat, dessert et moment précieux, tout en un seul endroit</p>
+                <div class="card-visual-accent"></div>
+            </div>
+        </div>
+
+        {{-- Conclusion Impactante --}}
+        <div class="why-choose-conclusion-visual">
+            <blockquote class="conclusion-quote">
+                <span class="quote-mark">"</span>
+                <p>Ici, vous ne consommez pas une simple commande.</p>
+                <p class="conclusion-highlight">Vous vivez une expérience.</p>
+                <span class="quote-mark close">"</span>
+            </blockquote>
         </div>
     </div>
 </section>
+
 
 {{-- ════════════════════════════════════════════
      SECTION : L'AMBIANCE
