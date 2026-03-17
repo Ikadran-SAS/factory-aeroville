@@ -7074,6 +7074,7 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
+  justify-content: center;
 }
 
 .category-nav::-webkit-scrollbar {
