@@ -773,39 +773,146 @@
 </section>
 
 {{-- ════════════════════════════════════════════
-     SECTION : MOMENTS
+     SECTION : POUR TOUS LES MOMENTS (REDESIGNÉE)
 ════════════════════════════════════════════ --}}
-<section class="section section-light">
+<section class="section moments-section-redesigned">
     <div class="container">
-        <h2 class="concept-title">⏰ Pour Tous les Moments</h2>
-        <p class="section-subtitle">Du déjeuner au goûter… jusqu'au dîner</p>
+        {{-- Header Premium --}}
+        <div class="moments-header-redesigned">
+            <span class="moments-badge">
+                <span class="moments-badge-icon">⏰</span>
+                Pour Tous les Moments
+            </span>
+            <h2 class="moments-title-redesigned">
+                Chaque heure a sa <span class="moments-highlight">bonne raison</span>
+            </h2>
+            <p class="moments-subtitle-redesigned">Du déjeuner au goûter… jusqu'au dîner et au-delà</p>
+        </div>
 
-        <div class="moments-grid">
-            <div class="moment-card">
-                <span class="moment-icon">🍽️</span>
-                <h4>Pause déjeuner efficace</h4>
-                <p>Rapide, satisfaisante et délicieuse</p>
+        {{-- Intro Quote --}}
+        <blockquote class="moments-intro-quote">
+            Factory & Co s'adapte à votre rythme. Que ce soit une pause rapide ou un moment à savourer, nous sommes là pour chaque occasion.
+        </blockquote>
+
+        {{-- 4 Premium Moments Cards --}}
+        <div class="moments-cards-grid">
+            {{-- Card 1: Pause Déjeuner --}}
+            <div class="moments-card-premium">
+                <div class="moments-card-image">
+                    <img src="{{ asset('images/burger.webp') }}" alt="Pause déjeuner Factory & Co - Burger savoureux" loading="lazy">
+                    <div class="moments-card-overlay"></div>
+                </div>
+                <div class="moments-card-content">
+                    <div class="moments-card-number">01</div>
+                    <div class="moments-card-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <defs>
+                                <linearGradient id="grad-moment-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="32" cy="32" r="16" stroke="url(#grad-moment-1)" stroke-width="2.5" fill="none"/>
+                            <path d="M 28 28 L 32 32 L 36 28" stroke="url(#grad-moment-1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <path d="M 32 32 L 32 40" stroke="url(#grad-moment-1)" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="moments-card-title">Pause Déjeuner</h3>
+                    <p class="moments-card-description">Rapide, satisfaisante et délicieuse. Idéale pour votre pause shopping ou professionnelle</p>
+                    <div class="moments-card-accent"></div>
+                </div>
             </div>
-            <div class="moment-card">
-                <span class="moment-icon">☕</span>
-                <h4>Goûter gourmand</h4>
-                <p>Pour une pause sucrée réconfortante</p>
+
+            {{-- Card 2: Goûter Gourmand --}}
+            <div class="moments-card-premium">
+                <div class="moments-card-image">
+                    <img src="{{ asset('images/desserts.webp') }}" alt="Goûter gourmand Factory & Co - Desserts délicieux" loading="lazy">
+                    <div class="moments-card-overlay"></div>
+                </div>
+                <div class="moments-card-content">
+                    <div class="moments-card-number">02</div>
+                    <div class="moments-card-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <defs>
+                                <linearGradient id="grad-moment-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M 20 38 Q 20 30, 32 24 Q 44 30, 44 38 Q 44 44, 32 48 Q 20 44, 20 38 Z" stroke="url(#grad-moment-2)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                            <circle cx="32" cy="32" r="4" stroke="url(#grad-moment-2)" stroke-width="2" fill="none"/>
+                            <path d="M 32 20 Q 30 18, 28 20" stroke="url(#grad-moment-2)" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="moments-card-title">Goûter Gourmand</h3>
+                    <p class="moments-card-description">Une pause sucrée et réconfortante pour vos moments de détente l'après-midi</p>
+                    <div class="moments-card-accent"></div>
+                </div>
             </div>
-            <div class="moment-card">
-                <span class="moment-icon">🌆</span>
-                <h4>Dîner décontracté</h4>
-                <p>Entre détente et plaisir gustatif</p>
+
+            {{-- Card 3: Dîner Décontracté --}}
+            <div class="moments-card-premium">
+                <div class="moments-card-image">
+                    <img src="{{ asset('images/factory-val-interieur.webp') }}" alt="Dîner Factory & Co - Ambiance conviviale" loading="lazy">
+                    <div class="moments-card-overlay"></div>
+                </div>
+                <div class="moments-card-content">
+                    <div class="moments-card-number">03</div>
+                    <div class="moments-card-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <defs>
+                                <linearGradient id="grad-moment-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="32" cy="32" r="18" stroke="url(#grad-moment-3)" stroke-width="2.5" fill="none"/>
+                            <path d="M 26 26 Q 26 22, 32 20 Q 38 22, 38 26" stroke="url(#grad-moment-3)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M 20 32 Q 20 28, 24 26 M 44 32 Q 44 28, 40 26" stroke="url(#grad-moment-3)" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="moments-card-title">Dîner Décontracté</h3>
+                    <p class="moments-card-description">Entre détente et plaisir gustatif, savourez une soirée en toute sérénité</p>
+                    <div class="moments-card-accent"></div>
+                </div>
             </div>
-            <div class="moment-card">
-                <span class="moment-icon">👫</span>
-                <h4>Moment entre amis</h4>
-                <p>À partager en bonne compagnie</p>
+
+            {{-- Card 4: Moment entre Amis --}}
+            <div class="moments-card-premium">
+                <div class="moments-card-image">
+                    <img src="{{ asset('images/factory-val-3.webp') }}" alt="Moment entre amis Factory & Co - Convivialité" loading="lazy">
+                    <div class="moments-card-overlay"></div>
+                </div>
+                <div class="moments-card-content">
+                    <div class="moments-card-number">04</div>
+                    <div class="moments-card-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <defs>
+                                <linearGradient id="grad-moment-4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="22" cy="26" r="6" stroke="url(#grad-moment-4)" stroke-width="2.5" fill="none"/>
+                            <circle cx="32" cy="16" r="6" stroke="url(#grad-moment-4)" stroke-width="2.5" fill="none"/>
+                            <circle cx="42" cy="26" r="6" stroke="url(#grad-moment-4)" stroke-width="2.5" fill="none"/>
+                            <path d="M 18 33 Q 18 40, 32 44 Q 46 40, 46 33" stroke="url(#grad-moment-4)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="moments-card-title">Moment entre Amis</h3>
+                    <p class="moments-card-description">À partager en bonne compagnie, créez des souvenirs délicieux ensemble</p>
+                    <div class="moments-card-accent"></div>
+                </div>
             </div>
         </div>
 
-        <p style="text-align: center; margin-top: 2rem; font-style: italic; color: var(--pink-dark);">
-            Peu importe l'heure, il y a toujours une bonne raison de venir.
-        </p>
+        {{-- Closing Message --}}
+        <div class="moments-closing-message">
+            <p class="moments-closing-text">
+                Peu importe l'heure, il y a toujours une bonne raison de venir.<br>
+                <span class="moments-closing-emphasis">Factory & Co s'adapte à chaque moment de votre vie.</span>
+            </p>
+        </div>
     </div>
 </section>
 

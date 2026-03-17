@@ -5759,6 +5759,390 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
   .card-visual-accent:hover {
     width: 60px;
   }
+
+  .moments-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .moments-card-image {
+    height: 200px;
+  }
+
+  .moments-title-redesigned {
+    font-size: 2rem;
+  }
+
+  .moments-subtitle-redesigned {
+    font-size: 0.95rem;
+  }
+
+  .moments-intro-quote {
+    font-size: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .moments-card-title {
+    font-size: 1.1rem;
+  }
+
+  .moments-card-description {
+    font-size: 0.9rem;
+  }
+
+  .moments-closing-text {
+    font-size: 1rem;
+  }
+
+  .moments-badge {
+    font-size: 9px;
+    padding: 6px 12px;
+  }
+
+  .moments-closing-message {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ════════════════════════════════════════════
+   SECTION : POUR TOUS LES MOMENTS (REDESIGNÉE)
+════════════════════════════════════════════ */
+
+.moments-section-redesigned {
+  background: linear-gradient(135deg, var(--bg-light) 0%, #F5F7FA 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.moments-section-redesigned::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(245, 195, 219, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.moments-section-redesigned .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Header Premium ── */
+.moments-header-redesigned {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.moments-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(245, 195, 219, 0.2);
+  border: 1px solid rgba(245, 195, 219, 0.3);
+  border-radius: 24px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--pink-dark);
+  margin-bottom: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.moments-badge-icon {
+  font-size: 14px;
+}
+
+.moments-title-redesigned {
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+
+.moments-highlight {
+  background: linear-gradient(135deg, var(--pink-dark) 0%, var(--pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+}
+
+.moments-subtitle-redesigned {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+/* ── Intro Quote ── */
+.moments-intro-quote {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--text);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+  border-left: 4px solid var(--pink);
+  border-radius: 4px;
+  background: rgba(245, 195, 219, 0.12);
+  line-height: 1.8;
+}
+
+/* ── Moments Cards Grid ── */
+.moments-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* ── Premium Moments Card ── */
+.moments-card-premium {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid rgba(245, 195, 219, 0.25);
+  box-shadow: 0 4px 16px rgba(27, 38, 58, 0.08);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  height: 100%;
+  position: relative;
+}
+
+.moments-card-premium:hover {
+  border-color: var(--pink);
+  box-shadow: 0 20px 50px rgba(204, 51, 102, 0.2);
+  transform: translateY(-12px);
+}
+
+/* ── Card Image ── */
+.moments-card-image {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--bg-light) 0%, #F5F7FA 100%);
+}
+
+.moments-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.moments-card-premium:hover .moments-card-image img {
+  transform: scale(1.12) rotate(-3deg);
+}
+
+.moments-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(27, 38, 58, 0.3) 100%);
+  z-index: 2;
+}
+
+/* ── Card Content ── */
+.moments-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.75rem;
+  position: relative;
+  z-index: 3;
+}
+
+/* ── Card Number Badge ── */
+.moments-card-number {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--pink) 0%, var(--pink-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  opacity: 0.6;
+}
+
+/* ── Card Icon ── */
+.moments-card-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245, 195, 219, 0.15);
+  border: 1px solid rgba(245, 195, 219, 0.3);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.moments-card-icon svg {
+  width: 32px;
+  height: 32px;
+  transition: all 0.3s ease;
+}
+
+.moments-card-premium:hover .moments-card-icon {
+  background: rgba(245, 195, 219, 0.25);
+  border-color: var(--pink);
+  transform: scale(1.15) rotate(8deg);
+}
+
+.moments-card-premium:hover .moments-card-icon svg {
+  filter: drop-shadow(0 4px 12px rgba(204, 51, 102, 0.25));
+}
+
+/* ── Card Title & Description ── */
+.moments-card-title {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.moments-card-premium:hover .moments-card-title {
+  color: var(--pink-dark);
+}
+
+.moments-card-description {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Card Accent Line ── */
+.moments-card-accent {
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--pink) 0%, var(--pink-dark) 100%);
+  margin-top: auto;
+  transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  opacity: 0;
+}
+
+.moments-card-premium:hover .moments-card-accent {
+  width: 100%;
+  opacity: 1;
+}
+
+/* ── Closing Message ── */
+.moments-closing-message {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, rgba(245, 195, 219, 0.12) 0%, rgba(204, 51, 102, 0.08) 100%);
+  border: 1px solid rgba(245, 195, 219, 0.25);
+  border-radius: 12px;
+  margin-top: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.moments-closing-text {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.moments-closing-emphasis {
+  background: linear-gradient(135deg, var(--pink) 0%, var(--pink-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* ════════════════════════════════════════════
+   RESPONSIVE : MOMENTS SECTION
+════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .moments-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .moments-card-image {
+    height: 220px;
+  }
+
+  .moments-title-redesigned {
+    font-size: 2rem;
+  }
+
+  .moments-closing-text {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .moments-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .moments-card-image {
+    height: 200px;
+  }
+
+  .moments-card-content {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .moments-title-redesigned {
+    font-size: 1.5rem;
+  }
+
+  .moments-subtitle-redesigned {
+    font-size: 0.95rem;
+  }
+
+  .moments-intro-quote {
+    font-size: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .moments-card-title {
+    font-size: 1.1rem;
+  }
+
+  .moments-card-description {
+    font-size: 0.9rem;
+  }
+
+  .moments-closing-text {
+    font-size: 1rem;
+  }
+
+  .moments-badge {
+    font-size: 9px;
+    padding: 6px 12px;
+  }
+
+  .moments-closing-message {
+    padding: 2rem 1.5rem;
+  }
 }
 
 /* ════════════════════════════════════════════
