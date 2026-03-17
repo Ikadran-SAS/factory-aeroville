@@ -1,0 +1,426 @@
+@extends('layouts.app')
+@section('title', $seo['title'])
+@section('description', $seo['description'])
+@section('keywords', $seo['keywords'])
+@section('canonical', $seo['canonical'])
+
+@push('schema')
+@php
+    $breadcrumbSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            [
+                '@type' => 'ListItem',
+                'position' => 1,
+                'name' => 'Accueil',
+                'item' => route('home')
+            ],
+            [
+                '@type' => 'ListItem',
+                'position' => 2,
+                'name' => 'Nos Spécialités',
+                'item' => route('specialites')
+            ]
+        ]
+    ];
+@endphp
+<script type="application/ld+json">{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+@endpush
+
+@section('content')
+
+{{-- ════════════════════════════════════════════
+     BREADCRUMB
+════════════════════════════════════════════ --}}
+<nav class="breadcrumb"><div class="breadcrumb-inner"><a href="{{ route('home') }}">Accueil</a><span class="bc-sep">›</span><span>Nos Spécialités</span></div></nav>
+
+{{-- ════════════════════════════════════════════
+     HERO SECTION
+════════════════════════════════════════════ --}}
+<section class="hero hero-specialites">
+    <div class="hero-bg" style="background-image: url('https://restaurants.factoryandco.com/wp-content/uploads/2020/07/smash-burger.webp')" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+        <span class="section-tag">🌟 Nos Spécialités</span>
+        <h1>Nos Spécialités<br><em>L'Excellence à chaque bouchée</em></h1>
+        <p class="hero-sub">Smash, Bagels, Cheesecake & Breakfast : 4 piliers du goût authentique</p>
+        <div class="hero-ctas">
+            <a href="{{ route('menu.burgers') }}" class="btn btn-pink">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Découvrir la carte
+            </a>
+        </div>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     SECTION INTRO - La Philosophie
+════════════════════════════════════════════ --}}
+<section class="section section-light">
+    <div class="container">
+        <div class="concept-grid">
+            <div class="concept-text">
+                <span class="section-tag dark">Chaque spécialité</span>
+                <h2 class="section-title dark">
+                    Chaque spécialité<br>
+                    <em>raconte une histoire</em>
+                </h2>
+                <p>Chez Factory &amp; Co, nos spécialités ne sont pas juste des plats. Ce sont des célébrations du savoir-faire, nées de la passion du chef <strong>Jonathan Jablonski</strong> et de son engagement envers l'authenticité.</p>
+                <p>Chaque recette a été affinée au fil des années. Chaque ingrédient sélectionné avec soin. Chaque préparation respecte des standards qu'on ne compromet jamais.</p>
+                <p><strong>Ici, on ne fait pas des compromis. Jamais.</strong></p>
+            </div>
+            <div class="concept-image">
+                <img src="{{ asset('images/factory-val-interieur.webp') }}"
+                     alt="Intérieur Factory & Co Val d'Europe"
+                     loading="lazy" width="700" height="500">
+                <div class="concept-badge">
+                    <span class="concept-badge-title">Premium</span>
+                    <span class="concept-badge-sub">Made Daily</span>
+                    <span class="concept-badge-detail">100% à la minute</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     SECTION : 4 SPÉCIALITÉS EN SHOWCASE
+════════════════════════════════════════════ --}}
+<section class="section section-dark">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-tag">Galerie</span>
+            <h2 class="section-title light">Les 4 piliers<br>qui font notre réputation</h2>
+        </div>
+
+        <div class="specialites-grid">
+            {{-- SMASH BURGERS --}}
+            <div class="specialite-card">
+                <div class="specialite-image">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/smash-burger.webp" alt="Smash Burgers Factory & Co" loading="lazy">
+                    <span class="specialite-badge">Signature</span>
+                </div>
+                <div class="specialite-content">
+                    <h3>Smash Burgers</h3>
+                    <p>L'art de la simplicité. Plaque brûlante, viande frémissante, fromage coulant. Le burger comme il faut.</p>
+                    <div class="specialite-meta">
+                        <span>⏱️ Rapide</span>
+                        <span>🔥 Gourmand</span>
+                    </div>
+                    <a href="{{ route('menu.burgers') }}" class="btn btn-pink btn-sm">
+                        Découvrir
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            {{-- BAGELS --}}
+            <div class="specialite-card">
+                <div class="specialite-image">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/BLT-SEUL-2.jpg" alt="Bagels Authentiques Factory & Co" loading="lazy">
+                    <span class="specialite-badge">Star</span>
+                </div>
+                <div class="specialite-content">
+                    <h3>Bagels Authentiques</h3>
+                    <p>Directement de Brooklyn. Croquant dehors, moelleux dedans. Un aller simple pour New York, sans quitter votre table.</p>
+                    <div class="specialite-meta">
+                        <span>🌅 Breakfast</span>
+                        <span>✨ Artisanal</span>
+                    </div>
+                    <a href="{{ route('menu.bagels') }}" class="btn btn-pink btn-sm">
+                        Découvrir
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            {{-- CHEESECAKE --}}
+            <div class="specialite-card">
+                <div class="specialite-image">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/Factory_And_Co_Claye_Souilly_Jon_Filin_Burger_Cheesecake_Sports_Bar-6.png" alt="Cheesecake Factory & Co" loading="lazy">
+                    <span class="specialite-badge">Must-try</span>
+                </div>
+                <div class="specialite-content">
+                    <h3>Cheesecake Factory</h3>
+                    <p>Noir New-Yorkais. Fromage frais, biscuit beurre, crème fouettée. L'indulgence en assiette, signée Factory &amp; Co.</p>
+                    <div class="specialite-meta">
+                        <span>🎂 Dessert</span>
+                        <span>💎 Iconique</span>
+                    </div>
+                    <a href="{{ route('menu.cheesecake') }}" class="btn btn-pink btn-sm">
+                        Découvrir
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            {{-- BREAKFAST --}}
+            <div class="specialite-card">
+                <div class="specialite-image">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/smoothiee.jpeg" alt="Breakfast Américain Factory & Co" loading="lazy">
+                    <span class="specialite-badge">Premium</span>
+                </div>
+                <div class="specialite-content">
+                    <h3>Breakfast Américain</h3>
+                    <p>Ouverts dès 07h00. Bagels frais, œufs brouillés, bacon croustillant, café de qualité. Le vrai breakfast, pas la version pauvre.</p>
+                    <div class="specialite-meta">
+                        <span>☕ Matinal</span>
+                        <span>🥓 Copieux</span>
+                    </div>
+                    <a href="{{ route('menu.index') }}" class="btn btn-pink btn-sm">
+                        Découvrir
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     SECTION : PROCESSUS QUALITÉ
+════════════════════════════════════════════ --}}
+<section class="section section-light">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-tag dark">Notre promesse</span>
+            <h2 class="section-title dark">Qualité sans<br><em>compromis</em></h2>
+        </div>
+
+        <div class="quality-pillars">
+            <div class="pillar">
+                <div class="pillar-icon">🌟</div>
+                <h3>Fraîcheur</h3>
+                <p>100% préparé à la commande. Zéro surgelé. Zéro compromis. Chaque plat respire la fraîcheur du moment.</p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-icon">👨‍🍳</div>
+                <h3>Craft</h3>
+                <p>Recettes exclusives du chef Jonathan Jablonski, formé aux côtés des plus grands de Brooklyn. 15+ ans d'expérience culinaire.</p>
+            </div>
+            <div class="pillar">
+                <div class="pillar-icon">🗽</div>
+                <h3>Authenticité</h3>
+                <p>Ingrédients sélectionnés avec soin. Goût New-Yorkais authentique. L'ADN des diners américains, transporté au cœur de Val d'Europe.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     SECTION : CTA COMMANDER
+════════════════════════════════════════════ --}}
+<section class="section section-cta-large">
+    <div class="container">
+        <div class="cta-large-content">
+            <img src="{{ asset('images/ashley.webp') }}" alt="Prêt à vivre l'expérience" class="cta-image">
+            <div class="cta-text">
+                <h2>Prêt à vivre<br>l'expérience ?</h2>
+                <p>Nos spécialités vous attendent. Que ce soit sur place, à emporter, ou en commande rapide : vivez l'authenticité Factory &amp; Co.</p>
+                <div class="cta-actions">
+                    <a href="{{ route('menu.index') }}" class="btn btn-pink">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                        La carte complète
+                    </a>
+                    <a href="javascript:void(0)" onclick="window.factoryCoNav && window.factoryCoNav.openNavigationModal()" class="btn btn-outline-dark">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Venir chez nous
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     SECTION : FAQ
+════════════════════════════════════════════ --}}
+<section class="section section-light" id="faq">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-tag dark">Questions ?</span>
+            <h2 class="section-title dark">Questions fréquentes</h2>
+        </div>
+        {{-- Accordéon FAQs avec Vue --}}
+        <div id="faq-accordion-app" data-faqs="{{ base64_encode(json_encode($faqs)) }}"></div>
+        <div class="faq-cta text-center">
+            <p>Vous avez d'autres questions ?</p>
+            <a href="{{ route('contact') }}" class="btn btn-outline-pink">Nous contacter</a>
+        </div>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     SECTION : NEWSLETTER
+════════════════════════════════════════════ --}}
+<section class="section section-dark newsletter-section">
+    <div class="container">
+        <div class="newsletter-content">
+            <h2>Restez connecté</h2>
+            <p>Recevez nos nouveaux menus, promotions et actualités spécialités en avant-première.</p>
+            <form class="newsletter-form" method="POST" action="#">
+                @csrf
+                <input type="email" placeholder="votre@email.com" required>
+                <button type="submit" class="btn btn-pink">S'abonner</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+@endsection
+
+<style>
+{{-- Styles CSS pour la page spécialités --}}
+.specialites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.specialite-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.specialite-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+}
+
+.specialite-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
+
+.specialite-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition);
+}
+
+.specialite-card:hover .specialite-image img {
+    transform: scale(1.05);
+}
+
+.specialite-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--pink);
+    color: var(--navy);
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+.specialite-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.specialite-content h3 {
+    font-size: 1.35rem;
+    color: var(--white);
+    margin: 0;
+    font-family: var(--font-title);
+}
+
+.specialite-content p {
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.specialite-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--pink);
+    margin-top: 0.5rem;
+}
+
+.btn-sm {
+    padding: 0.6rem 1.25rem;
+    font-size: 12px;
+}
+
+/* Quality Pillars */
+.quality-pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.pillar {
+    text-align: center;
+    padding: 2rem 1.5rem;
+}
+
+.pillar-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.pillar h3 {
+    font-family: var(--font-title);
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+}
+
+.pillar p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* CTA Section */
+.cta-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.cta-actions .btn {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .specialites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quality-pillars {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+    }
+
+    .cta-actions .btn {
+        width: 100%;
+    }
+}
+</style>

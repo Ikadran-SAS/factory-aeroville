@@ -7,6 +7,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\SpecialitesController;
 use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 /* ── NIVEAU 1 : Hub de marque ── */
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/concept', [ConceptController::class, 'index'])->name('concept');
+Route::get('/specialites', [SpecialitesController::class, 'index'])->name('specialites');
 Route::get('/avis', [AvisController::class, 'index'])->name('avis');
 
 /* ── NIVEAU 2 : Silos produits ── */

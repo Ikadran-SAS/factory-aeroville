@@ -47,6 +47,7 @@
             <div class="footer-col">
                 <h4>Informations</h4>
                 <ul>
+                    <li><a href="{{ route('specialites') }}">Nos spécialités</a></li>
                     <li><a href="{{ route('blog.index') }}">Guide du voyageur</a></li>
                     <li><a href="#">Recrutement</a></li>
                     <li><a href="#">Mentions légales</a></li>
