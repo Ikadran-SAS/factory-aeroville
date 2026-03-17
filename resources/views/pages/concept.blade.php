@@ -180,87 +180,205 @@
 </section>
 
 {{-- ════════════════════════════════════════════
-     SECTION : L'EXPÉRIENCE CLIENT
+     SECTION : L'EXPÉRIENCE CLIENT (REDESIGNÉE)
 ════════════════════════════════════════════ --}}
-<section class="section section-light">
+<section class="section experience-section-redesigned">
     <div class="container">
-        <h2 class="concept-title">🍽️ L'Expérience Client</h2>
-        <p class="section-subtitle">Un moment qui s'adapte à vous</p>
+        {{-- Header Premium --}}
+        <div class="experience-header-redesigned">
+            <h2 class="experience-title-redesigned">
+                L'<span class="experience-highlight">Expérience Client</span>
+            </h2>
+            <p class="experience-subtitle-redesigned">Un moment qui s'adapte à vous</p>
+        </div>
 
-        <div class="experience-content">
-            <p style="margin-bottom: 2rem; font-size: 1.05rem;">
-                Que vous soyez en pleine session shopping, en pause déjeuner ou en sortie détente, notre restaurant s'intègre naturellement dans votre journée.
-            </p>
+        {{-- Intro text en citation premium --}}
+        <blockquote class="experience-intro-quote">
+            Que vous soyez en pleine session shopping, en pause déjeuner ou en sortie détente, notre restaurant s'intègre naturellement dans votre journée.
+        </blockquote>
 
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <h4>Prendre le temps</h4>
-                    <p>vous poser et savourer chaque bouchée</p>
+        {{-- 4 Moments/Expériences en grille 2x2 premium --}}
+        <div class="experience-moments-grid">
+            {{-- Moment 1: Prendre le temps --}}
+            <div class="experience-moment-card">
+                <div class="moment-icon-wrapper">
+                    <svg class="moment-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
                 </div>
-                <div class="benefit-card">
-                    <h4>Manger rapidement</h4>
-                    <p>sans compromis sur la qualité</p>
+                <div class="moment-content">
+                    <h3 class="moment-title">Prendre le temps</h3>
+                    <p class="moment-description">Vous poser et savourer chaque bouchée</p>
                 </div>
-                <div class="benefit-card">
-                    <h4>Partager un moment</h4>
-                    <p>convivial et chaleureux</p>
-                </div>
-                <div class="benefit-card">
-                    <h4>S'offrir une pause</h4>
-                    <p>gourmande et réconfortante</p>
-                </div>
+                <div class="moment-accent"></div>
             </div>
 
-            <p style="text-align: center; margin-top: 2rem; font-style: italic; color: var(--pink-dark);">
-                Ici, tout est conçu pour être simple, fluide et agréable.
+            {{-- Moment 2: Manger rapidement --}}
+            <div class="experience-moment-card">
+                <div class="moment-icon-wrapper">
+                    <svg class="moment-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <div class="moment-content">
+                    <h3 class="moment-title">Manger rapidement</h3>
+                    <p class="moment-description">Sans compromis sur la qualité</p>
+                </div>
+                <div class="moment-accent"></div>
+            </div>
+
+            {{-- Moment 3: Partager un moment --}}
+            <div class="experience-moment-card">
+                <div class="moment-icon-wrapper">
+                    <svg class="moment-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+                    </svg>
+                </div>
+                <div class="moment-content">
+                    <h3 class="moment-title">Partager un moment</h3>
+                    <p class="moment-description">Convivial et chaleureux</p>
+                </div>
+                <div class="moment-accent"></div>
+            </div>
+
+            {{-- Moment 4: S'offrir une pause --}}
+            <div class="experience-moment-card">
+                <div class="moment-icon-wrapper">
+                    <svg class="moment-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <div class="moment-content">
+                    <h3 class="moment-title">S'offrir une pause</h3>
+                    <p class="moment-description">Gourmande et réconfortante</p>
+                </div>
+                <div class="moment-accent"></div>
+            </div>
+        </div>
+
+        {{-- Conclusion impactante --}}
+        <div class="experience-conclusion">
+            <p class="experience-conclusion-text">
+                Ici, tout est conçu pour être <span class="experience-conclusion-highlight">simple, fluide et agréable.</span>
+            </p>
+            <p class="experience-conclusion-subtext">
+                ✓ Factory & Co - À chaque moment de votre journée
             </p>
         </div>
     </div>
 </section>
 
 {{-- ════════════════════════════════════════════
-     SECTION : NOTRE CUISINE
+     SECTION : NOTRE CUISINE (REDESIGNÉE)
 ════════════════════════════════════════════ --}}
-<section class="section section-dark">
+<section class="section section-dark cuisine-section-redesigned">
     <div class="container">
-        <h2 class="concept-title light">🍔 Notre Cuisine</h2>
-        <p class="text-light-muted" style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">Généreuse, gourmande, assumée</p>
-
-        <div class="cuisine-section">
-            <p class="text-light-muted" style="margin-bottom: 2rem; font-size: 1.05rem; text-align: center;">
-                Notre cuisine célèbre le plaisir.
+        {{-- Header Premium avec Badge --}}
+        <div class="cuisine-header-redesigned">
+            <span class="cuisine-badge">
+                <span class="cuisine-badge-icon">🍔</span>
+                Notre Cuisine
+            </span>
+            <h2 class="cuisine-title-redesigned">
+                Généreuse, <span class="cuisine-highlight">gourmande,</span> assumée
+            </h2>
+            <p class="cuisine-subtitle-redesigned">
+                Notre cuisine célèbre le plaisir
             </p>
+        </div>
 
-            <div class="cuisine-grid">
-                <div class="cuisine-item">
-                    <h4 style="color: var(--pink); margin-bottom: 0.5rem;">🍔 Burgers</h4>
-                    <p>Généreux au pain moelleux</p>
+        {{-- Intro text avec accent --}}
+        <blockquote class="cuisine-intro-quote">
+            Chaque assiette est une promesse de gourmandise, chaque détail pensé pour créer un moment mémorable.
+        </blockquote>
+
+        {{-- Grille 4 Catégories (2x2) avec cartes animées --}}
+        <div class="cuisine-categories-grid">
+            {{-- Catégorie 1: Burgers --}}
+            <div class="cuisine-category-card">
+                <div class="category-emoji-wrapper">
+                    <span class="category-emoji">🍔</span>
                 </div>
-                <div class="cuisine-item">
-                    <h4 style="color: var(--pink); margin-bottom: 0.5rem;">🍽️ Recettes</h4>
-                    <p>Travaillées et savoureuses</p>
+                <div class="category-content">
+                    <h3 class="category-title">Burgers</h3>
+                    <p class="category-description">
+                        Généreux au pain moelleux
+                    </p>
+                    <div class="category-accent-line"></div>
                 </div>
-                <div class="cuisine-item">
-                    <h4 style="color: var(--pink); margin-bottom: 0.5rem;">🍰 Desserts</h4>
-                    <p>Iconiques et régressifs</p>
-                </div>
-                <div class="cuisine-item">
-                    <h4 style="color: var(--pink); margin-bottom: 0.5rem;">🥤 Boissons</h4>
-                    <p>Gourmandes et rafraîchissantes</p>
-                </div>
+                <div class="category-accent-bar"></div>
             </div>
 
-            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(255, 195, 219, 0.1); border-radius: 2px;">
-                <p class="text-light-muted" style="margin-bottom: 1rem; font-weight: 500;">Chaque produit est pensé pour offrir :</p>
-                <ul class="checklist">
-                    <li>✔️ du goût</li>
-                    <li>✔️ de la texture</li>
-                    <li>✔️ de la satisfaction</li>
+            {{-- Catégorie 2: Recettes --}}
+            <div class="cuisine-category-card">
+                <div class="category-emoji-wrapper">
+                    <span class="category-emoji">🍽️</span>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-title">Recettes</h3>
+                    <p class="category-description">
+                        Travaillées et savoureuses
+                    </p>
+                    <div class="category-accent-line"></div>
+                </div>
+                <div class="category-accent-bar"></div>
+            </div>
+
+            {{-- Catégorie 3: Desserts --}}
+            <div class="cuisine-category-card">
+                <div class="category-emoji-wrapper">
+                    <span class="category-emoji">🍰</span>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-title">Desserts</h3>
+                    <p class="category-description">
+                        Iconiques et régressifs
+                    </p>
+                    <div class="category-accent-line"></div>
+                </div>
+                <div class="category-accent-bar"></div>
+            </div>
+
+            {{-- Catégorie 4: Boissons --}}
+            <div class="cuisine-category-card">
+                <div class="category-emoji-wrapper">
+                    <span class="category-emoji">🥤</span>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-title">Boissons</h3>
+                    <p class="category-description">
+                        Gourmandes et rafraîchissantes
+                    </p>
+                    <div class="category-accent-line"></div>
+                </div>
+                <div class="category-accent-bar"></div>
+            </div>
+        </div>
+
+        {{-- Engagement Box avec checklist --}}
+        <div class="cuisine-engagement-box">
+            <div class="engagement-content">
+                <h3 class="engagement-title">Ce que nous garantissons</h3>
+                <ul class="engagement-checklist">
+                    <li class="checklist-item">
+                        <span class="checklist-badge">✔️</span>
+                        <span class="checklist-text">Du goût</span>
+                    </li>
+                    <li class="checklist-item">
+                        <span class="checklist-badge">✔️</span>
+                        <span class="checklist-text">De la texture</span>
+                    </li>
+                    <li class="checklist-item">
+                        <span class="checklist-badge">✔️</span>
+                        <span class="checklist-text">De la satisfaction</span>
+                    </li>
                 </ul>
-                <p class="text-light-muted" style="margin-top: 1rem; font-style: italic;">
+                <p class="engagement-tagline">
                     Parce que bien manger, c'est aussi se faire plaisir sans compromis.
                 </p>
             </div>
+            {{-- Image ashley subtle en arrière-plan --}}
+            <div class="engagement-image-bg"></div>
         </div>
     </div>
 </section>

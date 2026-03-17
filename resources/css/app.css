@@ -1282,6 +1282,1081 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   SECTION : L'EXPÉRIENCE CLIENT (REDESIGNÉE)
+═══════════════════════════════════════════════════════════════ */
+
+.experience-section-redesigned {
+  padding: 5rem 0;
+  background: var(--bg-light);
+  position: relative;
+}
+
+/* ── Header Premium ── */
+.experience-header-redesigned {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+/* ── Titre redesigné ── */
+.experience-title-redesigned {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.experience-highlight {
+  color: var(--pink-dark);
+  position: relative;
+  display: inline;
+}
+
+.experience-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pink-dark), var(--pink-mid), var(--pink-dark));
+  border-radius: 2px;
+  animation: experience-underline-pulse 2s ease-in-out infinite;
+}
+
+@keyframes experience-underline-pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ── Sous-titre ── */
+.experience-subtitle-redesigned {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-top: 1.5rem;
+}
+
+/* ── Intro Quote ── */
+.experience-intro-quote {
+  font-size: 1.1rem;
+  color: var(--navy);
+  line-height: 1.8;
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 4rem;
+  padding: 2rem;
+  border-left: 4px solid var(--pink-dark);
+  background: rgba(204, 51, 102, 0.06);
+  border-radius: 2px;
+  font-weight: 500;
+  position: relative;
+  letter-spacing: 0.2px;
+}
+
+.experience-intro-quote::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  font-size: 3.5rem;
+  color: var(--pink);
+  opacity: 0.25;
+  font-family: Georgia, serif;
+}
+
+/* ── Grille 4 Moments (2x2) ── */
+.experience-moments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+/* ── Card Moment ── */
+.experience-moment-card {
+  background: linear-gradient(135deg, rgba(245, 195, 219, 0.06) 0%, rgba(204, 51, 102, 0.02) 100%);
+  border: 1px solid rgba(204, 51, 102, 0.15);
+  border-radius: 6px;
+  padding: 2.25rem;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.experience-moment-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(245, 195, 219, 0.08), transparent);
+  transition: left 0.6s ease;
+  z-index: 0;
+}
+
+.experience-moment-card:hover {
+  background: linear-gradient(135deg, rgba(245, 195, 219, 0.12) 0%, rgba(204, 51, 102, 0.06) 100%);
+  border-color: rgba(204, 51, 102, 0.25);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(204, 51, 102, 0.12);
+}
+
+.experience-moment-card:hover::before {
+  left: 100%;
+}
+
+.experience-moment-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Icon Wrapper ── */
+.moment-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(204, 51, 102, 0.15), rgba(245, 195, 219, 0.1));
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(204, 51, 102, 0.2);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.moment-icon {
+  width: 28px;
+  height: 28px;
+  stroke: var(--pink-dark);
+  stroke-width: 1.5;
+  transition: all 0.4s ease;
+}
+
+.experience-moment-card:hover .moment-icon-wrapper {
+  background: linear-gradient(135deg, rgba(204, 51, 102, 0.25), rgba(245, 195, 219, 0.15));
+  border-color: rgba(204, 51, 102, 0.35);
+  transform: scale(1.1);
+}
+
+.experience-moment-card:hover .moment-icon {
+  stroke: var(--pink);
+  filter: drop-shadow(0 4px 12px rgba(245, 195, 219, 0.3));
+}
+
+/* ── Contenu Moment ── */
+.moment-content {
+  flex: 1;
+  width: 100%;
+}
+
+/* ── Titre Moment ── */
+.moment-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+/* ── Description Moment ── */
+.moment-description {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+}
+
+/* ── Accent Bar du Moment ── */
+.moment-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--pink-dark), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 2px;
+}
+
+.experience-moment-card:hover .moment-accent {
+  opacity: 1;
+  animation: moment-accent-glow 0.6s ease-in-out;
+}
+
+@keyframes moment-accent-glow {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+/* ── Conclusion Impactante ── */
+.experience-conclusion {
+  text-align: center;
+  max-width: 750px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, rgba(245, 195, 219, 0.08) 0%, rgba(204, 51, 102, 0.04) 100%);
+  border: 1px solid rgba(204, 51, 102, 0.15);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-conclusion::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(245, 195, 219, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.experience-conclusion > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Texte de Conclusion ── */
+.experience-conclusion-text {
+  font-size: 1.15rem;
+  color: var(--navy);
+  line-height: 1.8;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  margin-bottom: 1.25rem;
+}
+
+.experience-conclusion-highlight {
+  color: var(--pink-dark);
+  font-weight: 700;
+  position: relative;
+}
+
+.experience-conclusion-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--pink-dark);
+  border-radius: 1px;
+  opacity: 0.5;
+}
+
+/* ── Sous-texte de Conclusion ── */
+.experience-conclusion-subtext {
+  font-size: 0.95rem;
+  color: var(--pink-dark);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .experience-moments-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .experience-moment-card {
+    padding: 2rem;
+  }
+
+  .experience-title-redesigned {
+    font-size: clamp(1.75rem, 3.5vw, 2.2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-section-redesigned {
+    padding: 3.5rem 0;
+  }
+
+  .experience-header-redesigned {
+    margin-bottom: 3rem;
+  }
+
+  .experience-title-redesigned {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .experience-subtitle-redesigned {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
+
+  .experience-intro-quote {
+    font-size: 1rem;
+    padding: 1.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .experience-moments-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .experience-moment-card {
+    padding: 1.75rem;
+  }
+
+  .moment-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1.25rem;
+  }
+
+  .moment-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .moment-title {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 0.6rem;
+  }
+
+  .moment-description {
+    font-size: 0.9rem;
+  }
+
+  .experience-highlight::after {
+    bottom: -8px;
+  }
+
+  .experience-conclusion {
+    margin: 2.5rem auto;
+    padding: 2rem;
+  }
+
+  .experience-conclusion-text {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-title-redesigned {
+    font-size: 1.5rem;
+  }
+
+  .experience-intro-quote {
+    font-size: 0.95rem;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .experience-moments-grid {
+    gap: 1.5rem;
+  }
+
+  .experience-moment-card {
+    padding: 1.5rem;
+  }
+
+  .moment-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 1rem;
+  }
+
+  .moment-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .moment-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .moment-description {
+    font-size: 0.85rem;
+  }
+
+  .experience-conclusion {
+    padding: 1.5rem;
+  }
+
+  .experience-conclusion-text {
+    font-size: 1rem;
+  }
+
+  .experience-conclusion-subtext {
+    font-size: 0.85rem;
+  }
+
+  .experience-intro-quote::before {
+    font-size: 2.5rem;
+    top: -5px;
+    left: 10px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SECTION : NOTRE CUISINE (REDESIGNÉE)
+═══════════════════════════════════════════════════════════════ */
+
+.cuisine-section-redesigned {
+  padding: 5rem 0;
+  background: var(--navy);
+  position: relative;
+}
+
+/* ── Header Premium avec Badge ── */
+.cuisine-header-redesigned {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+/* ── Badge animé ── */
+.cuisine-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: rgba(245, 195, 219, 0.15);
+  color: var(--pink);
+  padding: 7px 18px;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  border: 1.5px solid rgba(245, 195, 219, 0.3);
+  animation: cuisine-badge-pulse 2.5s ease-in-out infinite;
+}
+
+.cuisine-badge-icon {
+  font-size: 13px;
+  display: inline-block;
+  animation: cuisine-icon-bounce 2s ease-in-out infinite;
+}
+
+@keyframes cuisine-badge-pulse {
+  0%, 100% {
+    background: rgba(245, 195, 219, 0.12);
+    border-color: rgba(245, 195, 219, 0.25);
+  }
+  50% {
+    background: rgba(245, 195, 219, 0.18);
+    border-color: rgba(245, 195, 219, 0.35);
+    box-shadow: 0 0 20px rgba(245, 195, 219, 0.2);
+  }
+}
+
+@keyframes cuisine-icon-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+/* ── Titre principal ── */
+.cuisine-title-redesigned {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.cuisine-highlight {
+  color: var(--pink-dark);
+  position: relative;
+  display: inline;
+}
+
+.cuisine-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pink-dark), var(--pink-mid), var(--pink-dark));
+  border-radius: 2px;
+  animation: cuisine-underline-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes cuisine-underline-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    width: 100%;
+  }
+  50% {
+    opacity: 1;
+    width: 105%;
+  }
+}
+
+/* ── Sous-titre ── */
+.cuisine-subtitle-redesigned {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-top: 1.5rem;
+}
+
+/* ── Intro Quote ── */
+.cuisine-intro-quote {
+  font-size: 1.1rem;
+  color: var(--white);
+  line-height: 1.8;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  padding: 2.25rem;
+  border-left: 4px solid var(--pink);
+  background: rgba(245, 195, 219, 0.08);
+  border-radius: 4px;
+  font-weight: 500;
+  position: relative;
+  letter-spacing: 0.3px;
+}
+
+.cuisine-intro-quote::before {
+  content: '"';
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  font-size: 4rem;
+  color: var(--pink);
+  opacity: 0.2;
+  font-family: Georgia, serif;
+}
+
+/* ── Grille 4 Catégories (2x2) ── */
+.cuisine-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+/* ── Card Catégorie ── */
+.cuisine-category-card {
+  background: linear-gradient(135deg, rgba(245, 195, 219, 0.08) 0%, rgba(204, 51, 102, 0.04) 100%);
+  border: 1px solid rgba(245, 195, 219, 0.12);
+  border-radius: 6px;
+  padding: 2.25rem;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Shimmer effect au hover */
+.cuisine-category-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(245, 195, 219, 0.1), transparent);
+  transition: left 0.6s ease;
+  z-index: 0;
+}
+
+.cuisine-category-card:hover {
+  background: linear-gradient(135deg, rgba(245, 195, 219, 0.15) 0%, rgba(204, 51, 102, 0.08) 100%);
+  border-color: rgba(245, 195, 219, 0.25);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(204, 51, 102, 0.15);
+}
+
+.cuisine-category-card:hover::before {
+  left: 100%;
+}
+
+.cuisine-category-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Emoji Wrapper ── */
+.category-emoji-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: rgba(245, 195, 219, 0.15);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid rgba(245, 195, 219, 0.2);
+}
+
+.cuisine-category-card:hover .category-emoji-wrapper {
+  background: rgba(245, 195, 219, 0.25);
+  border-color: rgba(245, 195, 219, 0.35);
+  transform: scale(1.12) rotateZ(-5deg);
+  box-shadow: 0 8px 24px rgba(245, 195, 219, 0.2);
+}
+
+.category-emoji {
+  font-size: 2rem;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cuisine-category-card:hover .category-emoji {
+  animation: category-emoji-bounce 0.6s ease-in-out;
+}
+
+@keyframes category-emoji-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-4px);
+  }
+}
+
+/* ── Contenu de la catégorie ── */
+.category-content {
+  flex: 1;
+}
+
+/* ── Titre de la catégorie ── */
+.category-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+/* ── Description de la catégorie ── */
+.category-description {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.2px;
+  transition: color 0.3s ease;
+}
+
+.cuisine-category-card:hover .category-description {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Accent Line intérieure ── */
+.category-accent-line {
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--pink), var(--pink-mid));
+  border-radius: 1px;
+  opacity: 0.7;
+  transition: all 0.4s ease;
+}
+
+.cuisine-category-card:hover .category-accent-line {
+  width: 60px;
+  opacity: 1;
+}
+
+/* ── Accent Bar (bas de la card) ── */
+.category-accent-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--pink), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 2px;
+}
+
+.cuisine-category-card:hover .category-accent-bar {
+  opacity: 1;
+  animation: category-bar-glow 0.6s ease-in-out;
+}
+
+@keyframes category-bar-glow {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+/* ═══════════════════════════════════════════
+   Engagement Box - Garanties
+═══════════════════════════════════════════ */
+
+.cuisine-engagement-box {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(245, 195, 219, 0.1) 0%, rgba(204, 51, 102, 0.05) 100%);
+  border: 1px solid rgba(245, 195, 219, 0.15);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Fond image subtle avec ashley.webp */
+.engagement-image-bg {
+  position: absolute;
+  right: -50px;
+  top: -30%;
+  width: 450px;
+  height: 450px;
+  background-image: url('/images/ashley.webp');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(2px);
+  z-index: 0;
+}
+
+/* ── Contenu ── */
+.engagement-content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.engagement-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.3rem, 3vw, 1.65rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.01em;
+}
+
+/* ── Checklist ── */
+.engagement-checklist {
+  list-style: none;
+  margin-bottom: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  transition: all 0.3s ease;
+}
+
+.checklist-item:hover {
+  transform: translateX(8px);
+}
+
+.checklist-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(245, 195, 219, 0.2);
+  border-radius: 50%;
+  color: var(--pink);
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  border: 1.5px solid rgba(245, 195, 219, 0.35);
+  transition: all 0.3s ease;
+}
+
+.checklist-item:hover .checklist-badge {
+  background: rgba(245, 195, 219, 0.3);
+  border-color: rgba(245, 195, 219, 0.5);
+  box-shadow: 0 0 16px rgba(245, 195, 219, 0.25);
+  transform: scale(1.1);
+}
+
+.checklist-text {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* ── Tagline ── */
+.engagement-tagline {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  font-style: italic;
+  letter-spacing: 0.2px;
+}
+
+/* ═══════════════════════════════════════════
+   Responsive - Cuisine Section
+═══════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .cuisine-categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .cuisine-category-card {
+    padding: 1.75rem;
+  }
+
+  .cuisine-title-redesigned {
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  }
+
+  .cuisine-engagement-box {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem;
+  }
+
+  .engagement-image-bg {
+    width: 350px;
+    height: 350px;
+    right: -80px;
+    top: -20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cuisine-section-redesigned {
+    padding: 3.5rem 0;
+  }
+
+  .cuisine-header-redesigned {
+    margin-bottom: 3rem;
+  }
+
+  .cuisine-categories-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .cuisine-category-card {
+    padding: 1.5rem;
+  }
+
+  .category-emoji-wrapper {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1.25rem;
+  }
+
+  .category-emoji {
+    font-size: 1.75rem;
+  }
+
+  .category-title {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    margin-bottom: 0.65rem;
+  }
+
+  .category-description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .cuisine-intro-quote {
+    font-size: 1rem;
+    padding: 1.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .cuisine-highlight::after {
+    bottom: -6px;
+  }
+
+  .cuisine-engagement-box {
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
+  .engagement-content {
+    flex: 1;
+  }
+
+  .engagement-image-bg {
+    width: 280px;
+    height: 280px;
+    right: -60px;
+    opacity: 0.06;
+  }
+
+  .engagement-title {
+    font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .checklist-item {
+    font-size: 0.95rem;
+    gap: 1rem;
+  }
+
+  .checklist-badge {
+    width: 28px;
+    height: 28px;
+    font-size: 0.95rem;
+  }
+
+  .cuisine-title-redesigned {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .cuisine-subtitle-redesigned {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cuisine-section-redesigned {
+    padding: 2.5rem 0;
+  }
+
+  .cuisine-badge {
+    font-size: 10px;
+    padding: 5px 12px;
+    margin-bottom: 1.5rem;
+  }
+
+  .cuisine-title-redesigned {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .cuisine-subtitle-redesigned {
+    font-size: 0.9rem;
+  }
+
+  .cuisine-categories-grid {
+    gap: 1.5rem;
+  }
+
+  .cuisine-category-card {
+    padding: 1.25rem;
+  }
+
+  .category-emoji-wrapper {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+  }
+
+  .category-emoji {
+    font-size: 1.5rem;
+  }
+
+  .category-title {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .category-description {
+    font-size: 0.85rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .cuisine-intro-quote {
+    font-size: 0.95rem;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .cuisine-intro-quote::before {
+    font-size: 2.5rem;
+    top: -8px;
+    left: 12px;
+  }
+
+  .cuisine-engagement-box {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .engagement-image-bg {
+    display: none;
+  }
+
+  .engagement-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .engagement-checklist {
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .checklist-item {
+    font-size: 0.9rem;
+    gap: 0.85rem;
+  }
+
+  .checklist-badge {
+    width: 26px;
+    height: 26px;
+    font-size: 0.85rem;
+  }
+
+  .engagement-tagline {
+    font-size: 0.9rem;
+  }
+
+  .cuisine-highlight::after {
+    bottom: -5px;
+    height: 2px;
+  }
+
+  .cuisine-category-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .cuisine-category-card:hover .category-emoji-wrapper {
+    transform: scale(1.08) rotateZ(-3deg);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════════════════════════════ */
 
