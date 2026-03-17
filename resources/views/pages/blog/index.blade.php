@@ -30,7 +30,6 @@
 <nav class="breadcrumb"><div class="breadcrumb-inner"><a href="{{ route('home') }}">Accueil</a><span class="bc-sep">›</span><span>Blog</span></div></nav>
 <div class="page-hero">
     <div class="page-hero-inner">
-        <span class="section-tag">E-E-A-T · Expertise · Autorité · Confiance</span>
         <h1>Blog –<br><em>Val d'Europe & Conseils</em></h1>
         <p>Conseils pratiques, astuces shopping, guides gastronomiques et informations pratiques pour votre visite à Val d'Europe.</p>
     </div>
