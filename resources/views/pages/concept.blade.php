@@ -296,6 +296,9 @@
         <div class="cuisine-categories-grid">
             {{-- Catégorie 1: Burgers --}}
             <div class="cuisine-category-card">
+                <div class="category-image">
+                    <img src="/images/burger.webp" alt="Délicieux burger gourmand" />
+                </div>
                 <div class="category-emoji-wrapper">
                     <span class="category-emoji">🍔</span>
                 </div>
@@ -311,6 +314,9 @@
 
             {{-- Catégorie 2: Recettes --}}
             <div class="cuisine-category-card">
+                <div class="category-image">
+                    <img src="/images/recettes.webp" alt="Recettes travaillées et savoureuses" />
+                </div>
                 <div class="category-emoji-wrapper">
                     <span class="category-emoji">🍽️</span>
                 </div>
@@ -326,6 +332,9 @@
 
             {{-- Catégorie 3: Desserts --}}
             <div class="cuisine-category-card">
+                <div class="category-image">
+                    <img src="/images/desserts.webp" alt="Desserts iconiques et régressifs" />
+                </div>
                 <div class="category-emoji-wrapper">
                     <span class="category-emoji">🍰</span>
                 </div>
@@ -341,6 +350,9 @@
 
             {{-- Catégorie 4: Boissons --}}
             <div class="cuisine-category-card">
+                <div class="category-image">
+                    <img src="/images/boissons.webp" alt="Boissons gourmandes et rafraîchissantes" />
+                </div>
                 <div class="category-emoji-wrapper">
                     <span class="category-emoji">🥤</span>
                 </div>
