@@ -657,39 +657,117 @@
 
 
 {{-- ════════════════════════════════════════════
-     SECTION : L'AMBIANCE
+     SECTION : L'AMBIANCE DU LIEU (REDESIGNÉE)
 ════════════════════════════════════════════ --}}
-<section class="section section-dark">
+<section class="section ambiance-section-redesigned">
     <div class="container">
-        <h2 class="concept-title light">🏙️ L'Ambiance du Lieu</h2>
-        <p class="text-light-muted" style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">Un lieu vivant, chaleureux et moderne</p>
+        {{-- Header Premium --}}
+        <div class="ambiance-header-redesigned">
+            <span class="ambiance-badge">
+                <span class="ambiance-badge-icon">✨</span>
+                L'Ambiance du Lieu
+            </span>
+            <h2 class="ambiance-title-redesigned">
+                Un espace <span class="ambiance-highlight">vivant et mémorable</span>
+            </h2>
+            <p class="ambiance-subtitle-redesigned">Dès l'entrée, l'atmosphère vous transporte</p>
+        </div>
 
-        <div class="ambiance-content">
-            <p class="text-light-muted" style="margin-bottom: 2rem; font-size: 1.05rem; text-align: center;">
-                Dès l'entrée, l'atmosphère se fait ressentir.
-            </p>
+        {{-- Intro Quote --}}
+        <blockquote class="ambiance-intro-quote">
+            Factory & Co n'est pas juste un restaurant. C'est un univers pensé dans les moindres détails pour transformer chaque visite en souvenir.
+        </blockquote>
 
-            <div class="ambiance-list">
-                <div class="ambiance-item">
-                    <span class="ambiance-icon">🎨</span>
-                    <h4>Design urbain</h4>
-                    <p>Inspiré des grandes villes</p>
+        {{-- 3 Premium Ambiance Cards avec images --}}
+        <div class="ambiance-cards-grid">
+            {{-- Card 1: Design Urbain --}}
+            <div class="ambiance-card-premium">
+                <div class="ambiance-card-image">
+                    <img src="{{ asset('images/factory-val-interieur.webp') }}" alt="Design urbain Factory & Co - Intérieur moderne et inspiré" loading="lazy">
+                    <div class="ambiance-card-overlay"></div>
                 </div>
-                <div class="ambiance-item">
-                    <span class="ambiance-icon">👥</span>
-                    <h4>Ambiance conviviale</h4>
-                    <p>Pensée pour se retrouver</p>
-                </div>
-                <div class="ambiance-item">
-                    <span class="ambiance-icon">✨</span>
-                    <h4>Espace détente</h4>
-                    <p>Qui invite à profiter</p>
+                <div class="ambiance-card-content">
+                    <div class="ambiance-card-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <defs>
+                                <linearGradient id="grad-ambiance-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="12" y="18" width="40" height="30" rx="2" stroke="url(#grad-ambiance-1)" stroke-width="2.5" fill="none"/>
+                            <line x1="12" y1="26" x2="52" y2="26" stroke="url(#grad-ambiance-1)" stroke-width="2"/>
+                            <rect x="16" y="20" width="6" height="6" stroke="url(#grad-ambiance-1)" stroke-width="2" fill="none"/>
+                            <rect x="42" y="20" width="6" height="6" stroke="url(#grad-ambiance-1)" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3 class="ambiance-card-title">Design Urbain</h3>
+                    <p class="ambiance-card-description">Inspiré des grandes villes, notre intérieur fusionne style new-yorkais et savoir-faire français</p>
+                    <div class="ambiance-card-accent"></div>
                 </div>
             </div>
 
-            <p class="text-light-muted" style="text-align: center; margin-top: 2rem; font-style: italic;">
-                Que ce soit pour une pause rapide ou un moment plus long, l'espace invite à se détendre et à profiter.
-            </p>
+            {{-- Card 2: Ambiance Conviviale --}}
+            <div class="ambiance-card-premium">
+                <div class="ambiance-card-image">
+                    <img src="{{ asset('images/factory-val-3.webp') }}" alt="Ambiance conviviale Factory & Co - Moments en famille" loading="lazy">
+                    <div class="ambiance-card-overlay"></div>
+                </div>
+                <div class="ambiance-card-content">
+                    <div class="ambiance-card-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <defs>
+                                <linearGradient id="grad-ambiance-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="22" cy="28" r="8" stroke="url(#grad-ambiance-2)" stroke-width="2.5" fill="none"/>
+                            <circle cx="32" cy="18" r="8" stroke="url(#grad-ambiance-2)" stroke-width="2.5" fill="none"/>
+                            <circle cx="42" cy="28" r="8" stroke="url(#grad-ambiance-2)" stroke-width="2.5" fill="none"/>
+                            <path d="M18 38 Q18 44, 32 48 Q46 44, 46 38" stroke="url(#grad-ambiance-2)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="ambiance-card-title">Ambiance Conviviale</h3>
+                    <p class="ambiance-card-description">Un espace chaleureux pensé pour les moments partagés, où chacun se sent bienvenu</p>
+                    <div class="ambiance-card-accent"></div>
+                </div>
+            </div>
+
+            {{-- Card 3: Espace Détente --}}
+            <div class="ambiance-card-premium">
+                <div class="ambiance-card-image">
+                    <img src="{{ asset('images/ashley.webp') }}" alt="Espace détente Factory & Co - Confort et relaxation" loading="lazy">
+                    <div class="ambiance-card-overlay"></div>
+                </div>
+                <div class="ambiance-card-content">
+                    <div class="ambiance-card-icon">
+                        <svg viewBox="0 0 64 64" fill="none">
+                            <defs>
+                                <linearGradient id="grad-ambiance-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="14" y="20" width="36" height="24" rx="3" stroke="url(#grad-ambiance-3)" stroke-width="2.5" fill="none"/>
+                            <path d="M20 32 Q20 28, 24 28" stroke="url(#grad-ambiance-3)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            <path d="M44 32 Q44 28, 40 28" stroke="url(#grad-ambiance-3)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            <path d="M26 40 L 26 45 M 38 40 L 38 45" stroke="url(#grad-ambiance-3)" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="ambiance-card-title">Espace Détente</h3>
+                    <p class="ambiance-card-description">Que ce soit rapide ou détente, nos installations vous offrent le confort et la sérénité</p>
+                    <div class="ambiance-card-accent"></div>
+                </div>
+            </div>
+        </div>
+
+        {{-- Ambiance Message --}}
+        <div class="ambiance-message">
+            <blockquote class="ambiance-tagline">
+                L'ambiance n'est pas une décoration.<br>
+                <span class="ambiance-tagline-emphasis">C'est l'âme du lieu.</span>
+            </blockquote>
         </div>
     </div>
 </section>

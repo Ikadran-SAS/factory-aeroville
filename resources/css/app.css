@@ -5760,3 +5760,333 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
     width: 60px;
   }
 }
+
+/* ════════════════════════════════════════════
+   SECTION : L'AMBIANCE DU LIEU (REDESIGNÉE)
+════════════════════════════════════════════ */
+
+.ambiance-section-redesigned {
+  background: linear-gradient(135deg, var(--navy) 0%, #243352 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.ambiance-section-redesigned::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(245, 195, 219, 0.08) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ambiance-section-redesigned .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Header Premium ── */
+.ambiance-header-redesigned {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.ambiance-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(245, 195, 219, 0.12);
+  border: 1px solid rgba(245, 195, 219, 0.25);
+  border-radius: 24px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.ambiance-badge-icon {
+  font-size: 14px;
+}
+
+.ambiance-title-redesigned {
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+
+.ambiance-highlight {
+  background: linear-gradient(135deg, var(--pink) 0%, var(--pink-mid) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+}
+
+.ambiance-subtitle-redesigned {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+/* ── Intro Quote ── */
+.ambiance-intro-quote {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+  border-left: 4px solid var(--pink);
+  border-radius: 4px;
+  background: rgba(245, 195, 219, 0.08);
+  line-height: 1.8;
+}
+
+/* ── Ambiance Cards Grid ── */
+.ambiance-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* ── Premium Ambiance Card ── */
+.ambiance-card-premium {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(36, 51, 82, 0.5);
+  border: 1px solid rgba(245, 195, 219, 0.15);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  height: 100%;
+  position: relative;
+  group: ambiance-card;
+}
+
+.ambiance-card-premium:hover {
+  border-color: var(--pink);
+  box-shadow: 0 20px 60px rgba(204, 51, 102, 0.3), inset 0 0 40px rgba(245, 195, 219, 0.08);
+  transform: translateY(-8px);
+}
+
+/* ── Card Image ── */
+.ambiance-card-image {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+}
+
+.ambiance-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.ambiance-card-premium:hover .ambiance-card-image img {
+  transform: scale(1.08) rotate(2deg);
+}
+
+.ambiance-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(27, 38, 58, 0.4) 100%);
+  z-index: 2;
+}
+
+/* ── Card Content ── */
+.ambiance-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.75rem;
+  position: relative;
+  z-index: 3;
+}
+
+/* ── Card Icon ── */
+.ambiance-card-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245, 195, 219, 0.12);
+  border: 1px solid rgba(245, 195, 219, 0.25);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.ambiance-card-icon svg {
+  width: 32px;
+  height: 32px;
+  transition: all 0.3s ease;
+}
+
+.ambiance-card-premium:hover .ambiance-card-icon {
+  background: rgba(245, 195, 219, 0.2);
+  border-color: var(--pink);
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.ambiance-card-premium:hover .ambiance-card-icon svg {
+  filter: drop-shadow(0 4px 12px rgba(204, 51, 102, 0.3));
+}
+
+/* ── Card Title & Description ── */
+.ambiance-card-title {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.ambiance-card-premium:hover .ambiance-card-title {
+  color: var(--pink);
+}
+
+.ambiance-card-description {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Card Accent Line ── */
+.ambiance-card-accent {
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--pink) 0%, var(--pink-mid) 100%);
+  margin-top: auto;
+  transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.ambiance-card-premium:hover .ambiance-card-accent {
+  width: 100%;
+  opacity: 1;
+}
+
+/* ── Ambiance Message ── */
+.ambiance-message {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, rgba(245, 195, 219, 0.08) 0%, rgba(204, 51, 102, 0.06) 100%);
+  border: 1px solid rgba(245, 195, 219, 0.2);
+  border-radius: 12px;
+  margin-top: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.ambiance-tagline {
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.5;
+  margin: 0;
+  font-style: italic;
+}
+
+.ambiance-tagline-emphasis {
+  background: linear-gradient(135deg, var(--pink) 0%, var(--pink-mid) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+/* ════════════════════════════════════════════
+   RESPONSIVE : AMBIANCE SECTION
+════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .ambiance-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .ambiance-card-image {
+    height: 200px;
+  }
+
+  .ambiance-title-redesigned {
+    font-size: 2rem;
+  }
+
+  .ambiance-tagline {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .ambiance-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .ambiance-card-image {
+    height: 180px;
+  }
+
+  .ambiance-card-content {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .ambiance-title-redesigned {
+    font-size: 1.5rem;
+  }
+
+  .ambiance-subtitle-redesigned {
+    font-size: 0.95rem;
+  }
+
+  .ambiance-intro-quote {
+    font-size: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .ambiance-card-title {
+    font-size: 1.1rem;
+  }
+
+  .ambiance-card-description {
+    font-size: 0.9rem;
+  }
+
+  .ambiance-tagline {
+    font-size: 1.1rem;
+  }
+
+  .ambiance-badge {
+    font-size: 9px;
+    padding: 6px 12px;
+  }
+
+  .ambiance-message {
+    padding: 2rem 1.5rem;
+  }
+}
