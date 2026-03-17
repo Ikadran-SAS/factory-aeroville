@@ -917,74 +917,199 @@
 </section>
 
 {{-- ════════════════════════════════════════════
-     SECTION : CE QUE NOS CLIENTS AIMENT
+     SECTION : CE QUE NOS CLIENTS AIMENT (REDESIGNÉE)
 ════════════════════════════════════════════ --}}
-<section class="section section-dark">
+<section class="section clients-love-section-redesigned">
     <div class="container">
-        <h2 class="concept-title light">❤️ Ce que Nos Clients Aiment</h2>
-        <p class="text-light-muted" style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">Une expérience qui marque</p>
+        {{-- Header Premium --}}
+        <div class="clients-love-header">
+            <span class="clients-love-badge">
+                <span class="clients-love-badge-icon">❤️</span>
+                Ce que Nos Clients Aiment
+            </span>
+            <h2 class="clients-love-title">
+                Pourquoi on <span class="clients-love-highlight">revient</span>
+            </h2>
+            <p class="clients-love-subtitle">Une expérience qui marque et qui inspire</p>
+        </div>
 
-        <div class="testimonial-section">
-            <p class="text-light-muted" style="margin-bottom: 2rem; text-align: center; font-size: 1.05rem;">
-                Nos clients reviennent pour :
-            </p>
+        {{-- Intro Text --}}
+        <p class="clients-love-intro">
+            Nos clients reviennent pour bien plus qu'une simple commande. Voici ce qu'ils aiment vraiment :
+        </p>
 
-            <div class="love-grid">
-                <div class="love-item">
-                    <h4 style="color: var(--pink);">La générosité</h4>
-                    <p>Des plats copieux et réconfortants</p>
+        {{-- 4 Premium Love Cards --}}
+        <div class="clients-love-cards-grid">
+            {{-- Card 1: Générosité --}}
+            <div class="clients-love-card">
+                <div class="clients-love-card-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-love-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="32" cy="32" r="14" stroke="url(#grad-love-1)" stroke-width="2.5" fill="none"/>
+                        <path d="M 28 28 L 32 32 L 36 28 M 28 36 L 32 32 L 36 36" stroke="url(#grad-love-1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
                 </div>
-                <div class="love-item">
-                    <h4 style="color: var(--pink);">La qualité</h4>
-                    <p>Des produits choisis avec soin</p>
-                </div>
-                <div class="love-item">
-                    <h4 style="color: var(--pink);">L'ambiance</h4>
-                    <p>Un lieu agréable et accueillant</p>
-                </div>
-                <div class="love-item">
-                    <h4 style="color: var(--pink);">Le plaisir</h4>
-                    <p>Simple de bien manger</p>
-                </div>
+                <h3 class="clients-love-card-title">La Générosité</h3>
+                <p class="clients-love-card-text">Des plats copieux et réconfortants qui satisfont les plus grands appétits</p>
             </div>
 
-            <p class="text-light-muted" style="text-align: center; margin-top: 2rem; font-style: italic;">
-                Un lieu qui plaît, et qui donne envie de revenir.
+            {{-- Card 2: Qualité --}}
+            <div class="clients-love-card">
+                <div class="clients-love-card-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-love-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M 32 18 L 38 26 L 46 27 L 40 32 L 42 40 L 32 36 L 22 40 L 24 32 L 18 27 L 26 26 Z" stroke="url(#grad-love-2)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="clients-love-card-title">La Qualité</h3>
+                <p class="clients-love-card-text">Des produits choisis avec soin, aucun compromis sur l'excellence</p>
+            </div>
+
+            {{-- Card 3: Ambiance --}}
+            <div class="clients-love-card">
+                <div class="clients-love-card-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-love-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="14" y="18" width="36" height="28" rx="2" stroke="url(#grad-love-3)" stroke-width="2.5" fill="none"/>
+                        <circle cx="22" cy="24" r="2" fill="url(#grad-love-3)"/>
+                        <circle cx="32" cy="24" r="2" fill="url(#grad-love-3)"/>
+                        <circle cx="42" cy="24" r="2" fill="url(#grad-love-3)"/>
+                        <path d="M 16 38 Q 32 42, 48 38" stroke="url(#grad-love-3)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3 class="clients-love-card-title">L'Ambiance</h3>
+                <p class="clients-love-card-text">Un lieu agréable et accueillant où se sentir à la maison</p>
+            </div>
+
+            {{-- Card 4: Plaisir --}}
+            <div class="clients-love-card">
+                <div class="clients-love-card-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-love-4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="32" cy="32" r="16" stroke="url(#grad-love-4)" stroke-width="2.5" fill="none"/>
+                        <path d="M 24 32 Q 28 28, 32 26 Q 36 28, 40 32" stroke="url(#grad-love-4)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="28" cy="36" r="1.5" fill="url(#grad-love-4)"/>
+                        <circle cx="36" cy="36" r="1.5" fill="url(#grad-love-4)"/>
+                    </svg>
+                </div>
+                <h3 class="clients-love-card-title">Le Plaisir</h3>
+                <p class="clients-love-card-text">Simple de bien manger et de profiter de chaque moment</p>
+            </div>
+        </div>
+
+        {{-- Closing Message --}}
+        <div class="clients-love-closing">
+            <p class="clients-love-closing-text">
+                Un lieu qui plaît, et qui donne envie de revenir encore et encore.
             </p>
         </div>
     </div>
 </section>
 
 {{-- ════════════════════════════════════════════
-     SECTION : LOCALISATION
+     SECTION : LOCALISATION (REDESIGNÉE)
 ════════════════════════════════════════════ --}}
-<section class="section section-light">
+<section class="section location-section-redesigned">
     <div class="container">
-        <h2 class="concept-title">📍 Au Cœur de Votre Centre Commercial</h2>
-        <p class="section-subtitle">Facile, accessible, évident</p>
+        {{-- Header Premium --}}
+        <div class="location-header">
+            <span class="location-badge">
+                <span class="location-badge-icon">📍</span>
+                Au Cœur de Votre Centre Commercial
+            </span>
+            <h2 class="location-title">
+                Facile, <span class="location-highlight">accessible,</span> évident
+            </h2>
+            <p class="location-subtitle">Le point de pause parfait dans votre journée</p>
+        </div>
 
-        <div class="location-content">
-            <p style="margin-bottom: 2rem; font-size: 1.05rem; text-align: center;">
-                Idéalement situé, notre restaurant est le point de pause parfait.
-            </p>
+        {{-- Intro Text --}}
+        <p class="location-intro">
+            Idéalement situé au cœur de votre centre commercial, Factory & Co est toujours à portée de main pour vos moments de détente.
+        </p>
 
-            <div class="location-list">
-                <div class="location-item">
-                    <span>🎯</span>
-                    <p>Au milieu de votre parcours shopping</p>
+        {{-- 3 Premium Location Benefit Cards --}}
+        <div class="location-benefits-grid">
+            {{-- Card 1: Localisation --}}
+            <div class="location-benefit-card">
+                <div class="location-benefit-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-location-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M 32 16 C 24 16, 18 22, 18 30 C 18 40, 32 52, 32 52 C 32 52, 46 40, 46 30 C 46 22, 40 16, 32 16 Z" stroke="url(#grad-location-1)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+                        <circle cx="32" cy="30" r="4" stroke="url(#grad-location-1)" stroke-width="2" fill="none"/>
+                    </svg>
                 </div>
-                <div class="location-item">
-                    <span>⚡</span>
-                    <p>Accessible rapidement</p>
-                </div>
-                <div class="location-item">
-                    <span>🔄</span>
-                    <p>Adapté à tous les rythmes</p>
-                </div>
+                <h3 class="location-benefit-title">Au Milieu du Shopping</h3>
+                <p class="location-benefit-text">Situé stratégiquement pour une pause naturelle dans votre parcours</p>
             </div>
 
-            <p style="text-align: center; margin-top: 2rem; font-style: italic; color: var(--pink-dark);">
-                Un lieu pratique, sans compromis sur l'expérience.
+            {{-- Card 2: Accessibilité --}}
+            <div class="location-benefit-card">
+                <div class="location-benefit-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-location-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M 32 18 L 46 32 M 32 18 L 18 32 M 32 18 L 32 44 M 18 32 L 46 32" stroke="url(#grad-location-2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <circle cx="32" cy="32" r="6" stroke="url(#grad-location-2)" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                <h3 class="location-benefit-title">Accessible Rapidement</h3>
+                <p class="location-benefit-text">Facile à trouver, entièrement accessible de tous les sens du centre</p>
+            </div>
+
+            {{-- Card 3: Flexibilité --}}
+            <div class="location-benefit-card">
+                <div class="location-benefit-icon">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-location-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="32" cy="32" r="16" stroke="url(#grad-location-3)" stroke-width="2.5" fill="none"/>
+                        <path d="M 32 18 L 32 32 L 42 42" stroke="url(#grad-location-3)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        <circle cx="32" cy="32" r="2" fill="url(#grad-location-3)"/>
+                    </svg>
+                </div>
+                <h3 class="location-benefit-title">Adapté à Tous les Rythmes</h3>
+                <p class="location-benefit-text">Ouvert à tous les moments, du matin jusqu'au soir, 7 jours sur 7</p>
+            </div>
+        </div>
+
+        {{-- Closing Message --}}
+        <div class="location-closing">
+            <p class="location-closing-text">
+                Un lieu pratique, sans aucun compromis sur l'expérience et la qualité.
             </p>
         </div>
     </div>
