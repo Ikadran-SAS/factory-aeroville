@@ -111,6 +111,31 @@
     {{-- ── Page-specific head ── --}}
     @stack('head')
 
+    {{-- ── Google Consent Mode v2 ── --}}
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
+    </script>
+
+    {{-- ── Google Analytics 4 ── --}}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSJJ1E3F4P"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WSJJ1E3F4P', {
+      'allow_google_signals': false,
+      'allow_ad_personalization_signals': false
+    });
+    </script>
+
     {{-- ── Google Tag Manager ── --}}
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -143,6 +168,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>{{-- /#app --}}
 
 <div id="modal-app"></div>
+
+{{-- ── Cookie Banner (Google Consent Mode v2) ── --}}
+@include('layouts.partials.cookie-banner')
 
 </body>
 </html>

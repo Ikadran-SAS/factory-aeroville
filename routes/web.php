@@ -52,6 +52,11 @@ Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
+// Legal
+Route::get('/confidentialite', function () {
+    return view('pages.confidentialite');
+})->name('confidentialite');
+
 /* ── SEO Technique ── */
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 Route::get('/robots.txt', [SitemapController::class, 'robots'])->name('robots');
