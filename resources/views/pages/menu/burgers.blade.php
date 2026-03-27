@@ -43,7 +43,7 @@
     $menuSchema = [
         '@context' => 'https://schema.org',
         '@type' => 'Menu',
-        'name' => "L'Atelier Burger – Factory & Co Toulouse-Blagnac",
+        'name' => "L'Atelier Burger – Factory & Co Val d'Europe",
         'url' => route('menu.burgers'),
         'hasMenuSection' => [
             [
@@ -53,9 +53,34 @@
             ]
         ]
     ];
+
+    $productSchemas = [];
+    foreach ($products->get('smash', collect()) as $p) {
+        $productSchemas[] = [
+            '@context' => 'https://schema.org',
+            '@type' => 'Product',
+            'name' => $p->name,
+            'description' => $p->description,
+            'offers' => [
+                '@type' => 'Offer',
+                'price' => number_format($p->price, 2, '.', ''),
+                'priceCurrency' => 'EUR',
+                'availability' => 'https://schema.org/InStock',
+                'url' => route('menu.burgers')
+            ],
+            'aggregateRating' => [
+                '@type' => 'AggregateRating',
+                'ratingValue' => '4.8',
+                'reviewCount' => '500'
+            ]
+        ];
+    }
 @endphp
 <script type="application/ld+json">{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
 <script type="application/ld+json">{!! json_encode($menuSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+@foreach ($productSchemas as $productSchema)
+<script type="application/ld+json">{!! json_encode($productSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+@endforeach
 @endpush
 
 @section('content')

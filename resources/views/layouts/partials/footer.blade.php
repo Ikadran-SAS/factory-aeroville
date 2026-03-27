@@ -7,24 +7,19 @@
             <div>
                 <p class="footer-logo-text">Factory &amp; Co</p>
                 <p class="footer-tagline">Delicious since 1989</p>
-                {{-- NAP cohérent pour le SEO local --}}
-                <address class="footer-address" itemscope itemtype="https://schema.org/Restaurant">
-                    <span itemprop="name" style="display:none">Factory &amp; Co Val d'Europe</span>
-                    <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                        <span itemprop="streetAddress">14 Rue du Danube, CC Val d'Europe</span><br>
-                        <span itemprop="postalCode">77700</span>
-                        <span itemprop="addressLocality">Serris</span>,
-                        <span itemprop="addressCountry">France</span>
-                    </span><br>
+                {{-- NAP (Restaurant schema defined globally in app.blade.php) --}}
+                <address class="footer-address">
+                    14 Rue du Danube, CC Val d'Europe<br>
+                    77700 Serris, France<br>
                     <em style="color:var(--pink-dark)">Parking gratuit – Gare RER Val d'Europe</em><br><br>
-                    <a href="tel:0164632889" itemprop="telephone" style="color:var(--navy);font-weight:600">01 64 63 28 89</a><br>
-                    <a href="mailto:contact@factoryandco.com" itemprop="email" style="color:var(--navy);font-weight:600">contact@factoryandco.com</a>
+                    <a href="tel:0164632889" style="color:var(--navy);font-weight:600">01 64 63 28 89</a><br>
+                    <a href="mailto:contact@factoryandco.com" style="color:var(--navy);font-weight:600">contact@factoryandco.com</a>
                 </address>
             </div>
 
             {{-- Colonne carte --}}
             <div class="footer-col">
-                <h4>Notre carte</h4>
+                <h3>Notre carte</h3>
                 <ul>
                     <li><a href="{{ route('menu.burgers') }}">Burgers Gourmets</a></li>
                     <li><a href="{{ route('menu.bagels') }}">Bagels Authentiques</a></li>
@@ -35,7 +30,7 @@
 
             {{-- Colonne services --}}
             <div class="footer-col">
-                <h4>Services</h4>
+                <h3>Services</h3>
                 <ul>
                     <li><a href="{{ route('faq') }}">FAQ Allergènes</a></li>
                     <li><a href="{{ route('contact') }}">Contactez-nous</a></li>
@@ -44,7 +39,7 @@
 
             {{-- Colonne infos --}}
             <div class="footer-col">
-                <h4>Informations</h4>
+                <h3>Informations</h3>
                 <ul>
                     <li><a href="{{ route('specialites') }}">Nos spécialités</a></li>
                     <li><a href="{{ route('blog.index') }}">Blog</a></li>

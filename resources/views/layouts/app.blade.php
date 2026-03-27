@@ -12,9 +12,9 @@
     <meta name="theme-color" content="#000000">
 
     {{-- ── SEO Meta ── --}}
-    <title>{{ $__env->yieldContent('title', 'Factory & Co Val d\'Europe – Restaurant Burger Serris') }}</title>
-    <meta name="description" content="{{ $__env->yieldContent('description', 'Factory & Co, restaurant burger, bagel et cheesecake à Val d\'Europe à Serris. 14 Rue du Danube. Ouvert 7j/7.') }}">
-    <meta name="keywords"    content="{{ $__env->yieldContent('keywords', 'restaurant burger val d\'europe serris, factory and co serris, manger val d\'europe') }}">
+    <title>{!! $__env->yieldContent('title', 'Factory & Co Val d\'Europe – Restaurant Burger Serris') !!}</title>
+    <meta name="description" content="{!! $__env->yieldContent('description', 'Factory & Co, restaurant burger, bagel et cheesecake à Val d\'Europe à Serris. 14 Rue du Danube. Ouvert 7j/7.') !!}">
+    <meta name="keywords"    content="{!! $__env->yieldContent('keywords', 'restaurant burger val d\'europe serris, factory and co serris, manger val d\'europe') !!}">
     <link rel="canonical"    href="{{ $__env->yieldContent('canonical', url()->current()) }}">
     <meta name="robots"      content="@yield('robots', 'index, follow')">
     <meta name="geo.region"      content="FR-75">
@@ -95,7 +95,7 @@
             'sameAs' => ['https://www.instagram.com/factoryandco/', 'https://www.facebook.com/factoryandco/']
         ];
     @endphp
-    <script type="application/ld+json">{!! json_encode($schemaData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+    <script type="application/ld+json">{!! json_encode($schemaData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_AMP) !!}</script>
 
     {{-- ── JSON-LD page-specific ── --}}
     @stack('schema')

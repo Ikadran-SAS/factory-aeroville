@@ -5,6 +5,30 @@
 @section('keywords', $seo['keywords'])
 @section('canonical', $seo['canonical'])
 
+@push('schema')
+@php
+    $breadcrumbSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            [
+                '@type' => 'ListItem',
+                'position' => 1,
+                'name' => 'Accueil',
+                'item' => route('home')
+            ],
+            [
+                '@type' => 'ListItem',
+                'position' => 2,
+                'name' => 'La Carte',
+                'item' => route('menu.index')
+            ]
+        ]
+    ];
+@endphp
+<script type="application/ld+json">{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+@endpush
+
 @section('content')
 
 {{-- BREADCRUMB --}}

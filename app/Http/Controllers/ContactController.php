@@ -13,7 +13,7 @@ class ContactController extends Controller
 
         $seo = [
             'title' => 'Contact – Factory & Co Val d\'Europe | Serris',
-            'description' => 'Contactez Factory & Co Val d\'Europe. Adresse : 14 Rue du Danube, CC Val d\'Europe, 77700 Serris. Ouvert 7j/7.',
+            'description' => 'Contactez Factory & Co à Val d\'Europe. Adresse : 14 Rue du Danube, CC Val d\'Europe, 77700 Serris. Nous sommes ouverts 7j/7 pour vos questions et réservations.',
             'keywords' => 'contact factory and co serris, adresse factory co val d\'europe, téléphone restaurant serris',
             'canonical' => route('contact'),
         ];

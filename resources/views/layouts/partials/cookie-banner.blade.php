@@ -4,7 +4,7 @@
     <div class="cookie-modal-content cookie-exception-modal" id="cookie-modal-draggable">
         <!-- Logo Header -->
         <div class="cookie-exception-logo-section">
-            <img src="{{ asset('images/logo.png') }}" alt="Factory & Co" class="cookie-exception-logo">
+            <img src="{{ asset('images/logo-fact.svg') }}" alt="Factory & Co" class="cookie-exception-logo" height="32" width="auto">
         </div>
 
         <!-- Main Content -->

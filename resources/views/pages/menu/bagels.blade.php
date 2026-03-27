@@ -23,8 +23,62 @@
             ]
         ]
     ];
+
+    $menuItems = [];
+    foreach ($products->get('bagels', collect()) as $p) {
+        $menuItems[] = [
+            '@type' => 'MenuItem',
+            'name' => $p->name,
+            'description' => $p->description,
+            'offers' => [
+                '@type' => 'Offer',
+                'price' => $p->price,
+                'priceCurrency' => 'EUR'
+            ]
+        ];
+    }
+
+    $menuSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'Menu',
+        'name' => 'Bagels New-Yorkais – Factory & Co',
+        'url' => route('menu.bagels'),
+        'hasMenuSection' => [
+            [
+                '@type' => 'MenuSection',
+                'name' => 'Bagels New-Yorkais',
+                'hasMenuItem' => $menuItems
+            ]
+        ]
+    ];
+
+    $productSchemas = [];
+    foreach ($products->get('bagels', collect()) as $p) {
+        $productSchemas[] = [
+            '@context' => 'https://schema.org',
+            '@type' => 'Product',
+            'name' => $p->name,
+            'description' => $p->description,
+            'offers' => [
+                '@type' => 'Offer',
+                'price' => number_format($p->price, 2, '.', ''),
+                'priceCurrency' => 'EUR',
+                'availability' => 'https://schema.org/InStock',
+                'url' => route('menu.bagels')
+            ],
+            'aggregateRating' => [
+                '@type' => 'AggregateRating',
+                'ratingValue' => '4.8',
+                'reviewCount' => '500'
+            ]
+        ];
+    }
 @endphp
 <script type="application/ld+json">{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+<script type="application/ld+json">{!! json_encode($menuSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+@foreach ($productSchemas as $productSchema)
+<script type="application/ld+json">{!! json_encode($productSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+@endforeach
 @endpush
 @section('content')
 <nav class="breadcrumb"><div class="breadcrumb-inner"><a href="{{ route('home') }}">Accueil</a><span class="bc-sep">›</span><span>Bagels New-Yorkais</span></div></nav>

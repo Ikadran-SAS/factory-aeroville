@@ -8,7 +8,7 @@ class ConceptController extends Controller
     {
         $seo = [
             'title' => 'Notre Concept – Factory & Co Val d\'Europe',
-            'description' => 'Découvrez l\'univers de Factory & Co : une philosophie basée sur l\'authenticité, la passion et le savoir-faire artisanal.',
+            'description' => 'Découvrez l\'univers de Factory & Co : une philosophie basée sur l\'authenticité, la passion et le savoir-faire artisanal. Depuis 1989, nous préparons des burgers de qualité avec des ingrédients frais.',
             'keywords' => 'concept factory and co, restaurant authentique, diner américain, burgers artisanaux',
             'canonical' => route('concept'),
         ];
