@@ -12,7 +12,7 @@
         'image' => $post->image_url,
         'author' => [
             '@type' => 'Organization',
-            'name' => 'Factory & Co Toulouse-Blagnac'
+            'name' => 'Factory & Co Aéroville'
         ],
         'publisher' => [
             '@type' => 'Organization',

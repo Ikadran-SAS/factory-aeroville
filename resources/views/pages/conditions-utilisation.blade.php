@@ -4,6 +4,30 @@
 @section('description', 'Conditions d\'utilisation du site Factory & Co Aéroville. Consultez nos règles et obligations pour l\'utilisation de nos services.')
 @section('keywords', 'conditions d\'utilisation, conditions d\'usage, Factory & Co, termes de service')
 
+@push('schema')
+@php
+    $breadcrumbSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Accueil', 'item' => route('home')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Conditions d\'utilisation', 'item' => route('conditions-utilisation')]
+        ]
+    ];
+    $webPageSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'WebPage',
+        '@id' => route('conditions-utilisation'),
+        'url' => route('conditions-utilisation'),
+        'name' => 'Conditions d\'Utilisation – Factory & Co Aéroville',
+        'isPartOf' => ['@id' => route('home')],
+        'breadcrumb' => ['@id' => '#breadcrumb']
+    ];
+@endphp
+<script type="application/ld+json">{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+<script type="application/ld+json">{!! json_encode($webPageSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+@endpush
+
 @section('content')
 
 <nav class="breadcrumb">

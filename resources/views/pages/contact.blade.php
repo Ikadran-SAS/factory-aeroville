@@ -23,8 +23,33 @@
             ]
         ]
     ];
+
+    $contactPageSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'ContactPage',
+        '@id' => route('contact'),
+        'url' => route('contact'),
+        'name' => 'Contact – Factory & Co Aéroville',
+        'description' => 'Contactez Factory & Co Aéroville au 01 74 25 78 52 ou par email. 30 Rue des Buissons, CC Westfield Aéroville, 93290 Tremblay-en-France.',
+        'mainEntity' => [
+            '@type' => 'LocalBusiness',
+            'name' => 'Factory & Co Aéroville',
+            'telephone' => '+33174257852',
+            'email' => 'contact@factoryandco.com',
+            'address' => [
+                '@type' => 'PostalAddress',
+                'streetAddress' => '30 Rue des Buissons, CC Westfield Aéroville',
+                'addressLocality' => 'Tremblay-en-France',
+                'postalCode' => '93290',
+                'addressCountry' => 'FR'
+            ]
+        ],
+        'isPartOf' => ['@id' => route('home')],
+        'breadcrumb' => ['@id' => '#breadcrumb']
+    ];
 @endphp
 <script type="application/ld+json">{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+<script type="application/ld+json">{!! json_encode($contactPageSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
 @endpush
 @section('content')
 <nav class="breadcrumb"><div class="breadcrumb-inner"><a href="{{ route('home') }}">Accueil</a><span class="bc-sep">›</span><span>Contact</span></div></nav>

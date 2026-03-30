@@ -4,6 +4,30 @@
 @section('description', 'Découvrez notre politique de confidentialité et comment nous protégeons vos données personnelles chez Factory & Co.')
 @section('keywords', 'politique de confidentialité, RGPD, protection des données, Factory & Co')
 
+@push('schema')
+@php
+    $breadcrumbSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Accueil', 'item' => route('home')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Confidentialité', 'item' => route('confidentialite')]
+        ]
+    ];
+    $webPageSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'WebPage',
+        '@id' => route('confidentialite'),
+        'url' => route('confidentialite'),
+        'name' => 'Politique de Confidentialité – Factory & Co Aéroville',
+        'isPartOf' => ['@id' => route('home')],
+        'breadcrumb' => ['@id' => '#breadcrumb']
+    ];
+@endphp
+<script type="application/ld+json">{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+<script type="application/ld+json">{!! json_encode($webPageSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+@endpush
+
 @section('content')
 
 <nav class="breadcrumb">
