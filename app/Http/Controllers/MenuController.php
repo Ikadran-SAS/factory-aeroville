@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Review;
 
 class MenuController extends Controller
 {
@@ -43,14 +44,10 @@ class MenuController extends Controller
             'h1' => 'La Carte – Factory & Co',
         ];
 
-        // Avis Google live
-        $googleBusinessController = new GoogleBusinessController;
-        $allReviews = $googleBusinessController->getReviews();
-        $featuredReviews = collect($allReviews)
-            ->filter(fn (array $r): bool => ($r['rating'] ?? 0) >= 4 && ! empty($r['content']))
+        $featuredReviews = Review::featured()
+            ->orderBy('sort_order')
             ->take(3)
-            ->map(fn (array $r): object => (object) $r)
-            ->values();
+            ->get();
 
         return view('pages.menu.carte', compact('seo', 'burgers', 'bagels', 'cheesecakes', 'bowls', 'featuredReviews'));
     }

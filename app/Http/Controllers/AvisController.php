@@ -3,26 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Models\FaqItem;
+use App\Models\Review;
 
 class AvisController extends Controller
 {
     public function index()
     {
         $faqsGrouped = FaqItem::grouped();
-        // Flatten grouped FAQs into a single array for the accordion component
         $faqs = collect($faqsGrouped)->flatten(1)->values()->all();
 
-        // Avis et note depuis Google Places API (live)
-        $googleBusinessController = new GoogleBusinessController;
-        $aggregateData = $googleBusinessController->getAggregateRating();
-        $averageRating = $aggregateData['rating'] ?? 4.5;
-        $totalReviews = $aggregateData['total'] ?? 6460;
+        $reviews = Review::where('is_visible', true)
+            ->orderBy('sort_order')
+            ->get();
 
-        $allReviews = $googleBusinessController->getReviews();
-        $reviews = collect($allReviews)
-            ->filter(fn (array $r): bool => ! empty($r['content']))
-            ->map(fn (array $r): object => (object) $r)
-            ->values();
+        $googleReviewsController = new GoogleReviewsController;
+        $aggregateData = $googleReviewsController->getAggregateRating();
+        $averageRating = $aggregateData['rating'] ?? ($reviews->count() > 0 ? $reviews->avg('rating') : 4.5);
+        $totalReviews = $aggregateData['total'] ?? $reviews->count();
 
         $seo = [
             'title' => 'Avis Clients | Factory & Co – Nos Clients Témoignent',

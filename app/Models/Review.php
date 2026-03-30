@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Review extends Model
 {
     protected $fillable = [
+        'google_review_id',
         'author_name', 'author_initial', 'avatar_color',
         'rating', 'content', 'source', 'date_label',
         'is_featured', 'is_visible', 'sort_order',

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\FaqItem;
 use App\Models\OpeningHour;
 use App\Models\Product;
+use App\Models\Review;
 
 class HomeController extends Controller
 {
@@ -19,23 +20,19 @@ class HomeController extends Controller
             ->get()
             ->groupBy('category');
 
-        // Avis et note depuis Google Places API (live)
-        $googleBusinessController = new GoogleBusinessController;
-        $aggregateData = $googleBusinessController->getAggregateRating();
-        $averageRating = $aggregateData['rating'] ?? 4.5;
-        $totalReviews = $aggregateData['total'] ?? 6460;
-
-        $allReviews = $googleBusinessController->getReviews();
-        $featuredReviews = collect($allReviews)
-            ->filter(fn (array $r): bool => ($r['rating'] ?? 0) >= 4 && ! empty($r['content']))
+        $featuredReviews = Review::featured()
+            ->orderBy('sort_order')
             ->take(3)
-            ->map(fn (array $r): object => (object) $r)
-            ->values();
+            ->get();
+
+        $googleReviewsController = new GoogleReviewsController;
+        $aggregateData = $googleReviewsController->getAggregateRating();
+        $averageRating = $aggregateData['rating'] ?? ($featuredReviews->count() > 0 ? $featuredReviews->avg('rating') : 4.5);
+        $totalReviews = $aggregateData['total'] ?? Review::where('is_visible', true)->count();
 
         $openingHours = OpeningHour::orderBy('sort_order')->get();
 
         $faqsGrouped = FaqItem::grouped();
-        // Flatten grouped FAQs into a single array for the accordion component
         $faqs = collect($faqsGrouped)->flatten(1)->values()->all();
 
         $seo = [
@@ -46,26 +43,5 @@ class HomeController extends Controller
         ];
 
         return view('pages.home', compact('featuredProducts', 'featuredReviews', 'openingHours', 'faqs', 'seo', 'averageRating', 'totalReviews'));
-    }
-
-    /**
-     * Page Click & Collect
-     */
-    public function clickCollect()
-    {
-        $seo = [
-            'title' => 'Click & Collect – Commandez en avance | Factory & Co Aéroville',
-            'description' => 'Commandez votre repas en ligne et récupérez-le sans attendre à Aéroville à Tremblay-en-France. Click & Collect disponible 7j/7.',
-            'keywords' => 'click collect restaurant aéroville, commander en ligne factory co tremblay-en-france, commande à emporter tremblay-en-france',
-            'canonical' => route('click-collect'),
-        ];
-
-        $popularProducts = Product::available()
-            ->featured()
-            ->ordered()
-            ->take(6)
-            ->get();
-
-        return view('pages.click-collect', compact('seo', 'popularProducts'));
     }
 }
