@@ -68,7 +68,7 @@
             [
                 '@type' => 'MenuSection',
                 'name' => 'Cheesecake',
-                'description' => 'Cheesecake premium signatures du chef Jonathan',
+                'description' => 'Cheesecake premium signatures Factory & Co',
                 'position' => 4
             ]
         ]
@@ -272,7 +272,7 @@
                 CHEESECAKE FACTORY
             </div>
             <h2 class="category-title">Pâtisseries Premium</h2>
-            <p class="category-subtitle">Recettes authentiques du Chef Jonathan</p>
+            <p class="category-subtitle">Recettes authentiques Factory & Co</p>
             <p class="category-description">Le vrai New York cheesecake préparé selon les traditions. Textures parfaites, saveurs authentiques, portions généreuses.</p>
         </div>
 

@@ -11,4 +11,7 @@
     @endforeach
     <url><loc>{{ route('faq') }}</loc><lastmod>{{ now()->toDateString() }}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
     <url><loc>{{ route('contact') }}</loc><lastmod>{{ now()->toDateString() }}</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+    <url><loc>{{ route('mentions-legales') }}</loc><lastmod>{{ now()->toDateString() }}</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+    <url><loc>{{ route('confidentialite') }}</loc><lastmod>{{ now()->toDateString() }}</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+    <url><loc>{{ route('conditions-utilisation') }}</loc><lastmod>{{ now()->toDateString() }}</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

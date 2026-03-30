@@ -159,7 +159,7 @@
                     <figcaption>Milkshakes</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/Factory_And_Co_Claye_Souilly_Jon_Filin_Burger_Cheesecake_Sports_Bar-6.png" alt="Cheesecake New-Yorkais signature du chef Jonathan Factory & Co" loading="lazy">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/Factory_And_Co_Claye_Souilly_Jon_Filin_Burger_Cheesecake_Sports_Bar-6.png" alt="Cheesecake New-Yorkais signature Factory & Co Aéroville" loading="lazy">
                     <figcaption>Cheesecake</figcaption>
                 </div>
                 <div class="product-item-slide">

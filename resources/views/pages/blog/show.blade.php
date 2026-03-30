@@ -12,7 +12,9 @@
         'image' => $post->image_url,
         'author' => [
             '@type' => 'Organization',
-            'name' => 'Factory & Co Aéroville'
+            'name' => 'Factory & Co Aéroville',
+            'logo' => asset('images/logo-fact.svg'),
+            'url' => route('home')
         ],
         'publisher' => [
             '@type' => 'Organization',

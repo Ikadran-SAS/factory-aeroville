@@ -207,7 +207,7 @@ class ProductSeeder extends Seeder
                 'name' => 'New-Yorkais Classique',
                 'category' => 'cheesecake',
                 'subcategory' => 'classique',
-                'description' => 'Recette traditionnelle du chef Jonathan Jablonski, base biscuitée croustillante, texture crémeuse sans gélatine',
+                'description' => 'Recette traditionnelle Factory & Co, base biscuitée croustillante, texture crémeuse sans gélatine',
                 'ingredients' => 'Philadelphia, œufs, sucre, crème fraîche, vanille de Madagascar, base biscuits Graham',
                 'price' => 6.90,
                 'badge' => 'Signature',
