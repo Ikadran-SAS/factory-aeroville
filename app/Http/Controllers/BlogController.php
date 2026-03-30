@@ -12,9 +12,9 @@ class BlogController extends Controller
         $featured = BlogPost::published()->featured()->first();
 
         $seo = [
-            'title' => 'Blog – Conseils & Astuces Val d\'Europe | Factory & Co',
-            'description' => 'Découvrez nos articles sur Val d\'Europe à Serris : accès transports, conseils pratiques, breakfast américain, cheesecake à emporter et histoire de Factory & Co.',
-            'keywords' => 'blog factory co, conseils val d\'europe serris, transports val d\'europe, manger val d\'europe, restaurant serris',
+            'title' => 'Blog – Conseils & Astuces Aéroville | Factory & Co',
+            'description' => 'Découvrez nos articles sur Aéroville à Tremblay-en-France : accès transports, conseils pratiques, breakfast américain, cheesecake à emporter et histoire de Factory & Co.',
+            'keywords' => 'blog factory co, conseils aéroville tremblay-en-france, transports aéroville, manger aéroville, restaurant tremblay-en-france, roissy, aéroville',
             'canonical' => route('blog.index'),
         ];
 

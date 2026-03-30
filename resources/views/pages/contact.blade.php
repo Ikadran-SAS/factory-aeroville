@@ -31,7 +31,7 @@
 <div class="page-hero">
     <div class="page-hero-inner">
         <span class="section-tag">NAP · Nom · Adresse · Téléphone</span>
-        <h1>Contactez-nous –<br><em>Factory &amp; Co Val d'Europe</em></h1>
+        <h1>Contactez-nous –<br><em>Factory &amp; Co Aéroville</em></h1>
         <p>Une question, une commande ou un retour d'expérience ? Notre équipe vous répond sous 4 heures.</p>
     </div>
 </div>
@@ -91,9 +91,9 @@
             <div>
                 <div class="info-card">
                     <h3>📍 Adresse &amp; accès</h3>
-                    <p><strong>Centre Commercial Val d'Europe</strong><br>14 Rue du Danube<br>77700 Serris, France</p>
-                    <p>🅿️ Parking gratuit – 🚆 RER A Val d'Europe</p>
-                    <p><a href="tel:0164632889">01 64 63 28 89</a></p>
+                    <p><strong>Centre Commercial Westfield Aéroville</strong><br>30 Rue des Buissons<br>93290 Tremblay-en-France, France</p>
+                    <p>🅿️ Parking 3h gratuites – 🚆 RER B Parc des Expositions</p>
+                    <p><a href="tel:0174257852">01 74 25 78 52</a></p>
                     <p><a href="mailto:contact@factoryandco.com">contact@factoryandco.com</a></p>
                 </div>
                 <div class="info-card">
@@ -112,8 +112,8 @@
                     </table>
                 </div>
                 <div class="map-wrap" style="height:280px">
-                    <iframe title="Localisation Factory & Co Val d'Europe"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.0!2d2.7758!3d48.8753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e614d4c8c8c8c8%3A0x1!2sFactory+%26+Co+Val+d%27Europe!5e0!3m2!1sfr!2sfr!4v1"
+                    <iframe title="Localisation Factory & Co Aéroville"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2618.5!2d2.5220!3d48.9912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sFactory+%26+Co+A%C3%A9roville!5e0!3m2!1sfr!2sfr!4v1"
                         allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>

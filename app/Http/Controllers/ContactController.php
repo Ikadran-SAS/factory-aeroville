@@ -12,9 +12,9 @@ class ContactController extends Controller
         $openingHours = OpeningHour::orderBy('sort_order')->get();
 
         $seo = [
-            'title' => 'Contact – Factory & Co Val d\'Europe | Serris',
-            'description' => 'Contactez Factory & Co à Val d\'Europe. Adresse : 14 Rue du Danube, CC Val d\'Europe, 77700 Serris. Nous sommes ouverts 7j/7 pour vos questions et réservations.',
-            'keywords' => 'contact factory and co serris, adresse factory co val d\'europe, téléphone restaurant serris',
+            'title' => 'Contact – Factory & Co Aéroville | Tremblay-en-France',
+            'description' => 'Contactez Factory & Co à Aéroville. Adresse : 30 Rue des Buissons, CC Westfield Aéroville, 93290 Tremblay-en-France. Nous sommes ouverts 7j/7 pour vos questions et réservations.',
+            'keywords' => 'contact factory and co tremblay-en-france, adresse factory co aéroville, téléphone restaurant tremblay-en-france, roissy, aéroville',
             'canonical' => route('contact'),
         ];
 

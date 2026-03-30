@@ -47,15 +47,15 @@
 {{-- ════════════════════════════════════════════
      HERO SECTION - PLEIN ÉCRAN
 ════════════════════════════════════════════ --}}
-<section class="hero" aria-label="Factory & Co Val d'Europe">
-    <div class="hero-bg" style="background-image:url('{{ asset('images/PHOTO-2026-03-26-10-27-33.jpg') }}')" aria-hidden="true"></div>
+<section class="hero" aria-label="Factory & Co Aéroville">
+    <div class="hero-bg" style="background-image:url('{{ asset('images/factory-aeroville-hero.webp') }}')" aria-hidden="true"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
         <p class="hero-location">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            CC Val d'Europe · 14 Rue du Danube · Serris
+            CC Westfield Aéroville · 30 Rue des Buissons · Tremblay-en-France
         </p>
-        <h1 class="hero-title">Factory &amp; Co Val d'Europe : <em>L'Authentique Diner Américain</em></h1>
+        <h1 class="hero-title">Factory &amp; Co Aéroville : <em>L'authentique diner américain</em></h1>
         <p class="hero-sub">Smash burgers &amp; New York cheesecakes</p>
         <p class="hero-hours">Lun-Jeu, Dim: 8h30 - 22h · Ven-Sam: 8h30 - 23h · Delicious since 1989</p>
         <div class="hero-ctas">
@@ -77,8 +77,8 @@
 <section class="section section-dark stats-section">
     <div class="stats-grid">
         <div class="stat-item">
-            <div class="stat-number">2016</div>
-            <div class="stat-label">Ouverture Val d'Europe</div>
+            <div class="stat-number">2013</div>
+            <div class="stat-label">Ouverture Aéroville</div>
         </div>
         <div class="stat-item">
             <div class="stat-number">100%</div>
@@ -89,7 +89,7 @@
             <div class="stat-label">Note Google</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">6000+</div>
+            <div class="stat-number">6 460</div>
             <div class="stat-label">Avis Google</div>
         </div>
     </div>
@@ -102,22 +102,22 @@
     <div class="container">
         <div class="concept-grid">
             <div class="concept-text">
-                <span class="section-tag">La liberté de la gastronomie</span>
+                <span class="section-tag">Le goût de New York à Aéroville</span>
                 <h2 class="section-title dark">
-                    Une escale gourmande<br>
-                    Authentiquement américaine
+                    Votre diner américain<br>
+                    au cœur d'Aéroville
                 </h2>
-                <p>Factory &amp; Co, c'est l'histoire d'une passion : celle du chef <strong>Jonathan Jablonski</strong>, rêveur depuis 1989 d'ouvrir un vrai restaurant new-yorkais. <strong>En 2016</strong>, il réalise ce rêve en installant Factory &amp; Co au cœur de Val d'Europe, avec le même savoir-faire des plus grands cuisiniers de <strong>Brooklyn</strong>.</p>
-                <p>Chez nous, <strong>rien n'est surgelé, tout est préparé à la minute</strong>. Chaque burger est smashé sur plaque brûlante. Chaque bagel est frais du jour. Chaque cheesecake respire les meilleures traditions new-yorkaises.</p>
-                <p><strong>Factory &amp; Co, c'est la liberté de bien manger, sans compromis.</strong></p>
+                <p>Entre deux boutiques ou avant une séance au <strong>Pathé</strong>, poussez la porte de Factory &amp; Co. Ici, l'ambiance <strong>Brooklyn</strong> n'est pas un décor : c'est une promesse. Celle de produits frais, travaillés à la minute, avec les vraies recettes des diners new-yorkais.</p>
+                <p><strong>Smash Burgers</strong> saisis sur plaque brûlante, <strong>bagels</strong> bouillis puis dorés chaque matin, <strong>cheesecakes</strong> crémeux préparés maison — rien n'est surgelé, rien n'est réchauffé. Chaque assiette est préparée à la commande.</p>
+                <p><strong>Bien manger en centre commercial, c'est possible. On vous le prouve depuis 2013.</strong></p>
                 <a href="{{ route('concept') }}" class="btn btn-pink">
                     Découvrir notre concept
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
             </div>
             <div class="concept-image">
-                <img src="{{ asset('images/factory-val-interieur.webp') }}"
-                     alt="Ambiance diner américain Factory & Co Val d'Europe"
+                <img src="{{ asset('images/factory-aeroville-hero.webp') }}"
+                     alt="Ambiance diner américain Factory & Co Aéroville"
                      loading="lazy" width="700" height="500">
                 <div class="concept-badge">
                     <span class="concept-badge-title">Delicious</span>
@@ -136,14 +136,14 @@
     <div class="container">
         <div class="section-header text-center">
             <span class="section-tag">Galerie</span>
-            <h2 class="section-title light">Le meilleur de Factory &amp; Co Val d'Europe</h2>
+            <h2 class="section-title light">Le meilleur de Factory &amp; Co Aéroville</h2>
         </div>
 
         {{-- Slider d'images produits --}}
         <div class="products-slider-wrapper">
             <div class="products-slider">
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/smash-burger.webp" alt="Smash Burgers préparés à la minute au restaurant Factory & Co Val d'Europe" loading="lazy">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/smash-burger.webp" alt="Smash Burgers préparés à la minute au restaurant Factory & Co Aéroville" loading="lazy">
                     <figcaption>Smash Burgers</figcaption>
                 </div>
                 <div class="product-item-slide">
@@ -225,13 +225,13 @@
     <div class="container">
         <div class="section-header text-center">
             <span class="section-tag">Nous visiter</span>
-            <h2 class="section-title dark">Au cœur de Val d'Europe</h2>
+            <h2 class="section-title dark">Au cœur d'Aéroville</h2>
         </div>
 
         <div class="location-info-compact">
             <div class="location-block">
-                <strong>14 Rue du Danube, 77700 Serris</strong>
-                <p>Parking gratuit • RER A Val d'Europe • 15 min Disneyland Paris</p>
+                <strong>30 Rue des Buissons, 93290 Tremblay-en-France</strong>
+                <p>Parking 3h gratuites • RER B Parc des Expositions • Adjacent Pathé Aéroville</p>
             </div>
             <div class="location-block">
                 <strong>Horaires</strong>
@@ -245,8 +245,8 @@
 
         <div class="map-wrap">
             <iframe
-                title="Localisation Factory & Co Val d'Europe"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.0!2d2.7758!3d48.8753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e614d4c8c8c8c8%3A0x1!2sFactory+%26+Co+Val+d%27Europe!5e0!3m2!1sfr!2sfr!4v1"
+                title="Localisation Factory & Co Aéroville"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2618.5!2d2.5220!3d48.9912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sFactory+%26+Co+A%C3%A9roville!5e0!3m2!1sfr!2sfr!4v1"
                 allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
@@ -259,10 +259,10 @@
 <section class="section section-cta-large">
     <div class="container">
         <div class="cta-large-content">
-            <img src="{{ asset('images/ashley.webp') }}" alt="Client commandant à emporter chez Factory & Co Val d'Europe" class="cta-image">
+            <img src="{{ asset('images/ashley.webp') }}" alt="Client commandant à emporter chez Factory & Co Aéroville" class="cta-image">
             <div class="cta-text">
-                <h2>À emporter sur place</h2>
-                <p>Venez nous rendre visite ! Composez votre menu sur place, à la minute, et savourez votre repas à emporter. Parfait pour les visiteurs pressés qui veulent un vrai burger préparé avec savoir-faire, sans attente excessive.</p>
+                <h2>Prêt en quelques minutes, savouré n'importe où</h2>
+                <p>Commandez au comptoir, regardez votre burger se faire smasher sous vos yeux et repartez avec votre repas. Entre deux magasins, avant le cinéma ou en route vers l'aéroport CDG — Factory &amp; Co, c'est du fast-casual qui ne sacrifie jamais la qualité.</p>
                 <a href="{{ route('menu.index') }}" class="btn btn-pink">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                     Voir la carte

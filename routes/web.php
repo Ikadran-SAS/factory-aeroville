@@ -7,13 +7,13 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
-use App\Http\Controllers\SpecialitesController;
 use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\SpecialitesController;
 use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Factory & Co Val d'Europe — Routes Web
+| Factory & Co Aéroville — Routes Web
 |--------------------------------------------------------------------------
 | Architecture en silos SEO :
 |   Niveau 1 : Hub de marque (Accueil)

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Conditions d\'Utilisation – Factory & Co Val d\'Europe')
-@section('description', 'Conditions d\'utilisation du site Factory & Co Val d\'Europe. Consultez nos règles et obligations pour l\'utilisation de nos services.')
+@section('title', 'Conditions d\'Utilisation – Factory & Co Aéroville')
+@section('description', 'Conditions d\'utilisation du site Factory & Co Aéroville. Consultez nos règles et obligations pour l\'utilisation de nos services.')
 @section('keywords', 'conditions d\'utilisation, conditions d\'usage, Factory & Co, termes de service')
 
 @section('content')
@@ -17,7 +17,7 @@
 <div class="page-hero">
     <div class="page-hero-inner">
         <h1>Conditions d'Utilisation</h1>
-        <p>Consultez les règles et conditions régissant l'utilisation du site Factory & Co Val d'Europe</p>
+        <p>Consultez les règles et conditions régissant l'utilisation du site Factory & Co Aéroville</p>
     </div>
 </div>
 
@@ -25,10 +25,10 @@
     <div class="container">
         <div class="legal-content">
             <h2>1. Objet des conditions d'utilisation</h2>
-            <p>Les présentes conditions d'utilisation régissent l'accès et l'utilisation du site web Factory & Co Val d'Europe. En accédant à ce site, vous acceptez de vous conformer à ces conditions. Si vous n'acceptez pas ces conditions, veuillez ne pas accéder au site.</p>
+            <p>Les présentes conditions d'utilisation régissent l'accès et l'utilisation du site web Factory & Co Aéroville. En accédant à ce site, vous acceptez de vous conformer à ces conditions. Si vous n'acceptez pas ces conditions, veuillez ne pas accéder au site.</p>
 
             <h2>2. Accès au site</h2>
-            <p>Factory & Co Val d'Europe s'efforce de maintenir le site accessible 24h/24. Cependant, nous nous réservons le droit de :</p>
+            <p>Factory & Co Aéroville s'efforce de maintenir le site accessible 24h/24. Cependant, nous nous réservons le droit de :</p>
             <ul>
                 <li>Modifier ou interrompre l'accès au site temporairement ou définitivement, avec ou sans préavis</li>
                 <li>Refuser l'accès à tout utilisateur qui viole ces conditions</li>
@@ -76,7 +76,7 @@
             </ul>
 
             <h2>7. Limitation de responsabilité</h2>
-            <p>Factory & Co Val d'Europe ne peut être tenue responsable pour :</p>
+            <p>Factory & Co Aéroville ne peut être tenue responsable pour :</p>
             <ul>
                 <li>Les pertes de données ou d'informations</li>
                 <li>Les dommages consécutifs ou indirects</li>
@@ -87,13 +87,13 @@
             <p>Cette limitation s'applique dans la limite permise par la loi applicable.</p>
 
             <h2>8. Propriété intellectuelle</h2>
-            <p>Tous les éléments du site (textes, images, logos, vidéos, éléments graphiques, codes source) sont la propriété de Factory & Co Val d'Europe ou sont utilisés avec autorisation. Toute reproduction, distribution ou transmission sans autorisation écrite est strictement interdite.</p>
+            <p>Tous les éléments du site (textes, images, logos, vidéos, éléments graphiques, codes source) sont la propriété de Factory & Co Aéroville ou sont utilisés avec autorisation. Toute reproduction, distribution ou transmission sans autorisation écrite est strictement interdite.</p>
 
             <h2>9. Données personnelles</h2>
             <p>Pour plus d'informations sur la collecte, l'utilisation et la protection de vos données personnelles, veuillez consulter notre <a href="{{ route('confidentialite') }}">politique de confidentialité</a>.</p>
 
             <h2>10. Modifications des conditions</h2>
-            <p>Factory & Co Val d'Europe se réserve le droit de modifier ces conditions d'utilisation à tout moment. Les modifications sont effectives dès leur publication sur le site. Votre utilisation continue du site implique votre acceptation des conditions modifiées.</p>
+            <p>Factory & Co Aéroville se réserve le droit de modifier ces conditions d'utilisation à tout moment. Les modifications sont effectives dès leur publication sur le site. Votre utilisation continue du site implique votre acceptation des conditions modifiées.</p>
 
             <h2>11. Droit applicable et juridiction</h2>
             <p>Ces conditions d'utilisation sont régies par la loi française. Tout litige découlant de l'utilisation du site sera soumis à la juridiction des tribunaux français compétents.</p>
@@ -102,8 +102,8 @@
             <p>Pour toute question ou réclamation concernant ces conditions d'utilisation :</p>
             <ul>
                 <li>Email : <a href="mailto:contact@factoryandco.com">contact@factoryandco.com</a></li>
-                <li>Téléphone : <a href="tel:+33164632889">+33 1 64 63 28 89</a></li>
-                <li>Adresse : 14 Rue du Danube, 77700 Serris, France</li>
+                <li>Téléphone : <a href="tel:+33174257852">+33 1 74 25 78 52</a></li>
+                <li>Adresse : 30 Rue des Buissons, 93290 Tremblay-en-France, France</li>
             </ul>
 
             <h2>13. Dispositions diverses</h2>

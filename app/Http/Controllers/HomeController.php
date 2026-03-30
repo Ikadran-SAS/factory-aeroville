@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\FaqItem;
 use App\Models\OpeningHour;
 use App\Models\Product;
-use App\Models\Review;
 
 class HomeController extends Controller
 {
@@ -20,16 +19,18 @@ class HomeController extends Controller
             ->get()
             ->groupBy('category');
 
-        $featuredReviews = Review::featured()
-            ->orderBy('sort_order')
-            ->take(3)
-            ->get();
+        // Avis et note depuis Google Places API (live)
+        $googleBusinessController = new GoogleBusinessController;
+        $aggregateData = $googleBusinessController->getAggregateRating();
+        $averageRating = $aggregateData['rating'] ?? 4.5;
+        $totalReviews = $aggregateData['total'] ?? 6460;
 
-        // Get Google reviews aggregate rating
-        $googleReviewsController = new GoogleReviewsController();
-        $aggregateData = $googleReviewsController->getAggregateRating();
-        $averageRating = $aggregateData['rating'] ?? ($featuredReviews->count() > 0 ? $featuredReviews->avg('rating') : 0);
-        $totalReviews = $aggregateData['total'] ?? Review::where('is_visible', true)->count();
+        $allReviews = $googleBusinessController->getReviews();
+        $featuredReviews = collect($allReviews)
+            ->filter(fn (array $r): bool => ($r['rating'] ?? 0) >= 4 && ! empty($r['content']))
+            ->take(3)
+            ->map(fn (array $r): object => (object) $r)
+            ->values();
 
         $openingHours = OpeningHour::orderBy('sort_order')->get();
 
@@ -38,9 +39,9 @@ class HomeController extends Controller
         $faqs = collect($faqsGrouped)->flatten(1)->values()->all();
 
         $seo = [
-            'title' => 'Factory & Co Val d\'Europe – Restaurant Burger Serris',
-            'description' => 'Factory & Co, restaurant burger, bagel et cheesecake à Val d\'Europe à Serris. Centre commercial ouvert 7j/7. Smash Burgers, Bagels New-Yorkais, Cheesecake Factory.',
-            'keywords' => 'restaurant burger val d\'europe, factory and co serris, manger val d\'europe serris, smash burger serris, cheesecake serris, bagel val d\'europe',
+            'title' => 'Factory & Co Aéroville – Restaurant Burger Tremblay-en-France',
+            'description' => 'Factory & Co, restaurant burger, bagel et cheesecake à Aéroville à Tremblay-en-France. Centre commercial ouvert 7j/7. Smash Burgers, Bagels New-Yorkais, Cheesecake Factory.',
+            'keywords' => 'restaurant burger aéroville, factory and co tremblay-en-france, manger aéroville tremblay-en-france, smash burger tremblay-en-france, cheesecake tremblay-en-france, bagel aéroville, roissy, aéroville',
             'canonical' => route('home'),
         ];
 
@@ -53,9 +54,9 @@ class HomeController extends Controller
     public function clickCollect()
     {
         $seo = [
-            'title' => 'Click & Collect – Commandez en avance | Factory & Co Val d\'Europe',
-            'description' => 'Commandez votre repas en ligne et récupérez-le sans attendre à Val d\'Europe à Serris. Click & Collect disponible 7j/7.',
-            'keywords' => 'click collect restaurant val d\'europe, commander en ligne factory co serris, commande à emporter serris',
+            'title' => 'Click & Collect – Commandez en avance | Factory & Co Aéroville',
+            'description' => 'Commandez votre repas en ligne et récupérez-le sans attendre à Aéroville à Tremblay-en-France. Click & Collect disponible 7j/7.',
+            'keywords' => 'click collect restaurant aéroville, commander en ligne factory co tremblay-en-france, commande à emporter tremblay-en-france',
             'canonical' => route('click-collect'),
         ];
 

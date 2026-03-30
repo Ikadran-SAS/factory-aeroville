@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\FaqItem;
-use App\Models\Review;
 
 class AvisController extends Controller
 {
@@ -13,23 +12,22 @@ class AvisController extends Controller
         // Flatten grouped FAQs into a single array for the accordion component
         $faqs = collect($faqsGrouped)->flatten(1)->values()->all();
 
-        // Fetch visible reviews sorted by sort_order
-        $reviews = Review::where('is_visible', true)
-            ->orderBy('sort_order')
-            ->get();
+        // Avis et note depuis Google Places API (live)
+        $googleBusinessController = new GoogleBusinessController;
+        $aggregateData = $googleBusinessController->getAggregateRating();
+        $averageRating = $aggregateData['rating'] ?? 4.5;
+        $totalReviews = $aggregateData['total'] ?? 6460;
 
-        // Get aggregate rating (try Google first, fallback to local DB)
-        $googleReviewsController = new GoogleReviewsController();
-        $aggregateData = $googleReviewsController->getAggregateRating();
-
-        // Use Google data if available, otherwise use local DB
-        $averageRating = $aggregateData['rating'] ?? ($reviews->count() > 0 ? $reviews->avg('rating') : 0);
-        $totalReviews = $aggregateData['total'] ?? $reviews->count();
+        $allReviews = $googleBusinessController->getReviews();
+        $reviews = collect($allReviews)
+            ->filter(fn (array $r): bool => ! empty($r['content']))
+            ->map(fn (array $r): object => (object) $r)
+            ->values();
 
         $seo = [
             'title' => 'Avis Clients | Factory & Co – Nos Clients Témoignent',
-            'description' => 'Découvrez les avis vérifiés de nos clients satisfaits. '.number_format($averageRating, 1, ',', '').'★ - '.$totalReviews.' avis. Factory & Co Val d\'Europe à Serris.',
-            'keywords' => 'avis clients factory co, témoignages factory co, avis burgers serris, reviews factory and co, avis restaurants val d\'europe',
+            'description' => 'Découvrez les avis vérifiés de nos clients satisfaits. '.number_format($averageRating, 1, ',', '').'★ - '.$totalReviews.' avis. Factory & Co Aéroville à Tremblay-en-France.',
+            'keywords' => 'avis clients factory co, témoignages factory co, avis burgers tremblay-en-france, reviews factory and co, avis restaurants aéroville, roissy, aéroville',
             'canonical' => route('avis'),
         ];
 

@@ -11,9 +11,9 @@ class FaqController extends Controller
         $faqs = FaqItem::grouped();
 
         $seo = [
-            'title' => 'FAQ – Questions Fréquentes | Factory & Co Val d\'Europe',
-            'description' => 'Toutes les réponses à vos questions sur Factory & Co Val d\'Europe : horaires, accès, options Halal, allergènes, Click & Collect.',
-            'keywords' => 'faq factory and co serris, halal val d\'europe, allergènes restaurant serris, horaires factory co val d\'europe',
+            'title' => 'FAQ – Questions Fréquentes | Factory & Co Aéroville',
+            'description' => 'Toutes les réponses à vos questions sur Factory & Co Aéroville : horaires, accès, options Halal, allergènes, Click & Collect.',
+            'keywords' => 'faq factory and co tremblay-en-france, halal aéroville, allergènes restaurant tremblay-en-france, horaires factory co aéroville, roissy, aéroville',
             'canonical' => route('faq'),
         ];
 

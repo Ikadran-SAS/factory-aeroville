@@ -53,7 +53,7 @@
 <div class="page-hero">
     <div class="page-hero-inner">
         <span class="section-tag">Recherche vocale optimisée</span>
-        <h1>Questions fréquentes<br><em>Factory &amp; Co Val d'Europe</em></h1>
+        <h1>Questions fréquentes<br><em>Factory &amp; Co Aéroville</em></h1>
         <p>Toutes les réponses sur nos horaires, notre localisation, nos options Halal et nos allergènes.</p>
     </div>
 </div>

@@ -20,16 +20,16 @@ class FaqSeeder extends Seeder
                 'category' => 'acces',
                 'category_label' => 'Accès & Localisation',
                 'category_icon' => '📍',
-                'question' => 'Où se trouve Factory & Co à Val d\'Europe ?',
-                'answer' => 'Factory & Co est situé <strong>en plein cœur</strong> du centre commercial Val d\'Europe, à l\'adresse : <strong>14 Rue du Danube, Serris 77700</strong>. Nous sommes facilement accessibles depuis le parking gratuit du centre et la gare RER Val d\'Europe.',
+                'question' => 'Où se trouve Factory & Co à Aéroville ?',
+                'answer' => 'Factory & Co est situé <strong>au cœur</strong> du CC Westfield Aéroville, <strong>30 Rue des Buissons, 93290 Tremblay-en-France</strong>. Le restaurant est accessible depuis le parking du centre (4 000+ places, 3 h gratuites), le <strong>RER B</strong> (gare Parc des Expositions) ou la <strong>navette gratuite depuis l\'aéroport CDG</strong>.',
                 'sort_order' => 1,
             ],
             [
                 'category' => 'acces',
                 'category_label' => 'Accès & Localisation',
                 'category_icon' => '📍',
-                'question' => 'Comment rejoindre Val d\'Europe en transports en commun ?',
-                'answer' => 'Val d\'Europe est facilement accessible par le <strong>RER E</strong> (gare du Val d\'Europe - Serris). Depuis Paris, rejoignez la Gare de l\'Est et prenez le RER E direction Hausmann-St-Lazare. Vous pouvez aussi emprunter les navettes depuis Disneyland Paris (très proche). Par voiture, parking gratuit du centre disponible.',
+                'question' => 'Comment venir à Aéroville en transports en commun ?',
+                'answer' => '<strong>En RER B</strong> : descendez à la gare <strong>Parc des Expositions</strong>, le centre commercial est à quelques minutes à pied.<br><strong>En bus</strong> : lignes <strong>350</strong> et <strong>351</strong> desservent directement Aéroville.<br><strong>Depuis l\'aéroport CDG</strong> : navette gratuite depuis les terminaux.<br><strong>En voiture</strong> : accès par l\'A1 ou l\'A3, parking de 4 000+ places (3 h gratuites).',
                 'sort_order' => 2,
             ],
             [
@@ -37,7 +37,7 @@ class FaqSeeder extends Seeder
                 'category_label' => 'Accès & Localisation',
                 'category_icon' => '📍',
                 'question' => 'Le restaurant est-il accessible aux personnes à mobilité réduite ?',
-                'answer' => 'Oui, Factory & Co est entièrement accessible aux personnes à mobilité réduite (PMR). L\'aéroport dispose d\'ascenseurs et de rampes d\'accès. Notre comptoir est adapté et notre équipe est formée pour accueillir tous nos clients.',
+                'answer' => 'Oui, Factory & Co est entièrement accessible aux personnes à mobilité réduite (PMR). Le centre commercial Westfield Aéroville dispose d\'ascenseurs, de rampes d\'accès et de places de parking réservées. Notre comptoir est adapté et notre équipe est formée pour accueillir tous nos clients.',
                 'sort_order' => 3,
             ],
             // HORAIRES
@@ -45,8 +45,8 @@ class FaqSeeder extends Seeder
                 'category' => 'horaires',
                 'category_label' => 'Horaires & Service',
                 'category_icon' => '🕐',
-                'question' => 'Quels sont les horaires d\'ouverture de Factory & Co Val d\'Europe ?',
-                'answer' => 'Factory & Co est ouvert <strong>7 jours sur 7, 365 jours par an</strong> :<br>• Lundi–Mercredi : 07h00 – 21h30<br>• Jeudi–Vendredi : 07h00 – 22h00<br>• Samedi–Dimanche : 07h00 – 22h30',
+                'question' => 'Quels sont les horaires d\'ouverture de Factory & Co Aéroville ?',
+                'answer' => 'Factory & Co Aéroville est ouvert <strong>7 jours sur 7</strong> :<br>• Dimanche à Jeudi : <strong>8 h 30 – 22 h 00</strong><br>• Vendredi – Samedi : <strong>8 h 30 – 23 h 00</strong>',
                 'sort_order' => 4,
             ],
             [
@@ -54,15 +54,15 @@ class FaqSeeder extends Seeder
                 'category_label' => 'Horaires & Service',
                 'category_icon' => '🕐',
                 'question' => 'Le restaurant est-il ouvert les jours fériés ?',
-                'answer' => 'Oui, Factory & Co est ouvert <strong>tous les jours fériés</strong> sans exception, y compris Noël, le Jour de l\'An et le 14 juillet. Les horaires peuvent être légèrement ajustés selon les vols, mais le restaurant ne ferme jamais.',
+                'answer' => 'Oui, Factory & Co Aéroville est ouvert <strong>tous les jours fériés</strong> sans exception, y compris Noël, le Jour de l\'An et le 14 juillet. Les horaires peuvent être légèrement ajustés selon les horaires du centre commercial.',
                 'sort_order' => 5,
             ],
             [
                 'category' => 'horaires',
                 'category_label' => 'Horaires & Service',
                 'category_icon' => '🕐',
-                'question' => 'Puis-je manger chez Factory & Co très tôt le matin ?',
-                'answer' => 'Absolument ! Nous ouvrons à <strong>07h00</strong> tous les jours. Notre service breakfast (bagels, smoothie bowls, cafés) est disponible dès l\'ouverture. Idéal avant une journée de shopping ou une visite à Disneyland Paris !',
+                'question' => 'Puis-je prendre un petit-déjeuner chez Factory & Co ?',
+                'answer' => 'Absolument ! Nous ouvrons à <strong>8 h 30</strong> tous les jours. Notre offre breakfast (bagels frais, pancakes, viennoiseries, cafés de spécialité) est disponible dès l\'ouverture. Idéal avant une journée de shopping à Aéroville ou une séance au Pathé !',
                 'sort_order' => 6,
             ],
             // ALLERGÈNES
@@ -70,8 +70,8 @@ class FaqSeeder extends Seeder
                 'category' => 'allergenes',
                 'category_label' => 'Allergènes & Régimes',
                 'category_icon' => '🌿',
-                'question' => 'Proposez-vous des options Halal ?',
-                'answer' => 'Oui ! Nous proposons plusieurs options <strong>Halal certifiées</strong> : le Halal Smash Burger, le Chicken Avocado Bagel, les Super Bowls et la plupart de nos cheesecakes. Les produits Halal sont clairement identifiés sur notre carte avec le badge vert.',
+                'question' => 'Vos produits sont-ils Halal ?',
+                'answer' => 'Oui, chez Factory & Co <strong>l\'ensemble de notre viande est Halal</strong>. Ce n\'est pas une option à part : c\'est notre offre standard, naturellement intégrée à toute la carte. Smash Burgers, bagels, bowls — tous nos plats à base de viande sont préparés avec de la viande Halal certifiée.',
                 'sort_order' => 7,
             ],
             [
@@ -95,7 +95,7 @@ class FaqSeeder extends Seeder
                 'category_label' => 'Allergènes & Régimes',
                 'category_icon' => '🌿',
                 'question' => 'Proposez-vous des options sans gluten ?',
-                'answer' => 'Nous proposons plusieurs plats naturellement sans gluten : nos <strong>bowls</strong> (quinoa, riz brun), nos <strong>salades</strong> et certains <strong>cheesecakes</strong>. En revanche, notre cuisine n\'est pas une cuisine "sans gluten certifiée" : des traces de gluten peuvent être présentes en raison de la manipulation en cuisine.',
+                'answer' => 'Nous proposons plusieurs plats naturellement sans gluten : nos <strong>bowls</strong> (quinoa, riz brun), nos <strong>salades</strong> et certains <strong>cheesecakes</strong>. En revanche, notre cuisine n\'est pas certifiée « sans gluten » : des traces peuvent être présentes en raison de la manipulation en cuisine.',
                 'sort_order' => 10,
             ],
             // COMMANDE
@@ -104,7 +104,7 @@ class FaqSeeder extends Seeder
                 'category_label' => 'Commande & Paiement',
                 'category_icon' => '📦',
                 'question' => 'Comment fonctionne le Click & Collect chez Factory & Co ?',
-                'answer' => 'Le Click & Collect vous permet de <strong>commander et payer en ligne</strong> avant votre arrivée à l\'aéroport. Indiquez l\'heure de récupération souhaitée, passez la sécurité, et récupérez votre commande directement au comptoir sans attendre. Idéal pour les voyageurs pressés !',
+                'answer' => 'Le Click & Collect vous permet de <strong>commander et payer en ligne</strong> avant votre arrivée. Indiquez l\'heure de récupération souhaitée et récupérez votre commande directement au comptoir sans attendre. Idéal pour les shoppers pressés ou avant de reprendre la navette vers CDG !',
                 'sort_order' => 11,
             ],
             [
@@ -121,7 +121,7 @@ class FaqSeeder extends Seeder
                 'category_label' => 'Nos Spécialités',
                 'category_icon' => '🍔',
                 'question' => 'Quelle est la différence entre un Smash Burger et un burger classique ?',
-                'answer' => 'Le Smash Burger, c\'est une technique de cuisson précise : la viande est posée sur une plaque brûlante et écrasée immédiatement pour créer une croûte caramélisée et savoureux. Le résultat ? Une texture croustillante dehors, succulente dedans, avec un goût bien plus intense qu\'un burger traditionnel. Chaque smash burger est préparé à la minute, jamais précuit.',
+                'answer' => 'Le Smash Burger, c\'est une technique de cuisson précise : la viande est posée sur une plaque brûlante et écrasée immédiatement pour créer une croûte caramélisée et savoureuse. Le résultat ? Une texture croustillante dehors, succulente dedans, avec un goût bien plus intense qu\'un burger traditionnel. Chaque Smash Burger est préparé à la minute, jamais précuit.',
                 'sort_order' => 13,
             ],
             [
@@ -136,8 +136,8 @@ class FaqSeeder extends Seeder
                 'category' => 'specialites',
                 'category_label' => 'Nos Spécialités',
                 'category_icon' => '🍔',
-                'question' => 'Puis-je customiser les spécialités ?',
-                'answer' => 'Bien sûr ! Nos spécialités sont préparées à la minute. Vous pouvez adapter votre Smash Burger, Bagel ou Breakfast selon vos préférences : ajouter ou retirer des ingrédients, changer les sauces, etc. Allergies, restrictions alimentaires, goûts personnels : notre équipe s\'adapte à vos besoins spécifiques.',
+                'question' => 'Puis-je personnaliser ma commande ?',
+                'answer' => 'Bien sûr ! Nos spécialités sont préparées à la minute. Vous pouvez adapter votre Smash Burger, Bagel ou Breakfast selon vos préférences : ajouter ou retirer des ingrédients, changer les sauces, etc. Allergies, restrictions alimentaires, goûts personnels : notre équipe s\'adapte à vos besoins.',
                 'sort_order' => 15,
             ],
             [
@@ -145,7 +145,7 @@ class FaqSeeder extends Seeder
                 'category_label' => 'Nos Spécialités',
                 'category_icon' => '🍔',
                 'question' => 'Quels allergènes contient le Cheesecake Factory & Co ?',
-                'answer' => 'Notre Cheesecake contient : <strong>gluten, produits laitiers, œufs</strong>. Traces possibles de <strong>noix</strong>. Pour une liste complète et détaillée de tous les allergènes présents dans chaque spécialité (burgers, bagels, etc.), consultez notre <a href="' . route('faq') . '">FAQ complète des allergènes</a> ou demandez à notre équipe directement en restaurant.',
+                'answer' => 'Notre Cheesecake contient : <strong>gluten, produits laitiers, œufs</strong>. Traces possibles de <strong>noix</strong>. Pour une liste complète et détaillée de tous les allergènes présents dans chaque spécialité (burgers, bagels, etc.), consultez notre <a href="'.route('faq').'">FAQ complète des allergènes</a> ou demandez à notre équipe directement en restaurant.',
                 'sort_order' => 16,
             ],
         ];
@@ -157,25 +157,18 @@ class FaqSeeder extends Seeder
         /* ── HORAIRES D'OUVERTURE ── */
         $hours = [
             [
-                'days_label' => 'Lundi – Mercredi',
-                'days_of_week' => ['Monday', 'Tuesday', 'Wednesday'],
-                'opens_at' => '07:00:00',
-                'closes_at' => '21:30:00',
+                'days_label' => 'Dimanche – Jeudi',
+                'days_of_week' => ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+                'opens_at' => '08:30:00',
+                'closes_at' => '22:00:00',
                 'sort_order' => 1,
             ],
             [
-                'days_label' => 'Jeudi – Vendredi',
-                'days_of_week' => ['Thursday', 'Friday'],
-                'opens_at' => '07:00:00',
-                'closes_at' => '22:00:00',
+                'days_label' => 'Vendredi – Samedi',
+                'days_of_week' => ['Friday', 'Saturday'],
+                'opens_at' => '08:30:00',
+                'closes_at' => '23:00:00',
                 'sort_order' => 2,
-            ],
-            [
-                'days_label' => 'Samedi – Dimanche',
-                'days_of_week' => ['Saturday', 'Sunday'],
-                'opens_at' => '07:00:00',
-                'closes_at' => '22:30:00',
-                'sort_order' => 3,
             ],
         ];
 

@@ -30,7 +30,7 @@
         '@type' => 'WebPage',
         '@id' => route('concept') . '#webpage',
         'url' => route('concept'),
-        'name' => 'Notre Concept – Factory & Co Val d\'Europe',
+        'name' => 'Notre Concept – Factory & Co Aéroville',
         'description' => 'Découvrez l\'univers de Factory & Co : une philosophie basée sur l\'authenticité, la passion et le savoir-faire artisanal.',
         'isPartOf' => [
             '@id' => route('home') . '#website'
@@ -58,7 +58,7 @@
                 'name' => 'Depuis quand existe Factory & Co ?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Factory & Co existe depuis 1989. Nous sommes implantés à Val d\'Europe depuis 2016, au cœur du centre commercial.'
+                    'text' => 'Factory & Co existe depuis 1989. Nous sommes présent à Aéroville depuis 2013, au cœur du centre commercial.'
                 ]
             ],
             [
@@ -98,8 +98,8 @@
     <div class="hero-concept-overlay"></div>
     <div class="hero-content">
         <span class="section-tag">🍔</span>
-        <h1>Bien plus qu'un restaurant. Une expérience.</h1>
-        <p>Un aller simple pour New York… sans quitter votre centre commercial.</p>
+        <h1>Le diner new-yorkais qui ne fait rien comme les autres.</h1>
+        <p>Brooklyn s'installe au cœur d'Aéroville. Montez à bord.</p>
     </div>
 </section>
 
@@ -114,13 +114,13 @@
                 {{-- Badge --}}
                 <span class="pitch-badge">
                     <span class="pitch-badge-icon">💭</span>
-                    Notre philosophie
+                    Ce qui nous anime
                 </span>
 
                 {{-- Titre principal avec highlight --}}
                 <h2 class="pitch-redesigned-title">
-                    Chez nous, on ne vient<br>
-                    <span class="pitch-highlight">simplement manger.</span>
+                    Ici, on ne fait pas<br>
+                    <span class="pitch-highlight">de la restauration rapide.</span>
                 </h2>
 
                 {{-- Accent line --}}
@@ -128,12 +128,12 @@
 
                 {{-- Lead --}}
                 <p class="pitch-redesigned-lead">
-                    On vient vivre un moment : <span class="pitch-emphasis">gourmand, généreux, réconfortant.</span>
+                    On crée des moments : <span class="pitch-emphasis">savoureux, sincères, addictifs.</span>
                 </p>
 
                 {{-- Description --}}
                 <p class="pitch-redesigned-description">
-                    Entre burgers fondants, desserts iconiques et ambiance chaleureuse, chaque visite devient une parenthèse hors du temps. Ici, chaque détail est conçu pour transformer un simple repas en une véritable expérience.
+                    Des burgers smashés à la seconde, des cheesecakes qui fondent avant d'arriver à table, une énergie contagieuse dans l'air. Pas besoin de traverser l'Atlantique pour retrouver l'âme des diners américains.
                 </p>
 
                 {{-- CTA Button --}}
@@ -151,7 +151,7 @@
             {{-- Colonne Image --}}
             <div class="pitch-redesigned-image">
                 <div class="pitch-image-wrapper">
-                    <img src="{{ asset('images/factory-val-interieur.webp') }}" alt="Intérieur Factory & Co - Atmosphère du diner" loading="lazy">
+                    <img src="{{ asset('images/factory-aeroville-hero.webp') }}" alt="Intérieur Factory & Co - Atmosphère du diner" loading="lazy">
                     {{-- Accent corner --}}
                     <div class="pitch-image-accent"></div>
                 </div>
@@ -169,14 +169,14 @@
         {{-- Header Premium --}}
         <div class="concept-header-redesigned">
             <h2 class="concept-title-redesigned">
-                Notre <span class="concept-highlight">concept</span>
+                Notre <span class="concept-highlight">ADN</span>
             </h2>
-            <p class="concept-subtitle-redesigned">L'énergie new-yorkaise, le savoir-faire français</p>
+            <p class="concept-subtitle-redesigned">Né à Brooklyn, grandi en France</p>
         </div>
 
         {{-- Intro text en citation --}}
         <blockquote class="concept-quote">
-            Notre concept repose sur une idée simple : proposer une cuisine gourmande et qualitative, dans un univers inspiré des diners new-yorkais.
+            Tout part d'une conviction : on peut manger vite et manger bien. Notre carte réunit le meilleur du fast-casual américain, revisité avec l'exigence française.
         </blockquote>
 
         {{-- 3 Piliers en cards --}}
@@ -190,9 +190,9 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 4a3 3 0 013-3 3 3 0 013 3"></path>
                 </svg>
                 <div class="pillar-content">
-                    <h3 class="pillar-title">La rapidité<br>rencontre la qualité</h3>
+                    <h3 class="pillar-title">Vite fait,<br>bien fait</h3>
                     <p class="pillar-description">
-                        Chaque burger smashé sur plaque brûlante, chaque commande préparée à la minute. Fast, mais premium.
+                        Votre commande est lancée devant vous. Smashé, garni, servi : tout est frais, rien n'attend sous une lampe.
                     </p>
                 </div>
                 <div class="pillar-accent-bar"></div>
@@ -207,9 +207,9 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18c0-1.5 1-2 2-2h12c1 0 2 .5 2 2"></path>
                 </svg>
                 <div class="pillar-content">
-                    <h3 class="pillar-title">La street food<br>devient expérience</h3>
+                    <h3 class="pillar-title">Du comptoir<br>au voyage</h3>
                     <p class="pillar-description">
-                        Plus qu'un repas, c'est un moment. Chaque détail immersif crée une véritable parenthèse gourmande.
+                        Néons, briques, musique : dès que vous poussez la porte, vous êtes ailleurs. Le décor raconte une histoire, votre assiette aussi.
                     </p>
                 </div>
                 <div class="pillar-accent-bar"></div>
@@ -221,9 +221,9 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                 </svg>
                 <div class="pillar-content">
-                    <h3 class="pillar-title">Chaque détail<br>pensé pour vous</h3>
+                    <h3 class="pillar-title">Pensé<br>pour tous</h3>
                     <p class="pillar-description">
-                        De l'ambiance au service, tout est conçu pour transformer un simple repas en souvenir délicieux.
+                        Familles, amis, solo pressés ou voyageurs en transit depuis CDG : chacun trouve sa place et son moment chez nous.
                     </p>
                 </div>
                 <div class="pillar-accent-bar"></div>
@@ -233,10 +233,10 @@
         {{-- Conclusion impactante --}}
         <div class="concept-conclusion">
             <p class="concept-conclusion-text">
-                Ici, tout est préparé avec exigence, dans un esprit <span class="concept-conclusion-highlight">fast casual premium</span> : rapide, mais jamais bâclé.
+                Un état d'esprit simple : des produits qu'on assume, une cuisine qu'on maîtrise, un accueil qu'on soigne.
             </p>
             <p class="concept-conclusion-subtext">
-                ✓ Factory & Co Depuis 1989 – Ouvert à Val d'Europe depuis 2016
+                ✓ Factory & Co — Présent à Aéroville depuis 2013
             </p>
         </div>
     </div>
@@ -250,14 +250,14 @@
         {{-- Header Premium --}}
         <div class="experience-header-redesigned">
             <h2 class="experience-title-redesigned">
-                L'<span class="experience-highlight">expérience client</span>
+                <span class="experience-highlight">Votre moment</span>
             </h2>
-            <p class="experience-subtitle-redesigned">Un moment qui s'adapte à vous</p>
+            <p class="experience-subtitle-redesigned">À votre rythme, à votre façon</p>
         </div>
 
         {{-- Intro text en citation premium --}}
         <blockquote class="experience-intro-quote">
-            Que vous soyez en pleine session shopping, en pause déjeuner ou en sortie détente, notre restaurant s'intègre naturellement dans votre journée.
+            Avant le Pathé, entre deux boutiques ou juste avant de filer vers CDG, Factory & Co s'adapte à votre emploi du temps, pas l'inverse.
         </blockquote>
 
         {{-- 4 Moments/Expériences en grille 2x2 premium --}}
@@ -270,8 +270,8 @@
                     </svg>
                 </div>
                 <div class="moment-content">
-                    <h3 class="moment-title">Prendre le temps</h3>
-                    <p class="moment-description">Vous poser et savourer chaque bouchée</p>
+                    <h3 class="moment-title">S'installer</h3>
+                    <p class="moment-description">Prendre une vraie pause dans votre journée</p>
                 </div>
                 <div class="moment-accent"></div>
             </div>
@@ -285,8 +285,8 @@
                     </svg>
                 </div>
                 <div class="moment-content">
-                    <h3 class="moment-title">Manger rapidement</h3>
-                    <p class="moment-description">Sans compromis sur la qualité</p>
+                    <h3 class="moment-title">Repartir vite</h3>
+                    <p class="moment-description">Votre commande est prête en quelques minutes</p>
                 </div>
                 <div class="moment-accent"></div>
             </div>
@@ -302,8 +302,8 @@
                     </svg>
                 </div>
                 <div class="moment-content">
-                    <h3 class="moment-title">Partager un moment</h3>
-                    <p class="moment-description">Convivial et chaleureux</p>
+                    <h3 class="moment-title">Venir à plusieurs</h3>
+                    <p class="moment-description">Tables familiales, grandes tablées, ambiance détendue</p>
                 </div>
                 <div class="moment-accent"></div>
             </div>
@@ -321,8 +321,8 @@
                     </svg>
                 </div>
                 <div class="moment-content">
-                    <h3 class="moment-title">S'offrir une pause</h3>
-                    <p class="moment-description">Gourmande et réconfortante</p>
+                    <h3 class="moment-title">Se faire plaisir</h3>
+                    <p class="moment-description">Un cheesecake, un milkshake, juste pour le fun</p>
                 </div>
                 <div class="moment-accent"></div>
             </div>
@@ -331,10 +331,10 @@
         {{-- Conclusion impactante --}}
         <div class="experience-conclusion">
             <p class="experience-conclusion-text">
-                Ici, tout est conçu pour être <span class="experience-conclusion-highlight">simple, fluide et agréable.</span>
+                Pas de chichis, pas d'attente inutile. <span class="experience-conclusion-highlight">Juste l'essentiel, bien fait.</span>
             </p>
             <p class="experience-conclusion-subtext">
-                ✓ Factory & Co - À chaque moment de votre journée
+                ✓ Ouvert 7j/7 au CC Westfield Aéroville
             </p>
         </div>
     </div>
@@ -352,16 +352,16 @@
                 Notre cuisine
             </span>
             <h2 class="cuisine-title-redesigned">
-                Généreuse, <span class="cuisine-highlight">gourmande,</span> assumée
+                Franche, <span class="cuisine-highlight">généreuse,</span> sans filtre
             </h2>
             <p class="cuisine-subtitle-redesigned">
-                Le savoir-faire au cœur de chaque assiette
+                Ce qu'on met dans l'assiette, on l'assume
             </p>
         </div>
 
         {{-- Intro text avec accent --}}
         <blockquote class="cuisine-intro-quote">
-            Chaque assiette est une promesse de gourmandise, chaque détail pensé pour créer un moment mémorable. Pâtisseries, buns et pains bagels sont fabriqués par nos soins, avec le savoir-faire du chef Jonathan et l'engagement envers la qualité artisanale. Ici, rien n'est laissé au hasard. Tout est pensé, préparé, maîtrisé.
+            Viande Halal certifiée, pain brioché doré à point, sauces maison, cheesecakes coulants : chaque recette a été testée, ajustée, validée. On ne triche pas sur les ingrédients et ça se sent dès la première bouchée.
         </blockquote>
 
         {{-- Slider Wrapper avec Navigation --}}
@@ -408,7 +408,7 @@
                     {{-- Content --}}
                     <div class="card-text-content">
                         <h3 class="card-title">Burgers</h3>
-                        <p class="card-description">Généreux au pain moelleux</p>
+                        <p class="card-description">Smashés sur plaque, jamais précuits</p>
                     </div>
 
                     {{-- Accent Line --}}
@@ -454,7 +454,7 @@
                     {{-- Content --}}
                     <div class="card-text-content">
                         <h3 class="card-title">Recettes</h3>
-                        <p class="card-description">Travaillées et savoureuses</p>
+                        <p class="card-description">Bouillis puis dorés, à la new-yorkaise</p>
                     </div>
 
                     {{-- Accent Line --}}
@@ -501,7 +501,7 @@
                     {{-- Content --}}
                     <div class="card-text-content">
                         <h3 class="card-title">Desserts</h3>
-                        <p class="card-description">Iconiques et régressifs</p>
+                        <p class="card-description">Cheesecakes crémeux, recettes maison</p>
                     </div>
 
                     {{-- Accent Line --}}
@@ -545,7 +545,7 @@
                     {{-- Content --}}
                     <div class="card-text-content">
                         <h3 class="card-title">Boissons</h3>
-                        <p class="card-description">Gourmandes et rafraîchissantes</p>
+                        <p class="card-description">Mixés à la commande, fruits frais</p>
                     </div>
 
                     {{-- Accent Line --}}
@@ -567,23 +567,23 @@
         {{-- Engagement Box avec checklist --}}
         <div class="cuisine-engagement-box">
             <div class="engagement-content">
-                <h3 class="engagement-title">Ce que nous garantissons</h3>
+                <h3 class="engagement-title">Notre engagement</h3>
                 <ul class="engagement-checklist">
                     <li class="checklist-item">
                         <span class="checklist-badge">✔️</span>
-                        <span class="checklist-text">Du goût</span>
+                        <span class="checklist-text">Du goût, toujours</span>
                     </li>
                     <li class="checklist-item">
                         <span class="checklist-badge">✔️</span>
-                        <span class="checklist-text">De la texture</span>
+                        <span class="checklist-text">Du frais, jamais du surgelé</span>
                     </li>
                     <li class="checklist-item">
                         <span class="checklist-badge">✔️</span>
-                        <span class="checklist-text">De la satisfaction</span>
+                        <span class="checklist-text">Du sourire, en prime</span>
                     </li>
                 </ul>
                 <p class="engagement-tagline">
-                    Parce que bien manger, c'est aussi se faire plaisir sans compromis.
+                    La gourmandise n'a pas besoin d'excuses.
                 </p>
             </div>
             {{-- Image ashley subtle en arrière-plan --}}
@@ -601,18 +601,18 @@
         <div class="why-choose-header">
             <span class="why-choose-badge">
                 <span class="why-choose-badge-icon">⭐</span>
-                Pourquoi nous choisir
+                Ce qui fait la différence
             </span>
             <h2 class="why-choose-title">
-                <span class="why-choose-highlight">L'expérience</span> fait la différence
+                On ne vient pas ici <span class="why-choose-highlight">par hasard</span>
             </h2>
-            <p class="why-choose-subtitle">Plus qu'un restaurant, une destination mémorable</p>
+            <p class="why-choose-subtitle">On y revient parce que c'est bon, simple et vrai</p>
         </div>
 
         {{-- CARD 1: Identité Forte --}}
         <div class="why-choose-card-visual">
             <div class="card-visual-image">
-                <img src="{{ asset('images/factory-val-interieur.webp') }}" alt="Intérieur Factory & Co Toulouse - Design unique et mémorable" loading="lazy">
+                <img src="{{ asset('images/factory-aeroville-hero.webp') }}" alt="Intérieur Factory & Co Aéroville - Design unique et mémorable" loading="lazy">
                 <div class="card-visual-overlay-dark"></div>
             </div>
             <div class="card-visual-content">
@@ -629,8 +629,8 @@
                         <path d="M32 18 C32 18, 28 24, 28 28 C28 31.314, 29.791 34, 32 34 C34.209 34, 36 31.314, 36 28 C36 24, 32 18, 32 18 Z" stroke="url(#grad-visual-1)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h3 class="card-visual-title">Identité forte</h3>
-                <p class="card-visual-description">Un design unique et reconnaissable qui marque les esprits dès l'entrée</p>
+                <h3 class="card-visual-title">Un lieu qui se remarque</h3>
+                <p class="card-visual-description">Néons, briques apparentes, énergie new-yorkaise : l'ambiance Factory & Co ne ressemble à rien d'autre</p>
                 <div class="card-visual-accent"></div>
             </div>
         </div>
@@ -674,8 +674,8 @@
                         <line x1="48" y1="26" x2="50" y2="36" stroke="url(#grad-visual-2)" stroke-width="2"/>
                     </svg>
                 </div>
-                <h3 class="card-visual-title">Ambiance immersive</h3>
-                <p class="card-visual-description">Une atmosphère energique qui vous transporte loin de l'ordinaire</p>
+                <h3 class="card-visual-title">Une énergie communicative</h3>
+                <p class="card-visual-description">La playlist, l'équipe, les odeurs de grill : tout contribue à créer une atmosphère unique</p>
                 <div class="card-visual-accent"></div>
             </div>
         </div>
@@ -701,8 +701,8 @@
                         <path d="M20 35 Q32 40, 44 35" stroke="url(#grad-visual-3)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h3 class="card-visual-title">Cuisine généreuse</h3>
-                <p class="card-visual-description">Des produits frais, des portions généreuses, une qualité sans compromis</p>
+                <h3 class="card-visual-title">Des portions honnêtes</h3>
+                <p class="card-visual-description">Ce qui est dans la vitrine, c'est ce que vous retrouvez dans l'assiette. En vrai.</p>
                 <div class="card-visual-accent"></div>
             </div>
         </div>
@@ -710,7 +710,7 @@
         {{-- CARD 4: Expérience Complète --}}
         <div class="why-choose-card-visual card-visual-reverse">
             <div class="card-visual-image">
-                <img src="{{ asset('images/factory-val-3.webp') }}" alt="Ambiance Factory & Co - Moments en famille et entre amis" loading="lazy">
+                <img src="{{ asset('images/factory-aeroville-hero.webp') }}" alt="Ambiance Factory & Co - Moments en famille et entre amis" loading="lazy">
                 <div class="card-visual-overlay-dark"></div>
             </div>
             <div class="card-visual-content">
@@ -726,8 +726,8 @@
                         <path d="M32 48 C32 48, 16 36, 16 26 C16 20, 20 16, 24 16 C26.5 16, 28.8 17.2, 30.4 19 C31.2 19.9, 32 20.8, 32 20.8 C32 20.8, 32.8 19.9, 33.6 19 C35.2 17.2, 37.5 16, 40 16 C44 16, 48 20, 48 26 C48 36, 32 48, 32 48 Z" stroke="url(#grad-visual-4)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h3 class="card-visual-title">Expérience complète</h3>
-                <p class="card-visual-description">Entrée, plat, dessert et moment précieux, tout en un seul endroit</p>
+                <h3 class="card-visual-title">Du breakfast au dessert</h3>
+                <p class="card-visual-description">Dès 8h30, du petit-déjeuner au cheesecake de fin de soirée, on couvre tous les moments</p>
                 <div class="card-visual-accent"></div>
             </div>
         </div>
@@ -736,8 +736,8 @@
         <div class="why-choose-conclusion-visual">
             <blockquote class="conclusion-quote">
                 <span class="quote-mark">"</span>
-                <p>Ici, vous ne consommez pas une simple commande.</p>
-                <p class="conclusion-highlight">Vous vivez une expérience.</p>
+                <p>On ne vient pas juste manger.</p>
+                <p class="conclusion-highlight">On vient se régaler.</p>
                 <span class="quote-mark close">"</span>
             </blockquote>
         </div>
@@ -754,17 +754,17 @@
         <div class="ambiance-header-redesigned">
             <span class="ambiance-badge">
                 <span class="ambiance-badge-icon">✨</span>
-                L'Ambiance du Lieu
+                L'atmosphère
             </span>
             <h2 class="ambiance-title-redesigned">
-                Un espace <span class="ambiance-highlight">vivant et mémorable</span>
+                Un décor qui <span class="ambiance-highlight">raconte quelque chose</span>
             </h2>
-            <p class="ambiance-subtitle-redesigned">Dès l'entrée, l'atmosphère vous transporte</p>
+            <p class="ambiance-subtitle-redesigned">On entre, on oublie qu'on est dans un centre commercial</p>
         </div>
 
         {{-- Intro Quote --}}
         <blockquote class="ambiance-intro-quote">
-            Factory & Co n'est pas juste un restaurant. C'est un univers pensé dans les moindres détails pour transformer chaque visite en souvenir.
+            Les néons s'allument, la musique pulse, l'odeur du grill flotte dans l'air. Factory & Co, c'est un voyage express à Brooklyn sans quitter Aéroville.
         </blockquote>
 
         {{-- 3 Premium Ambiance Cards avec images --}}
@@ -772,7 +772,7 @@
             {{-- Card 1: Design Urbain --}}
             <div class="ambiance-card-premium">
                 <div class="ambiance-card-image">
-                    <img src="{{ asset('images/factory-val-interieur.webp') }}" alt="Design urbain Factory & Co - Intérieur moderne et inspiré" loading="lazy">
+                    <img src="{{ asset('images/factory-aeroville-hero.webp') }}" alt="Design urbain Factory & Co - Intérieur moderne et inspiré" loading="lazy">
                     <div class="ambiance-card-overlay"></div>
                 </div>
                 <div class="ambiance-card-content">
@@ -790,8 +790,8 @@
                             <rect x="42" y="20" width="6" height="6" stroke="url(#grad-ambiance-1)" stroke-width="2" fill="none"/>
                         </svg>
                     </div>
-                    <h3 class="ambiance-card-title">Design urbain</h3>
-                    <p class="ambiance-card-description">Inspiré des grandes villes, notre intérieur fusionne style new-yorkais et savoir-faire français</p>
+                    <h3 class="ambiance-card-title">Esprit Brooklyn</h3>
+                    <p class="ambiance-card-description">Briques, métal, bois brut et néons : chaque matière raconte l'histoire des diners américains</p>
                     <div class="ambiance-card-accent"></div>
                 </div>
             </div>
@@ -799,7 +799,7 @@
             {{-- Card 2: Ambiance Conviviale --}}
             <div class="ambiance-card-premium">
                 <div class="ambiance-card-image">
-                    <img src="{{ asset('images/factory-val-3.webp') }}" alt="Ambiance conviviale Factory & Co - Moments en famille" loading="lazy">
+                    <img src="{{ asset('images/factory-aeroville-hero.webp') }}" alt="Ambiance conviviale Factory & Co - Moments en famille" loading="lazy">
                     <div class="ambiance-card-overlay"></div>
                 </div>
                 <div class="ambiance-card-content">
@@ -817,8 +817,8 @@
                             <path d="M18 38 Q18 44, 32 48 Q46 44, 46 38" stroke="url(#grad-ambiance-2)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="ambiance-card-title">Ambiance conviviale</h3>
-                    <p class="ambiance-card-description">Un espace chaleureux pensé pour les moments partagés, où chacun se sent bienvenu</p>
+                    <h3 class="ambiance-card-title">Ouvert à tous</h3>
+                    <p class="ambiance-card-description">Familles, couples, bandes de potes, voyageurs solo : tout le monde est chez soi ici</p>
                     <div class="ambiance-card-accent"></div>
                 </div>
             </div>
@@ -844,8 +844,8 @@
                             <path d="M26 40 L 26 45 M 38 40 L 38 45" stroke="url(#grad-ambiance-3)" stroke-width="2.5" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="ambiance-card-title">Espace détente</h3>
-                    <p class="ambiance-card-description">Que ce soit rapide ou détente, nos installations vous offrent le confort et la sérénité</p>
+                    <h3 class="ambiance-card-title">Confort pensé</h3>
+                    <p class="ambiance-card-description">Banquettes, assises variées, espace kids : installez-vous comme vous voulez</p>
                     <div class="ambiance-card-accent"></div>
                 </div>
             </div>
@@ -854,8 +854,8 @@
         {{-- Ambiance Message --}}
         <div class="ambiance-message">
             <blockquote class="ambiance-tagline">
-                L'ambiance n'est pas une décoration.<br>
-                <span class="ambiance-tagline-emphasis">C'est l'âme du lieu.</span>
+                Le décor n'est pas un accessoire.<br>
+                <span class="ambiance-tagline-emphasis">C'est ce qui fait qu'on revient.</span>
             </blockquote>
         </div>
     </div>
@@ -870,17 +870,17 @@
         <div class="moments-header-redesigned">
             <span class="moments-badge">
                 <span class="moments-badge-icon">⏰</span>
-                Pour tous les moments
+                À toute heure
             </span>
             <h2 class="moments-title-redesigned">
-                Chaque heure a sa <span class="moments-highlight">bonne raison</span>
+                Il y a toujours une <span class="moments-highlight">raison de passer</span>
             </h2>
-            <p class="moments-subtitle-redesigned">Petit-déjeuner, déjeuner, goûter, dîner… à chaque heure sa spécialité</p>
+            <p class="moments-subtitle-redesigned">8h30, 12h, 16h, 20h : la carte s'adapte à votre journée</p>
         </div>
 
         {{-- Intro Quote --}}
         <blockquote class="moments-intro-quote">
-            Factory & Co s'adapte à votre rythme. Que ce soit une pause rapide ou un moment à savourer, nous sommes là pour chaque occasion.
+            Shopping marathon, escale avant un vol, sortie ciné au Pathé ou simple envie de bien manger : chez nous, il n'y a pas de mauvais moment pour venir.
         </blockquote>
 
         {{-- 4 Premium Moments Cards --}}
@@ -906,8 +906,8 @@
                             <path d="M 32 32 L 32 40" stroke="url(#grad-moment-1)" stroke-width="2.5" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="moments-card-title">Pause déjeuner</h3>
-                    <p class="moments-card-description">Burgers savoureux et bagels généreux pour votre pause shopping ou pause professionnelle. Nourrissant, rapide et délicieux</p>
+                    <h3 class="moments-card-title">Midi express</h3>
+                    <p class="moments-card-description">Un smash burger ou un bagel entre deux boutiques. Commandé, préparé, savouré : votre pause déjeuner est bouclée</p>
                     <div class="moments-card-accent"></div>
                 </div>
             </div>
@@ -933,8 +933,8 @@
                             <path d="M 32 20 Q 30 18, 28 20" stroke="url(#grad-moment-2)" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="moments-card-title">Goûter gourmand</h3>
-                    <p class="moments-card-description">Nos cheesecakes onctueux, pâtisseries artisanales et douceurs faites maison. La pause sucrée qu'on attend avec impatience</p>
+                    <h3 class="moments-card-title">Pause sucrée</h3>
+                    <p class="moments-card-description">Cheesecake, milkshake, cookie : la parenthèse gourmande parfaite en milieu d'après-midi</p>
                     <div class="moments-card-accent"></div>
                 </div>
             </div>
@@ -942,7 +942,7 @@
             {{-- Card 3: Dîner Décontracté --}}
             <div class="moments-card-premium">
                 <div class="moments-card-image">
-                    <img src="{{ asset('images/factory-val-interieur.webp') }}" alt="Dîner Factory & Co - Ambiance conviviale" loading="lazy">
+                    <img src="{{ asset('images/factory-aeroville-hero.webp') }}" alt="Dîner Factory & Co - Ambiance conviviale" loading="lazy">
                     <div class="moments-card-overlay"></div>
                 </div>
                 <div class="moments-card-content">
@@ -960,8 +960,8 @@
                             <path d="M 20 32 Q 20 28, 24 26 M 44 32 Q 44 28, 40 26" stroke="url(#grad-moment-3)" stroke-width="2.5" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="moments-card-title">Dîner décontracté</h3>
-                    <p class="moments-card-description">Burgers savoureux, bagels généreux et cheesecakes gourmands pour une soirée en famille ou entre amis, en toute détente</p>
+                    <h3 class="moments-card-title">Soirée tranquille</h3>
+                    <p class="moments-card-description">Après le Pathé ou en fin de shopping, posez-vous pour un burger et un dessert avant de rentrer</p>
                     <div class="moments-card-accent"></div>
                 </div>
             </div>
@@ -969,7 +969,7 @@
             {{-- Card 4: Moment entre Amis --}}
             <div class="moments-card-premium">
                 <div class="moments-card-image">
-                    <img src="{{ asset('images/factory-val-3.webp') }}" alt="Moment entre amis Factory & Co - Convivialité" loading="lazy">
+                    <img src="{{ asset('images/factory-aeroville-hero.webp') }}" alt="Moment entre amis Factory & Co - Convivialité" loading="lazy">
                     <div class="moments-card-overlay"></div>
                 </div>
                 <div class="moments-card-content">
@@ -988,8 +988,8 @@
                             <path d="M 18 33 Q 18 40, 32 44 Q 46 40, 46 33" stroke="url(#grad-moment-4)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="moments-card-title">Petit-déjeuner américain</h3>
-                    <p class="moments-card-description">Dès 8h30, bagels frais, œufs brouillés, bacon croustillant, pâtisseries artisanales et café de qualité pour bien commencer la journée</p>
+                    <h3 class="moments-card-title">Breakfast dès 8h30</h3>
+                    <p class="moments-card-description">Bagels frais, pancakes, viennoiseries et café de spécialité pour démarrer la journée du bon pied</p>
                     <div class="moments-card-accent"></div>
                 </div>
             </div>
@@ -998,8 +998,8 @@
         {{-- Closing Message --}}
         <div class="moments-closing-message">
             <p class="moments-closing-text">
-                Peu importe l'heure, il y a toujours une bonne raison de venir.<br>
-                <span class="moments-closing-emphasis">Factory & Co s'adapte à chaque moment de votre vie.</span>
+                De l'ouverture à la fermeture, la carte tourne mais la qualité reste.<br>
+                <span class="moments-closing-emphasis">Factory & Co Aéroville, ouvert 7j/7.</span>
             </p>
         </div>
     </div>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', 'Plan du site – Factory & Co')
-@section('description', 'Accédez facilement à toutes les pages du site Factory & Co Val d\'Europe')
+@section('description', 'Accédez facilement à toutes les pages du site Factory & Co Aéroville')
 @section('canonical', route('sitemap.html'))
 
 @section('content')
@@ -18,7 +18,7 @@
     <div class="container">
         <div class="sitemap-wrapper">
             <div class="sitemap-intro">
-                <p>Bienvenue sur le plan du site de Factory & Co Val d'Europe. Vous trouverez ci-dessous l'ensemble des pages et ressources du site, organisées par catégorie pour faciliter votre navigation.</p>
+                <p>Bienvenue sur le plan du site de Factory & Co Aéroville. Vous trouverez ci-dessous l'ensemble des pages et ressources du site, organisées par catégorie pour faciliter votre navigation.</p>
             </div>
 
             <div class="sitemap-grid">

@@ -123,4 +123,12 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Google Places API Key
+    |--------------------------------------------------------------------------
+    */
+
+    'google_places_api_key' => env('GOOGLE_PLACES_API_KEY'),
+
 ];

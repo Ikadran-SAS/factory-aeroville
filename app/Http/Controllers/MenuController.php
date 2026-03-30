@@ -36,14 +36,22 @@ class MenuController extends Controller
             ->groupBy('subcategory');
 
         $seo = [
-            'title' => 'La Carte | Factory & Co Val d\'Europe',
-            'description' => 'Découvrez la carte complète de Factory & Co à Val d\'Europe. Smash Burgers anglais, Bagels New-Yorkais, Cheesecake premium, Bowls sains. Tous les ingrédients frais et délicieux.',
-            'keywords' => 'carte factory co serris, menu factory co val d\'europe, burger bagel cheesecake serris',
+            'title' => 'La Carte | Factory & Co Aéroville',
+            'description' => 'Découvrez la carte complète de Factory & Co à Aéroville. Smash Burgers anglais, Bagels New-Yorkais, Cheesecake premium, Bowls sains. Tous les ingrédients frais et délicieux.',
+            'keywords' => 'carte factory co tremblay-en-france, menu factory co aéroville, burger bagel cheesecake tremblay-en-france, roissy, aéroville',
             'canonical' => route('menu.index'),
             'h1' => 'La Carte – Factory & Co',
         ];
 
-        return view('pages.menu.carte', compact('seo', 'burgers', 'bagels', 'cheesecakes', 'bowls'));
-    }
+        // Avis Google live
+        $googleBusinessController = new GoogleBusinessController;
+        $allReviews = $googleBusinessController->getReviews();
+        $featuredReviews = collect($allReviews)
+            ->filter(fn (array $r): bool => ($r['rating'] ?? 0) >= 4 && ! empty($r['content']))
+            ->take(3)
+            ->map(fn (array $r): object => (object) $r)
+            ->values();
 
+        return view('pages.menu.carte', compact('seo', 'burgers', 'bagels', 'cheesecakes', 'bowls', 'featuredReviews'));
+    }
 }

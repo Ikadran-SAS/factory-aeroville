@@ -14,7 +14,7 @@
           <span class="accordion-icon">+</span>
         </button>
         <div v-if="expandedIndex === index" class="accordion-content">
-          <p>{{ faq.answer }}</p>
+          <p v-html="faq.answer"></p>
         </div>
       </div>
     </div>

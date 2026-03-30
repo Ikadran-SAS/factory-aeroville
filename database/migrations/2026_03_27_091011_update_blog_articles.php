@@ -1,17 +1,16 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
     /**
      * Run the migrations.
+     * NOTE: Superseded by 2026_03_29_203000_update_content_for_aeroville.php
      */
     public function up(): void
     {
-        // Article 1: 5 astuces Val d'Europe - correction RER, horaires, click & collect
+        // Article 1: corrections RER, horaires, click & collect
         $article1 = DB::table('blog_posts')->where('id', 1)->first();
         if ($article1) {
             $content = str_replace(
@@ -22,7 +21,7 @@ return new class extends Migration
             DB::table('blog_posts')->where('id', 1)->update(['content' => $content]);
         }
 
-        // Article 2: RER E Val d'Europe Serris - correction RER E en RER A
+        // Article 2: correction RER E en RER A (superseded by Aéroville migration)
         $article2 = DB::table('blog_posts')->where('id', 2)->first();
         if ($article2) {
             $content = str_replace(
@@ -33,7 +32,7 @@ return new class extends Migration
             DB::table('blog_posts')->where('id', 2)->update([
                 'title' => 'Comment rejoindre Val d\'Europe en RER A ?',
                 'slug' => 'rer-a-val-europe-serris',
-                'content' => $content
+                'content' => $content,
             ]);
         }
 

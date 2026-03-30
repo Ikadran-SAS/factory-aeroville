@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Mentions Légales – Factory & Co Val d\'Europe')
-@section('description', 'Mentions légales et informations éditoriales de Factory & Co Val d\'Europe. Découvrez les responsabilités légales et les informations sur l\'entreprise.')
+@section('title', 'Mentions Légales – Factory & Co Aéroville')
+@section('description', 'Mentions légales et informations éditoriales de Factory & Co Aéroville. Découvrez les responsabilités légales et les informations sur l\'entreprise.')
 @section('keywords', 'mentions légales, informations légales, Factory & Co, éditeur du site')
 
 @section('content')
@@ -17,7 +17,7 @@
 <div class="page-hero">
     <div class="page-hero-inner">
         <h1>Mentions Légales</h1>
-        <p>Informations légales et éditoriales relatives au site Factory & Co Val d'Europe</p>
+        <p>Informations légales et éditoriales relatives au site Factory & Co Aéroville</p>
     </div>
 </div>
 
@@ -25,15 +25,15 @@
     <div class="container">
         <div class="legal-content">
             <h2>1. Identification de l'éditeur</h2>
-            <p><strong>Raison sociale :</strong> Factory & Co Val d'Europe<br>
+            <p><strong>Raison sociale :</strong> Factory & Co Aéroville<br>
             <strong>Statut juridique :</strong> Entreprise commerciale<br>
-            <strong>Adresse :</strong> 14 Rue du Danube, Centre Commercial Val d'Europe<br>
-            77700 Serris, France<br>
-            <strong>Téléphone :</strong> <a href="tel:+33164632889">+33 1 64 63 28 89</a><br>
+            <strong>Adresse :</strong> 30 Rue des Buissons, Centre Commercial Westfield Aéroville<br>
+            93290 Tremblay-en-France, France<br>
+            <strong>Téléphone :</strong> <a href="tel:+33174257852">+33 1 74 25 78 52</a><br>
             <strong>Email :</strong> <a href="mailto:contact@factoryandco.com">contact@factoryandco.com</a></p>
 
             <h2>2. Responsable de la publication</h2>
-            <p>Le présent site est édité par Factory & Co Val d'Europe. Le responsable de la publication est la direction générale de l'entreprise.</p>
+            <p>Le présent site est édité par Factory & Co Aéroville. Le responsable de la publication est la direction générale de l'entreprise.</p>
 
             <h2>3. Hébergement du site</h2>
             <p><strong>Nom de l'hébergeur :</strong> [À compléter avec les informations d'hébergement]<br>
@@ -50,32 +50,32 @@
 
             <h2>5. Propriété intellectuelle</h2>
             <p>Tous les contenus du site (textes, images, logos, éléments graphiques) sont protégés par les droits d'auteur et les droits de propriété intellectuelle. Toute reproduction sans autorisation est strictement interdite.</p>
-            <p>Les droits d'auteur du site et de ses contenus sont la propriété de Factory & Co Val d'Europe.</p>
+            <p>Les droits d'auteur du site et de ses contenus sont la propriété de Factory & Co Aéroville.</p>
 
             <h2>6. Responsabilité</h2>
-            <p>Factory & Co Val d'Europe s'efforce de fournir des informations précises et à jour sur son site. Cependant, nous ne pouvons pas garantir :</p>
+            <p>Factory & Co Aéroville s'efforce de fournir des informations précises et à jour sur son site. Cependant, nous ne pouvons pas garantir :</p>
             <ul>
                 <li>L'absence d'erreurs ou d'omissions</li>
                 <li>La disponibilité permanente du site</li>
                 <li>L'absence de virus ou de contenu nuisible</li>
             </ul>
-            <p>Factory & Co Val d'Europe ne peut être tenue responsable des dommages directs ou indirects résultant de l'utilisation du site.</p>
+            <p>Factory & Co Aéroville ne peut être tenue responsable des dommages directs ou indirects résultant de l'utilisation du site.</p>
 
             <h2>7. Liens externes</h2>
-            <p>Le site peut contenir des liens vers des sites externes. Factory & Co Val d'Europe n'est pas responsable du contenu de ces sites tiers et ne peut être tenue responsable de tout dommage résultant de leur accès ou utilisation.</p>
+            <p>Le site peut contenir des liens vers des sites externes. Factory & Co Aéroville n'est pas responsable du contenu de ces sites tiers et ne peut être tenue responsable de tout dommage résultant de leur accès ou utilisation.</p>
 
             <h2>8. Données personnelles et cookies</h2>
             <p>Pour plus d'informations sur la collecte, l'utilisation et la protection de vos données personnelles, veuillez consulter notre <a href="{{ route('confidentialite') }}">politique de confidentialité</a>.</p>
 
             <h2>9. Modifications</h2>
-            <p>Factory & Co Val d'Europe se réserve le droit de modifier à tout moment les présentes mentions légales. Les modifications seront effectives dès leur mise en ligne. Il est de votre responsabilité de consulter régulièrement ces mentions légales.</p>
+            <p>Factory & Co Aéroville se réserve le droit de modifier à tout moment les présentes mentions légales. Les modifications seront effectives dès leur mise en ligne. Il est de votre responsabilité de consulter régulièrement ces mentions légales.</p>
 
             <h2>10. Contact</h2>
             <p>Pour toute question concernant le site ou les présentes mentions légales, vous pouvez nous contacter :</p>
             <ul>
                 <li>Par email : <a href="mailto:contact@factoryandco.com">contact@factoryandco.com</a></li>
-                <li>Par téléphone : <a href="tel:+33164632889">+33 1 64 63 28 89</a></li>
-                <li>Par courrier : 14 Rue du Danube, 77700 Serris, France</li>
+                <li>Par téléphone : <a href="tel:+33174257852">+33 1 74 25 78 52</a></li>
+                <li>Par courrier : 30 Rue des Buissons, 93290 Tremblay-en-France, France</li>
             </ul>
         </div>
     </div>

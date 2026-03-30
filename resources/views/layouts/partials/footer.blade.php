@@ -8,12 +8,12 @@
                 <p class="footer-logo-text">Factory &amp; Co</p>
                 <p class="footer-tagline">Delicious since 1989</p>
                 <address class="footer-address">
-                    <strong>14 Rue du Danube</strong><br>
-                    CC Val d'Europe<br>
-                    77700 Serris, France<br><br>
-                    <a href="tel:+33164632889" style="color:var(--pink-dark);font-weight:600">+33 1 64 63 28 89</a><br>
+                    <strong>30 Rue des Buissons</strong><br>
+                    CC Westfield Aéroville<br>
+                    93290 Tremblay-en-France, France<br><br>
+                    <a href="tel:+33174257852" style="color:var(--pink-dark);font-weight:600">+33 1 74 25 78 52</a><br>
                     <a href="mailto:contact@factoryandco.com" style="color:var(--pink-dark);font-weight:600">contact@factoryandco.com</a><br><br>
-                    <small style="color:#888">Parking gratuit • RER A Val d'Europe</small>
+                    <small style="color:#888">Parking 3h gratuites • RER B Parc des Expositions</small>
                 </address>
             </div>
 
@@ -69,7 +69,7 @@
         <div class="footer-bottom">
             <div class="footer-bottom-left">
                 <p class="footer-copy">
-                    © {{ date('Y') }} Factory &amp; Co Val d'Europe. Tous droits réservés.
+                    © {{ date('Y') }} Factory &amp; Co Aéroville. Tous droits réservés.
                 </p>
             </div>
             <div class="footer-social">

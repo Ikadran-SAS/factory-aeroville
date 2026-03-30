@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('title', 'Avis Clients | Factory & Co – Nos Clients Témoignent')
-@section('description', 'Découvrez les avis vérifiés de nos clients satisfaits. 4.8★ - Plus de 500 avis positifs. Factory & Co Val d\'Europe.')
-@section('keywords', 'avis clients factory co, témoignages factory co, avis burgers serris, reviews factory and co')
+@section('description', 'Découvrez les avis vérifiés de nos clients satisfaits. 4.8★ - Plus de 500 avis positifs. Factory & Co Aéroville.')
+@section('keywords', 'avis clients factory co, témoignages factory co, avis burgers aéroville, reviews factory and co')
 @section('canonical', route('avis'))
 
 @push('schema')
@@ -31,7 +31,7 @@
         '@type' => 'WebPage',
         '@id' => route('avis'),
         'url' => route('avis'),
-        'name' => 'Avis Clients – Factory & Co Val d\'Europe',
+        'name' => 'Avis Clients – Factory & Co Aéroville',
         'description' => 'Découvrez les avis vérifiés de nos clients satisfaits.',
         'isPartOf' => [
             '@type' => 'WebSite',

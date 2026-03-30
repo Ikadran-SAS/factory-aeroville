@@ -10,59 +10,49 @@ class GoogleBusinessController extends Controller
      * Récupère les avis du restaurant depuis Google Places API
      * avec supplémentation par des avis statiques
      */
+    /**
+     * Place ID Factory & Co Aéroville (CID: 13984384105414976292)
+     */
+    private const PLACE_ID = 'ChIJGyTYsqMV5kcRT6rVHsNxon4';
+
     public function getReviews(): array
     {
         $apiKey = config('app.google_places_api_key');
 
-        if (!$apiKey) {
+        if (! $apiKey) {
             \Log::warning('Google Places API Key not configured');
+
             return $this->getStaticReviews();
         }
 
         try {
-            // Étape 1: Récupérer le Place ID via Text Search
-            $searchResponse = Http::get('https://maps.googleapis.com/maps/api/place/textsearch/json', [
-                'query' => 'Factory & Co Val d\'Europe, Serris',
+            $detailsResponse = Http::get('https://maps.googleapis.com/maps/api/place/details/json', [
+                'place_id' => self::PLACE_ID,
+                'fields' => 'reviews,rating,user_ratings_total',
+                'reviews_sort' => 'newest',
+                'language' => 'fr',
                 'key' => $apiKey,
             ]);
 
-            $searchData = $searchResponse->json();
+            $detailsData = $detailsResponse->json();
 
-            if ($searchResponse->successful() && ! empty($searchData['results'])) {
-                $placeId = $searchData['results'][0]['place_id'] ?? null;
+            if ($detailsResponse->successful() && isset($detailsData['result']['reviews'])) {
+                $reviews = [];
+                foreach ($detailsData['result']['reviews'] as $review) {
+                    $reviews[] = [
+                        'author_name' => $review['author_name'] ?? 'Anonyme',
+                        'author_initial' => strtoupper(substr($review['author_name'] ?? 'A', 0, 1)),
+                        'date_label' => $review['relative_time_description'] ?? '',
+                        'source' => 'google',
+                        'rating' => $review['rating'] ?? 5,
+                        'content' => $review['text'] ?? '',
+                    ];
+                }
 
-                if ($placeId) {
-                    // Étape 2: Récupérer les avis
-                    $detailsResponse = Http::get('https://maps.googleapis.com/maps/api/place/details/json', [
-                        'place_id' => $placeId,
-                        'fields' => 'reviews,rating,user_ratings_total',
-                        'reviews_sort' => 'newest',
-                        'language' => 'fr',
-                        'key' => $apiKey,
-                    ]);
+                if (! empty($reviews)) {
+                    $staticReviews = $this->getStaticReviews();
 
-                    $detailsData = $detailsResponse->json();
-
-                    if ($detailsResponse->successful() && isset($detailsData['result']['reviews'])) {
-                        $reviews = [];
-                        foreach ($detailsData['result']['reviews'] as $review) {
-                            $reviews[] = [
-                                'author_name' => $review['author_name'] ?? 'Anonyme',
-                                'author_initial' => strtoupper(substr($review['author_name'] ?? 'A', 0, 1)),
-                                'date_label' => $review['relative_time_description'] ?? '',
-                                'source' => 'google',
-                                'rating' => $review['rating'] ?? 5,
-                                'content' => $review['text'] ?? '',
-                            ];
-                        }
-
-                        if (! empty($reviews)) {
-                            // Compléter avec des avis statiques si nécessaire
-                            $staticReviews = $this->getStaticReviews();
-
-                            return array_merge($reviews, $staticReviews);
-                        }
-                    }
+                    return array_merge($reviews, $staticReviews);
                 }
             }
         } catch (\Exception $e) {
@@ -79,48 +69,35 @@ class GoogleBusinessController extends Controller
     {
         $apiKey = config('app.google_places_api_key');
 
-        if (!$apiKey) {
+        if (! $apiKey) {
             return [
-                'rating' => 4.8,
-                'total' => 6,
+                'rating' => 4.5,
+                'total' => 6460,
             ];
         }
 
         try {
-            $searchResponse = Http::get('https://maps.googleapis.com/maps/api/place/textsearch/json', [
-                'query' => 'Factory & Co Val d\'Europe, Serris',
+            $detailsResponse = Http::get('https://maps.googleapis.com/maps/api/place/details/json', [
+                'place_id' => self::PLACE_ID,
+                'fields' => 'rating,user_ratings_total',
                 'key' => $apiKey,
             ]);
 
-            $searchData = $searchResponse->json();
+            $detailsData = $detailsResponse->json();
 
-            if ($searchResponse->successful() && ! empty($searchData['results'])) {
-                $placeId = $searchData['results'][0]['place_id'] ?? null;
-
-                if ($placeId) {
-                    $detailsResponse = Http::get('https://maps.googleapis.com/maps/api/place/details/json', [
-                        'place_id' => $placeId,
-                        'fields' => 'rating,user_ratings_total',
-                        'key' => $apiKey,
-                    ]);
-
-                    $detailsData = $detailsResponse->json();
-
-                    if ($detailsResponse->successful() && isset($detailsData['result'])) {
-                        return [
-                            'rating' => $detailsData['result']['rating'] ?? 4.8,
-                            'total' => $detailsData['result']['user_ratings_total'] ?? 0,
-                        ];
-                    }
-                }
+            if ($detailsResponse->successful() && isset($detailsData['result'])) {
+                return [
+                    'rating' => $detailsData['result']['rating'] ?? 4.5,
+                    'total' => $detailsData['result']['user_ratings_total'] ?? 6460,
+                ];
             }
         } catch (\Exception $e) {
             \Log::error('Google Places API Error: '.$e->getMessage());
         }
 
         return [
-            'rating' => 4.8,
-            'total' => 6,
+            'rating' => 4.5,
+            'total' => 6460,
         ];
     }
 
@@ -136,7 +113,7 @@ class GoogleBusinessController extends Controller
                 'date_label' => 'il y a 2 semaines',
                 'source' => 'google',
                 'rating' => 5,
-                'content' => 'Excellent restaurant à Val d\'Europe ! Le smash burger est vraiment délicieux, la viande est de qualité et la sauce maison est top. Service rapide et souriant. Je recommande vivement !',
+                'content' => 'Excellent restaurant à Aéroville ! Le smash burger est vraiment délicieux, la viande est de qualité et la sauce maison est top. Service rapide et souriant. Je recommande vivement !',
             ],
             [
                 'author_name' => 'Thomas R.',
@@ -144,7 +121,7 @@ class GoogleBusinessController extends Controller
                 'date_label' => 'il y a 1 mois',
                 'source' => 'google',
                 'rating' => 5,
-                'content' => 'Le cheesecake New-Yorkais est une tuerie absolue. Texture parfaite, base biscuitée croustillante. On a aussi pris des bagels pour le petit-déjeuner avant notre vol, vraiment frais et copieux !',
+                'content' => 'Le cheesecake New-Yorkais est une tuerie absolue. Texture parfaite, base biscuitée croustillante. On a aussi pris des bagels pour le petit-déjeuner avant notre vol à l\'aéroport CDG, vraiment frais et copieux !',
             ],
             [
                 'author_name' => 'Sophie M.',
@@ -152,7 +129,7 @@ class GoogleBusinessController extends Controller
                 'date_label' => 'il y a 3 semaines',
                 'source' => 'google',
                 'rating' => 4,
-                'content' => 'Très bonne adresse à Val d\'Europe. Idéal pour une pause shopping ou une visite à Disneyland, les portions sont généreuses et les prix raisonnables. Le milkshake Oreo est incroyable !',
+                'content' => 'Très bonne adresse à Aéroville. Idéal pour une pause shopping ou avant un vol à l\'aéroport CDG, les portions sont généreuses et les prix raisonnables. Le milkshake Oreo est incroyable !',
             ],
             [
                 'author_name' => 'Jean-Pierre D.',
@@ -160,7 +137,7 @@ class GoogleBusinessController extends Controller
                 'date_label' => 'il y a 2 mois',
                 'source' => 'google',
                 'rating' => 5,
-                'content' => 'Halal et délicieux ! Rare de trouver une option Halal de qualité dans un centre commercial. Le Halal Smash Burger était juteux et bien assaisonné. Je reviendrai à chaque passage à Val d\'Europe.',
+                'content' => 'Halal et délicieux ! Rare de trouver une option Halal de qualité dans un centre commercial. Le Halal Smash Burger était juteux et bien assaisonné. Je reviendrai à chaque passage à Aéroville.',
             ],
             [
                 'author_name' => 'Camille B.',

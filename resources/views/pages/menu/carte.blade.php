@@ -31,8 +31,8 @@
         '@type' => 'WebPage',
         '@id' => route('menu.index'),
         'url' => route('menu.index'),
-        'name' => 'La Carte – Factory & Co Val d\'Europe',
-        'description' => 'Découvrez la carte complète de Factory & Co à Val d\'Europe. Smash Burgers anglais, Bagels New-Yorkais, Cheesecake premium, Bowls sains.',
+        'name' => 'La Carte – Factory & Co Aéroville',
+        'description' => 'Découvrez la carte complète de Factory & Co à Aéroville. Smash Burgers anglais, Bagels New-Yorkais, Cheesecake premium, Bowls sains.',
         'isPartOf' => [
             '@type' => 'WebSite',
             '@id' => route('home')
@@ -114,8 +114,8 @@
     {{-- Hero Content --}}
     <div class="hero-content">
         <span class="section-tag">🍔 LA CARTE</span>
-        <h1>Un voyage culinaire<br>sans fin</h1>
-        <p>Découvrez nos incontournables New York et nos créations exclusives</p>
+        <h1>Smashés, roulés, glacés<br>préparés à la minute</h1>
+        <p>Burgers, bagels, cheesecakes et bowls : préparés à la minute avec des produits frais</p>
         <div class="hero-buttons">
             <button class="btn btn-pink scroll-to-categories" aria-label="Parcourir la carte">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
@@ -300,17 +300,17 @@
      LOCALISATION - GOOGLE MAPS
 ════════════════════════════════════════════ --}}
 <section class="section location-section">
-    <div class="location-info">
+    <div class="location-info" style="text-align:center; padding:4rem 2rem;">
         <h2>Prêt à déguster ?</h2>
-        <p class="location-subtitle">Venez nous retrouver au cœur de Val d'Europe</p>
-        <address class="location-address">
-            14 Rue du Danube<br>
-            CC Val d'Europe<br>
-            77700 Serris, France
+        <p class="location-subtitle">Retrouvez-nous au CC Westfield Aéroville</p>
+        <address class="location-address" style="font-style:normal; margin-top:1rem; line-height:1.8;">
+            30 Rue des Buissons<br>
+            CC Westfield Aéroville<br>
+            93290 Tremblay-en-France
         </address>
     </div>
     <div class="location-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.9938339559873!2d2.7733!3d48.8753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5e6d8e6d8e6d9%3A0x1234567890!2s14%20Rue%20du%20Danube%2C%2077700%20Serris!5e0!3m2!1sfr!2sfr!4v1234567890" width="100%" height="400" style="border:0;border-radius:1.5rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2618.5!2d2.5220!3d48.9912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sFactory+%26+Co+A%C3%A9roville!5e0!3m2!1sfr!2sfr!4v1" width="100%" height="400" style="border:0;border-radius:1.5rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </section>
 
@@ -324,21 +324,13 @@
             <a href="{{ route('avis') }}" class="btn btn-outline-pink">Voir tous les avis</a>
         </div>
         <div class="reviews-grid">
+            @foreach($featuredReviews as $review)
             <div class="review-card">
-                <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                <p class="review-text">"Les meilleurs burgers de Val d'Europe ! Qualité au rendez-vous et équipe très sympa."</p>
-                <p class="review-author">— Sarah M.</p>
+                <div class="review-stars">@for($i = 1; $i <= $review->rating; $i++)⭐@endfor</div>
+                <p class="review-text">"{{ $review->content }}"</p>
+                <p class="review-author">— {{ $review->author_name }}</p>
             </div>
-            <div class="review-card">
-                <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                <p class="review-text">"Cadre moderne, burgers savoureux et service rapide. Je recommande vivement !"</p>
-                <p class="review-author">— Thomas D.</p>
-            </div>
-            <div class="review-card">
-                <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                <p class="review-text">"Les cheesecakes sont divins et les options halal/végétariennes sont très variées."</p>
-                <p class="review-author">— Fatima K.</p>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

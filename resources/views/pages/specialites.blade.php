@@ -30,7 +30,7 @@
         '@type' => 'WebPage',
         '@id' => route('specialites'),
         'url' => route('specialites'),
-        'name' => 'Nos Spécialités – Factory & Co Val d\'Europe',
+        'name' => 'Nos Spécialités – Factory & Co Aéroville',
         'description' => 'Smash Burgers, Bagels New-Yorkais, Cheesecake & Breakfast. Découvrez les 4 spécialités premium qui font notre réputation.',
         'isPartOf' => [
             '@type' => 'WebSite',
@@ -176,8 +176,8 @@
                 <p><strong>Ici, on ne fait pas des compromis. Jamais.</strong></p>
             </div>
             <div class="concept-image">
-                <img src="{{ asset('images/factory-val-interieur.webp') }}"
-                     alt="Intérieur Factory & Co Val d'Europe"
+                <img src="{{ asset('images/factory-aeroville-hero.webp') }}"
+                     alt="Intérieur Factory & Co Aéroville"
                      loading="lazy" width="700" height="500">
                 <div class="concept-badge">
                     <span class="concept-badge-title">Premium</span>
@@ -333,7 +333,7 @@
                 </div>
                 <div class="quality-card-content">
                     <h3>Authenticité</h3>
-                    <p class="quality-detail">Ingrédients sélectionnés avec soin. Goût New-Yorkais authentique. L'ADN des diners américains, au cœur de Val d'Europe.</p>
+                    <p class="quality-detail">Ingrédients sélectionnés avec soin. Goût New-Yorkais authentique. L'ADN des diners américains, au cœur d'Aéroville.</p>
                     <span class="quality-badge">New-York Heritage</span>
                 </div>
             </div>

@@ -12,29 +12,29 @@
     <meta name="theme-color" content="#000000">
 
     {{-- ── SEO Meta ── --}}
-    <title>{!! $__env->yieldContent('title', 'Factory & Co Val d\'Europe – Restaurant Burger Serris') !!}</title>
-    <meta name="description" content="{!! $__env->yieldContent('description', 'Factory & Co, restaurant burger, bagel et cheesecake à Val d\'Europe à Serris. 14 Rue du Danube. Ouvert 7j/7.') !!}">
-    <meta name="keywords"    content="{!! $__env->yieldContent('keywords', 'restaurant burger val d\'europe serris, factory and co serris, manger val d\'europe') !!}">
+    <title>{!! $__env->yieldContent('title', 'Factory & Co Aéroville – Restaurant Burger Tremblay-en-France') !!}</title>
+    <meta name="description" content="{!! $__env->yieldContent('description', 'Factory & Co, restaurant burger, bagel et cheesecake à Aéroville à Tremblay-en-France. 30 Rue des Buissons. Ouvert 7j/7.') !!}">
+    <meta name="keywords"    content="{!! $__env->yieldContent('keywords', 'restaurant burger aéroville tremblay-en-france, factory and co tremblay-en-france, manger aéroville roissy') !!}">
     <link rel="canonical"    href="{{ $__env->yieldContent('canonical', url()->current()) }}">
     <meta name="robots"      content="@yield('robots', 'index, follow')">
-    <meta name="geo.region"      content="FR-75">
-    <meta name="geo.placename"   content="Serris, Île-de-France">
-    <meta name="geo.position"    content="48.8753;2.7758">
-    <meta name="ICBM"            content="43.6290, 1.3678">
+    <meta name="geo.region"      content="FR-93">
+    <meta name="geo.placename"   content="Tremblay-en-France, Ile-de-France">
+    <meta name="geo.position"    content="48.9912;2.5220">
+    <meta name="ICBM"            content="48.9912, 2.5220">
 
     {{-- ── Open Graph ── --}}
     <meta property="og:type"        content="restaurant">
-    <meta property="og:site_name"   content="Factory & Co Val d'Europe">
-    <meta property="og:title"       content="@yield('og_title', 'Factory & Co – Restaurant Burger Val d\'Europe')">
-    <meta property="og:description" content="@yield('og_description', 'Burgers, bagels et cheesecakes à Val d\'Europe à Serris. 14 Rue du Danube. Ouvert 7j/7.')">
+    <meta property="og:site_name"   content="Factory & Co Aéroville">
+    <meta property="og:title"       content="@yield('og_title', 'Factory & Co – Restaurant Burger Aéroville')">
+    <meta property="og:description" content="@yield('og_description', 'Burgers, bagels et cheesecakes à Aéroville à Tremblay-en-France. 30 Rue des Buissons. Ouvert 7j/7.')">
     <meta property="og:image"       content="@yield('og_image', asset('images/og-factory-co.jpg'))">
     <meta property="og:url"         content="{{ url()->current() }}">
     <meta property="og:locale"      content="fr_FR">
 
     {{-- ── Twitter Card ── --}}
     <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:title"       content="@yield('og_title', 'Factory & Co Val d\'Europe')">
-    <meta name="twitter:description" content="@yield('og_description', 'Burgers, bagels et cheesecakes à Val d\'Europe à Serris.')">
+    <meta name="twitter:title"       content="@yield('og_title', 'Factory & Co Aéroville')">
+    <meta name="twitter:description" content="@yield('og_description', 'Burgers, bagels et cheesecakes à Aéroville à Tremblay-en-France.')">
     <meta name="twitter:image"       content="@yield('og_image', asset('images/og-factory-co.jpg'))">
 
     {{-- ── JSON-LD Schema.org Restaurant (global) ── --}}
@@ -42,24 +42,24 @@
         $schemaData = [
             '@context' => 'https://schema.org',
             '@type' => 'Restaurant',
-            'name' => 'Factory & Co Val d\'Europe',
-            'description' => 'Restaurant burger, bagel et cheesecake à Val d\'Europe à Serris. Fast-casual américain, ouvert 7j/7.',
+            'name' => 'Factory & Co Aéroville',
+            'description' => 'Restaurant burger, bagel et cheesecake à Aéroville à Tremblay-en-France. Fast-casual américain, ouvert 7j/7.',
             'url' => url('/'),
-            'telephone' => '0164632889',
+            'telephone' => '0174257852',
             'email' => 'contact@factoryandco.com',
             'image' => asset('images/og-factory-co.jpg'),
             'logo' => asset('images/logo.png'),
             'address' => [
                 '@type' => 'PostalAddress',
-                'streetAddress' => '14 Rue du Danube, CC Val d\'Europe',
-                'addressLocality' => 'Serris',
-                'postalCode' => '77700',
+                'streetAddress' => '30 Rue des Buissons, CC Westfield Aéroville',
+                'addressLocality' => 'Tremblay-en-France',
+                'postalCode' => '93290',
                 'addressCountry' => 'FR'
             ],
             'geo' => [
                 '@type' => 'GeoCoordinates',
-                'latitude' => 48.8753,
-                'longitude' => 2.7758
+                'latitude' => 48.9912,
+                'longitude' => 2.5220
             ],
             'servesCuisine' => ['American', 'Burger', 'Bagel', 'Cheesecake', 'Fast Casual', 'Healthy'],
             'priceRange' => '€€',
@@ -82,7 +82,7 @@
             'aggregateRating' => [
                 '@type' => 'AggregateRating',
                 'ratingValue' => '4.5',
-                'reviewCount' => '6000',
+                'reviewCount' => '6460',
                 'bestRating' => '5'
             ],
             'amenityFeature' => [
@@ -124,29 +124,17 @@
     });
     </script>
 
-    {{-- ── Google Analytics 4 ── --}}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSJJ1E3F4P"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-WSJJ1E3F4P', {
-      'allow_google_signals': false,
-      'allow_ad_personalization_signals': false
-    });
-    </script>
-
     {{-- ── Google Tag Manager ── --}}
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PWS5VJBC');</script>
+    })(window,document,'script','dataLayer','GTM-PWLG649S');</script>
 </head>
 <body>
 
 {{-- ── Google Tag Manager (noscript) ── --}}
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWS5VJBC"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWLG649S"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div id="app">
