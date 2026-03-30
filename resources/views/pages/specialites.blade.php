@@ -31,7 +31,7 @@
         '@id' => route('specialites'),
         'url' => route('specialites'),
         'name' => 'Nos Spécialités – Factory & Co Aéroville',
-        'description' => 'Smash Burgers, Bagels New-Yorkais, Cheesecake & Breakfast. Découvrez les 4 spécialités premium qui font notre réputation.',
+        'description' => 'Smash burgers Halal, bagels façon Brooklyn, cheesecakes maison et breakfast dès 8h30 au CC Westfield Aéroville, Tremblay-en-France, près de CDG et du Pathé.',
         'isPartOf' => [
             '@type' => 'WebSite',
             '@id' => route('home')
@@ -51,7 +51,7 @@
                 'item' => [
                     '@type' => 'Product',
                     'name' => 'Smash Burgers',
-                    'description' => 'L\'art de la simplicité. Plaque brûlante, viande frémissante, fromage coulant. Le burger comme il faut.',
+                    'description' => 'Viande Halal certifiée, smashée sur plaque brûlante. Cheddar fondant, brioche dorée. Le vrai smash burger, au cœur d\'Aéroville.',
                     'brand' => [
                         '@type' => 'Brand',
                         'name' => 'Factory & Co'
@@ -64,7 +64,7 @@
                 'item' => [
                     '@type' => 'Product',
                     'name' => 'Bagels Authentiques',
-                    'description' => 'Directement de Brooklyn. Croquant dehors, moelleux dedans. Un aller simple pour New York, sans quitter votre table.',
+                    'description' => 'Recette authentique Brooklyn : bouillis puis dorés au four. Garnis frais chaque matin, à déguster au CC Westfield Aéroville.',
                     'brand' => [
                         '@type' => 'Brand',
                         'name' => 'Factory & Co'
@@ -77,7 +77,7 @@
                 'item' => [
                     '@type' => 'Product',
                     'name' => 'Cheesecake Factory',
-                    'description' => 'Noir New-Yorkais. Fromage frais, biscuit beurre, crème fouettée. L\'indulgence en assiette, signée Factory & Co.',
+                    'description' => 'Recette crémeuse à l\'américaine, base biscuitée croustillante. Préparé chaque jour dans notre restaurant d\'Aéroville.',
                     'brand' => [
                         '@type' => 'Brand',
                         'name' => 'Factory & Co'
@@ -90,7 +90,7 @@
                 'item' => [
                     '@type' => 'Product',
                     'name' => 'Breakfast Américain',
-                    'description' => 'Ouverts dès 8h30. Bagels frais, œufs brouillés, bacon croustillant, café de qualité. Le vrai breakfast, pas la version pauvre.',
+                    'description' => 'Dès 8h30 à Aéroville : bagels du jour, pancakes, viennoiseries et cafés de spécialité. Le breakfast qui vaut le détour.',
                     'brand' => [
                         '@type' => 'Brand',
                         'name' => 'Factory & Co'
@@ -147,9 +147,9 @@
     <div class="hero-bg" style="background-image: url('https://restaurants.factoryandco.com/wp-content/uploads/2020/07/smash-burger.webp')" aria-hidden="true"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
-        <span class="section-tag">🌟 Nos Spécialités</span>
-        <h1>Nos Spécialités<br><em>L'Excellence à chaque bouchée</em></h1>
-        <p class="hero-sub">Smash, Bagels, Cheesecake & Breakfast : 4 piliers du goût authentique</p>
+        <span class="section-tag">🌟 Nos spécialités</span>
+        <h1>Nos spécialités<br><em>Quatre raisons de revenir</em></h1>
+        <p class="hero-sub">Smash burgers, bagels, cheesecakes et breakfast : tout ce qui fait la réputation de Factory & Co à Aéroville</p>
         <div class="hero-ctas">
             <a href="{{ route('menu.index') }}" class="btn btn-pink">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
@@ -166,14 +166,14 @@
     <div class="container">
         <div class="concept-grid">
             <div class="concept-text">
-                <span class="section-tag dark">Chaque spécialité</span>
+                <span class="section-tag dark">Ce qu'on sait faire</span>
                 <h2 class="section-title dark">
-                    Chaque spécialité<br>
-                    <em>raconte une histoire</em>
+                    Quatre spécialités<br>
+                    <em>une seule exigence</em>
                 </h2>
-                <p>Chez Factory &amp; Co, nos spécialités ne sont pas juste des plats. Ce sont des célébrations du savoir-faire, nées de la passion du chef <strong>Jonathan Jablonski</strong> et de son engagement envers l'authenticité.</p>
-                <p>Chaque recette a été affinée au fil des années. Chaque ingrédient sélectionné avec soin. Chaque préparation respecte des standards qu'on ne compromet jamais.</p>
-                <p><strong>Ici, on ne fait pas des compromis. Jamais.</strong></p>
+                <p>Chez Factory &amp; Co Aéroville, chaque spécialité a été pensée pour aller à l'essentiel : des produits frais, une préparation à la minute et des recettes qui ne changent pas au gré des modes.</p>
+                <p>Viande Halal certifiée pour les burgers, bagels bouillis puis dorés comme à Brooklyn, cheesecakes crémeux préparés chaque jour. On ne coupe pas les coins.</p>
+                <p><strong>Ce qui est dans la vitrine, c'est ce qui arrive dans l'assiette.</strong></p>
             </div>
             <div class="concept-image">
                 <img src="{{ asset('images/factory-aeroville-hero.webp') }}"
@@ -208,7 +208,7 @@
                 </div>
                 <div class="specialite-content">
                     <h3>Smash Burgers</h3>
-                    <p>L'art de la simplicité. Plaque brûlante, viande frémissante, fromage coulant. Le burger comme il faut.</p>
+                    <p>Viande smashée sur plaque à 200°C, cheddar fondu, brioche toastée. Préparé devant vous en quelques minutes.</p>
                     <div class="specialite-meta">
                         <span>⏱️ Rapide</span>
                         <span>🔥 Gourmand</span>
@@ -228,7 +228,7 @@
                 </div>
                 <div class="specialite-content">
                     <h3>Bagels Authentiques</h3>
-                    <p>Directement de Brooklyn. Croquant dehors, moelleux dedans. Un aller simple pour New York, sans quitter votre table.</p>
+                    <p>Bouillis puis dorés au four chaque matin. Garnis de produits frais, du saumon fumé au poulet grillé. La vraie recette new-yorkaise.</p>
                     <div class="specialite-meta">
                         <span>🌅 Breakfast</span>
                         <span>✨ Artisanal</span>
@@ -248,7 +248,7 @@
                 </div>
                 <div class="specialite-content">
                     <h3>Cheesecake Factory</h3>
-                    <p>Noir New-Yorkais. Fromage frais, biscuit beurre, crème fouettée. L'indulgence en assiette, signée Factory &amp; Co.</p>
+                    <p>Base biscuitée croustillante, cœur crémeux. Classique, Oreo, Kinder Bueno, Spéculoos : il y en a pour tous les gourmands.</p>
                     <div class="specialite-meta">
                         <span>🎂 Dessert</span>
                         <span>💎 Iconique</span>
@@ -268,7 +268,7 @@
                 </div>
                 <div class="specialite-content">
                     <h3>Breakfast Américain</h3>
-                    <p>Ouverts dès 8h30. Bagels frais, œufs brouillés, bacon croustillant, café de qualité. Le vrai breakfast, pas la version pauvre.</p>
+                    <p>Dès 8h30 à Aéroville : bagels du jour, pancakes, viennoiseries et café de spécialité. Idéal avant une journée de shopping ou un vol depuis CDG.</p>
                     <div class="specialite-meta">
                         <span>☕ Matinal</span>
                         <span>🥓 Copieux</span>
@@ -289,8 +289,8 @@
 <section class="quality-section">
     <div class="container">
         <div class="quality-header">
-            <span class="section-tag dark">Notre promesse</span>
-            <h2 class="section-title dark">Qualité<br><em>sans compromis</em></h2>
+            <span class="section-tag dark">Ce qu'on garantit</span>
+            <h2 class="section-title dark">La qualité<br><em>au quotidien</em></h2>
         </div>
 
         <div class="quality-cards-grid">
@@ -304,7 +304,7 @@
                 </div>
                 <div class="quality-card-content">
                     <h3>Fraîcheur</h3>
-                    <p class="quality-detail">100% préparé à la commande. Zéro surgelé. Chaque assiette respire la fraîcheur du moment.</p>
+                    <p class="quality-detail">Tout est lancé à la commande. Rien n'attend, rien n'est réchauffé. Ce que vous mangez vient d'être préparé.</p>
                     <span class="quality-badge">À la commande</span>
                 </div>
             </div>
@@ -319,8 +319,8 @@
                 </div>
                 <div class="quality-card-content">
                     <h3>Craft</h3>
-                    <p class="quality-detail">Recettes exclusives du chef Jonathan Jablonski, formé aux côtés des plus grands de Brooklyn. 15+ ans d'expertise.</p>
-                    <span class="quality-badge">Chef Jonathan</span>
+                    <p class="quality-detail">Des recettes rodées depuis plus de 10 ans, inspirées des meilleurs diners de Brooklyn et adaptées aux palais français.</p>
+                    <span class="quality-badge">Savoir-faire</span>
                 </div>
             </div>
 
@@ -333,7 +333,7 @@
                 </div>
                 <div class="quality-card-content">
                     <h3>Authenticité</h3>
-                    <p class="quality-detail">Ingrédients sélectionnés avec soin. Goût New-Yorkais authentique. L'ADN des diners américains, au cœur d'Aéroville.</p>
+                    <p class="quality-detail">Viande Halal, produits frais, sauces maison. Le goût des vrais diners américains, en plein centre d'Aéroville.</p>
                     <span class="quality-badge">New-York Heritage</span>
                 </div>
             </div>
@@ -341,7 +341,7 @@
 
         {{-- Trust Statement --}}
         <div class="quality-promise">
-            <p>Chaque assiette Factory & Co est une promesse tenue.</p>
+            <p>Chaque jour, même exigence. Chaque assiette, même standard.</p>
         </div>
     </div>
 </section>
@@ -352,10 +352,10 @@
 <section class="section section-cta-large">
     <div class="container">
         <div class="cta-large-content">
-            <img src="{{ asset('images/ashley.webp') }}" alt="Prêt à vivre l'expérience" class="cta-image">
+            <img src="{{ asset('images/ashley.webp') }}" alt="Envie d'y goûter maintenant" class="cta-image">
             <div class="cta-text">
-                <h2>Prêt à vivre<br>l'expérience ?</h2>
-                <p>Nos spécialités vous attendent. Que ce soit sur place, à emporter, ou en commande rapide : vivez l'authenticité Factory &amp; Co.</p>
+                <h2>Envie d'y goûter<br>maintenant ?</h2>
+                <p>Sur place, à emporter ou en Click &amp; Collect : passez nous voir au CC Westfield Aéroville et jugez par vous-même.</p>
                 <div class="cta-actions">
                     <a href="{{ route('menu.index') }}" class="btn btn-pink">
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
@@ -395,8 +395,8 @@
 <section class="section section-dark newsletter-section">
     <div class="container">
         <div class="newsletter-content">
-            <h2>Restez connecté</h2>
-            <p>Recevez nos nouveaux menus, promotions et actualités spécialités en avant-première.</p>
+            <h2>Ne ratez rien</h2>
+            <p>Nouveautés, offres exclusives et actus Factory &amp; Co Aéroville directement dans votre boîte mail.</p>
             <form class="newsletter-form" method="POST" action="#">
                 @csrf
                 <input type="email" placeholder="votre@email.com" required>

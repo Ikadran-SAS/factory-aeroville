@@ -16,7 +16,7 @@ class SpecialitesController extends Controller
 
         $seo = [
             'title' => 'Nos Spécialités – Factory & Co Aéroville',
-            'description' => 'Smash Burgers, Bagels New-Yorkais, Cheesecake & Breakfast. Découvrez les 4 spécialités premium qui font notre réputation.',
+            'description' => 'Smash burgers Halal, bagels façon Brooklyn, cheesecakes maison et breakfast dès 8h30 au CC Westfield Aéroville, Tremblay-en-France, près de CDG et du Pathé.',
             'keywords' => 'smash burger, bagels, cheesecake, breakfast factory and co, specialites restaurant tremblay-en-france, roissy, aéroville',
             'canonical' => route('specialites'),
         ];

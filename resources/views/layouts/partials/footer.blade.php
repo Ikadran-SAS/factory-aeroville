@@ -37,7 +37,7 @@
                     <li><a href="{{ route('menu.index') }}#bagels">Bagels New-York</a></li>
                     <li><a href="{{ route('menu.index') }}#bowls">Bowls &amp; salades</a></li>
                     <li><a href="{{ route('menu.index') }}#cheesecake">Cheesecakes</a></li>
-                    <li><a href="{{ route('click-collect') }}">Click &amp; Collect</a></li>
+                    <li><a href="{{ route('contact') }}">Commander</a></li>
                 </ul>
             </div>
 

@@ -30,8 +30,8 @@
 <nav class="breadcrumb"><div class="breadcrumb-inner"><a href="{{ route('home') }}">Accueil</a><span class="bc-sep">›</span><span>Contact</span></div></nav>
 <div class="page-hero">
     <div class="page-hero-inner">
-        <span class="section-tag">NAP · Nom · Adresse · Téléphone</span>
-        <h1>Contactez-nous –<br><em>Factory &amp; Co Aéroville</em></h1>
+        <span class="section-tag">📍 Contact</span>
+        <h1>Contactez-nous<br><em>Factory &amp; Co Aéroville</em></h1>
         <p>Une question, une commande ou un retour d'expérience ? Notre équipe vous répond sous 4 heures.</p>
     </div>
 </div>

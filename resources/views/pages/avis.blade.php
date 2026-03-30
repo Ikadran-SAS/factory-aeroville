@@ -65,7 +65,7 @@
                 'worstRating' => '1'
             ],
             'reviewBody' => $review->content,
-            'datePublished' => $review->created_at->toIso8601String()
+            'datePublished' => isset($review->created_at) ? (is_string($review->created_at) ? $review->created_at : $review->created_at->toIso8601String()) : now()->toIso8601String()
         ];
     }
 
@@ -114,7 +114,7 @@
             @forelse($reviews as $review)
             <div class="review-card-clean">
                 <div class="review-card-header-clean">
-                    <div class="review-avatar-clean">{{ $review->author_initial }}</div>
+                    <div class="review-avatar-clean">{{ $review->author_initial ?? strtoupper(substr($review->author_name ?? 'A', 0, 1)) }}</div>
                     <div class="review-info-clean">
                         <h3>{{ $review->author_name }}</h3>
                         <p class="review-time">{{ $review->date_label }}</p>
