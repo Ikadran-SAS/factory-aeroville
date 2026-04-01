@@ -36,6 +36,16 @@ class MenuController extends Controller
             ->get()
             ->groupBy('subcategory');
 
+        $featuredReviews = Review::featured()
+            ->orderBy('sort_order')
+            ->take(3)
+            ->get();
+
+        $googleReviewsController = new GoogleReviewsController;
+        $aggregateData = $googleReviewsController->getAggregateRating();
+        $averageRating = $aggregateData['rating'] ?? ($featuredReviews->count() > 0 ? $featuredReviews->avg('rating') : 0);
+        $totalReviews = $aggregateData['total'] ?? Review::where('is_visible', true)->count();
+
         $seo = [
             'title' => 'La Carte | Factory & Co Aéroville',
             'description' => 'Découvrez la carte complète de Factory & Co à Aéroville. Smash Burgers anglais, Bagels New-Yorkais, Cheesecake premium, Bowls sains. Tous les ingrédients frais et délicieux.',
@@ -44,11 +54,6 @@ class MenuController extends Controller
             'h1' => 'La Carte – Factory & Co',
         ];
 
-        $featuredReviews = Review::featured()
-            ->orderBy('sort_order')
-            ->take(3)
-            ->get();
-
-        return view('pages.menu.carte', compact('seo', 'burgers', 'bagels', 'cheesecakes', 'bowls', 'featuredReviews'));
+        return view('pages.menu.carte', compact('seo', 'burgers', 'bagels', 'cheesecakes', 'bowls', 'featuredReviews', 'averageRating', 'totalReviews'));
     }
 }

@@ -15,7 +15,7 @@ class ConceptController extends Controller
 
         $googleReviewsController = new GoogleReviewsController;
         $aggregateData = $googleReviewsController->getAggregateRating();
-        $averageRating = $aggregateData['rating'] ?? ($featuredReviews->count() > 0 ? $featuredReviews->avg('rating') : 4.5);
+        $averageRating = $aggregateData['rating'] ?? ($featuredReviews->count() > 0 ? $featuredReviews->avg('rating') : 0);
         $totalReviews = $aggregateData['total'] ?? Review::where('is_visible', true)->count();
 
         $seo = [
