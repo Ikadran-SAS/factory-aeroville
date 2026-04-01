@@ -31,6 +31,7 @@ Route::get('/avis', [AvisController::class, 'index'])->name('avis');
 Route::get('/carte', [MenuController::class, 'index'])->name('menu.index');
 
 /* ── NIVEAU 3 : Services & Engagement ── */
+Route::get('/click-collect', [HomeController::class, 'clickCollect'])->name('click-collect');
 
 // Blog
 Route::prefix('blog')->name('blog.')->group(function () {

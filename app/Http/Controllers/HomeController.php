@@ -27,7 +27,7 @@ class HomeController extends Controller
 
         $googleReviewsController = new GoogleReviewsController;
         $aggregateData = $googleReviewsController->getAggregateRating();
-        $averageRating = $aggregateData['rating'] ?? ($featuredReviews->count() > 0 ? $featuredReviews->avg('rating') : 4.5);
+        $averageRating = $aggregateData['rating'] ?? ($featuredReviews->count() > 0 ? $featuredReviews->avg('rating') : 0);
         $totalReviews = $aggregateData['total'] ?? Review::where('is_visible', true)->count();
 
         $openingHours = OpeningHour::orderBy('sort_order')->get();
@@ -43,5 +43,26 @@ class HomeController extends Controller
         ];
 
         return view('pages.home', compact('featuredProducts', 'featuredReviews', 'openingHours', 'faqs', 'seo', 'averageRating', 'totalReviews'));
+    }
+
+    /**
+     * Page Click & Collect
+     */
+    public function clickCollect()
+    {
+        $seo = [
+            'title' => 'Click & Collect Factory & Co Aéroville | Commander',
+            'description' => 'Click & Collect Factory & Co Aéroville : commandez en ligne, récupérez sans attente. Centre commercial Aéroville, Tremblay-en-France 93290. Burgers, bagels, cheesecakes.',
+            'keywords' => 'click collect aéroville, commander en ligne factory co tremblay-en-france, commande emporter aéroville, retrait aéroville roissy',
+            'canonical' => route('click-collect'),
+        ];
+
+        $popularProducts = Product::available()
+            ->featured()
+            ->ordered()
+            ->take(6)
+            ->get();
+
+        return view('pages.click-collect', compact('seo', 'popularProducts'));
     }
 }

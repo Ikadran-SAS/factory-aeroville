@@ -18,7 +18,7 @@ class AvisController extends Controller
 
         $googleReviewsController = new GoogleReviewsController;
         $aggregateData = $googleReviewsController->getAggregateRating();
-        $averageRating = $aggregateData['rating'] ?? ($reviews->count() > 0 ? $reviews->avg('rating') : 4.5);
+        $averageRating = $aggregateData['rating'] ?? ($reviews->count() > 0 ? $reviews->avg('rating') : 0);
         $totalReviews = $aggregateData['total'] ?? $reviews->count();
 
         $seo = [

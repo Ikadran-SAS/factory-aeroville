@@ -8,90 +8,98 @@ use Illuminate\Console\Command;
 
 class SyncGoogleReviews extends Command
 {
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
-    protected $signature = 'reviews:sync-google {--limit=10 : Maximum number of reviews to sync}';
+    protected $signature = 'reviews:sync-google';
 
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
-    protected $description = 'Synchronize reviews from Google Places API to database';
+    protected $description = 'Synchronise les vrais avis Google Places vers la base de données';
 
-    /**
-     * Execute the console command.
-     */
     public function handle(): int
     {
-        $this->info('Starting Google Reviews synchronization...');
+        $this->info('Synchronisation des avis Google Places...');
+
+        $apiKey = config('app.google_places_api_key');
+
+        if (! $apiKey) {
+            $this->error('GOOGLE_PLACES_API_KEY non configurée dans .env');
+
+            return 1;
+        }
 
         try {
-            $googleController = new GoogleBusinessController();
-            $googleReviews = $googleController->getReviews();
-            $limit = (int) $this->option('limit');
+            $controller = new GoogleBusinessController;
+            $googleReviews = $controller->getReviews();
 
             if (empty($googleReviews)) {
-                $this->warn('No reviews found from Google Places API');
+                $this->warn('Aucun avis récupéré depuis Google.');
+
                 return 1;
             }
 
+            $this->line('  '.$this->formatCount($googleReviews).' avis récupérés depuis Google Places');
+
             $synced = 0;
+            $updated = 0;
             $skipped = 0;
+            $maxSortOrder = Review::max('sort_order') ?? 0;
 
-            // Only process up to the limit
-            $reviewsToSync = array_slice($googleReviews, 0, $limit);
-
-            foreach ($reviewsToSync as $googleReview) {
-                // Check if review already exists by author name and content
-                $existingReview = Review::where('author_name', $googleReview['author_name'])
-                    ->where('content', $googleReview['content'])
+            foreach ($googleReviews as $data) {
+                $existing = Review::where('author_name', $data['author_name'])
+                    ->where('content', $data['content'])
                     ->first();
 
-                if ($existingReview) {
-                    $this->line("  ⊘ Skipped: {$googleReview['author_name']} (already exists)");
-                    $skipped++;
+                if ($existing) {
+                    if ($data['date_label'] && $existing->date_label !== $data['date_label']) {
+                        $existing->update(['date_label' => $data['date_label']]);
+                        $updated++;
+                        $this->line("  ↻ Mis à jour : {$data['author_name']}");
+                    } else {
+                        $skipped++;
+                    }
+
                     continue;
                 }
 
-                // Create new review
+                $maxSortOrder++;
+
                 Review::create([
-                    'author_name' => $googleReview['author_name'],
-                    'author_initial' => $googleReview['author_initial'],
+                    'author_name' => $data['author_name'],
+                    'author_initial' => $data['author_initial'],
                     'avatar_color' => $this->generateAvatarColor(),
-                    'rating' => $googleReview['rating'],
-                    'content' => $googleReview['content'],
-                    'source' => $googleReview['source'],
-                    'date_label' => $googleReview['date_label'],
+                    'rating' => $data['rating'],
+                    'content' => $data['content'],
+                    'source' => 'google',
+                    'date_label' => $data['date_label'],
                     'is_featured' => false,
                     'is_visible' => true,
-                    'sort_order' => Review::count() + 1,
+                    'sort_order' => $maxSortOrder,
                 ]);
 
-                $this->line("  ✓ Synced: {$googleReview['author_name']} ({$googleReview['rating']}★)");
                 $synced++;
+                $this->line("  ✓ Ajouté : {$data['author_name']} ({$data['rating']}★)");
             }
 
-            $this->info("\n✓ Sync complete!");
-            $this->line("  Synced: {$synced}");
-            $this->line("  Skipped: {$skipped}");
+            $this->newLine();
+            $this->info('Synchronisation terminée !');
+            $this->line("  Ajoutés : {$synced}");
+            $this->line("  Mis à jour : {$updated}");
+            $this->line("  Ignorés : {$skipped}");
+            $this->line('  Total en base : '.Review::count());
 
             return 0;
         } catch (\Exception $e) {
-            $this->error('Error during sync: '.$e->getMessage());
+            $this->error('Erreur : '.$e->getMessage());
+
             return 1;
         }
     }
 
-    /**
-     * Generate a random avatar color
-     */
+    private function formatCount(array $items): int
+    {
+        return count($items);
+    }
+
     private function generateAvatarColor(): string
     {
-        $colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E2'];
+        $colors = ['#1B263A', '#CC3366', '#4A90D9', '#27AE60', '#E67E22', '#8E44AD', '#FF6B6B', '#4ECDC4'];
 
         return $colors[array_rand($colors)];
     }

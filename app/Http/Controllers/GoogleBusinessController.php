@@ -24,7 +24,7 @@ class GoogleBusinessController extends Controller
         if (! $apiKey) {
             Log::warning('Google Places API key non configurée.');
 
-            return $this->getStaticReviews();
+            return [];
         }
 
         return Cache::remember('google_real_reviews', 3600, function () use ($apiKey) {
@@ -42,10 +42,6 @@ class GoogleBusinessController extends Controller
                 $allReviews[$review['author_name'].'_'.md5($review['content'])] = $review;
             }
 
-            if (empty($allReviews)) {
-                return $this->getStaticReviews();
-            }
-
             return array_values($allReviews);
         });
     }
@@ -58,7 +54,7 @@ class GoogleBusinessController extends Controller
         $apiKey = config('app.google_places_api_key');
 
         if (! $apiKey) {
-            return ['rating' => 4.5, 'total' => 6460];
+            return ['rating' => null, 'total' => null];
         }
 
         return Cache::remember('google_aggregate_rating', 3600, function () use ($apiKey) {
@@ -73,15 +69,15 @@ class GoogleBusinessController extends Controller
 
                 if ($response->successful() && isset($data['result'])) {
                     return [
-                        'rating' => $data['result']['rating'] ?? 4.5,
-                        'total' => $data['result']['user_ratings_total'] ?? 6460,
+                        'rating' => $data['result']['rating'] ?? null,
+                        'total' => $data['result']['user_ratings_total'] ?? null,
                     ];
                 }
             } catch (\Exception $e) {
                 Log::error('Google Places API Error: '.$e->getMessage());
             }
 
-            return ['rating' => 4.5, 'total' => 6460];
+            return ['rating' => null, 'total' => null];
         });
     }
 
@@ -132,20 +128,5 @@ class GoogleBusinessController extends Controller
 
             return [];
         }
-    }
-
-    /**
-     * Avis statiques (fallback si API indisponible)
-     */
-    private function getStaticReviews(): array
-    {
-        return [
-            ['author_name' => 'Marie L.', 'author_initial' => 'M', 'date_label' => 'il y a 2 semaines', 'source' => 'google', 'rating' => 5, 'content' => 'Excellent restaurant à Aéroville ! Le smash burger est vraiment délicieux, la viande est de qualité et la sauce maison est top. Service rapide et souriant. Je recommande vivement !'],
-            ['author_name' => 'Thomas R.', 'author_initial' => 'T', 'date_label' => 'il y a 1 mois', 'source' => 'google', 'rating' => 5, 'content' => 'Le cheesecake New-Yorkais est une tuerie absolue. Texture parfaite, base biscuitée croustillante. On a aussi pris des bagels pour le petit-déjeuner avant notre vol, vraiment frais et copieux !'],
-            ['author_name' => 'Sophie M.', 'author_initial' => 'S', 'date_label' => 'il y a 3 semaines', 'source' => 'google', 'rating' => 4, 'content' => 'Très bonne adresse à Aéroville. Idéal pour une pause shopping ou une séance au Pathé, les portions sont généreuses et les prix raisonnables. Le milkshake Oreo est incroyable !'],
-            ['author_name' => 'Jean-Pierre D.', 'author_initial' => 'J', 'date_label' => 'il y a 2 mois', 'source' => 'google', 'rating' => 5, 'content' => 'Halal et délicieux ! Rare de trouver cette qualité dans un centre commercial. Le Halal Smash Burger était juteux et bien assaisonné. Je reviendrai à chaque passage à Aéroville.'],
-            ['author_name' => 'Camille B.', 'author_initial' => 'C', 'date_label' => 'il y a 3 semaines', 'source' => 'tripadvisor', 'rating' => 5, 'content' => 'Le Lost Bagel au saumon fumé est mon péché mignon à chaque visite ! Le cream cheese est généreux, le saumon de qualité. Un vrai bagel new-yorkais, pas une copie. Bravo !'],
-            ['author_name' => 'Lucas F.', 'author_initial' => 'L', 'date_label' => 'il y a 1 semaine', 'source' => 'google', 'rating' => 5, 'content' => 'Végétarien depuis 5 ans, c\'est difficile de trouver de bons plats en centre commercial. Ici, le Veggie Bowl et le Veggie Smash sont vraiment bons. Ingrédients frais, préparation soignée.'],
-        ];
     }
 }
