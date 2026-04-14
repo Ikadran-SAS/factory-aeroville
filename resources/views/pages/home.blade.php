@@ -143,35 +143,35 @@
         <div class="products-slider-wrapper">
             <div class="products-slider">
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/smash-burger.webp" alt="Smash Burgers préparés à la minute au restaurant Factory & Co Aéroville" loading="lazy">
+                    <img src="{{ asset('menu/SALÉ/BURGER/Smash Burgers/Cheeseburger/Cheeseburger Regular/DSC03883.jpg') }}" alt="Cheeseburger smashé Factory & Co Aéroville" loading="lazy">
                     <figcaption>Smash Burgers</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/smoothiee.jpeg" alt="Petit-déjeuner américain et smoothies chez Factory & Co" loading="lazy">
-                    <figcaption>Breakfast</figcaption>
+                    <img src="{{ asset('menu/SALÉ/BURGER/Smash Burgers/Golden/Golden Regular/DSC03736.jpg') }}" alt="Golden Burger signature Factory & Co Aéroville" loading="lazy">
+                    <figcaption>Golden Burger</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/BLT-SEUL-2.jpg" alt="Bagels New-Yorkais frais de Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/SALÉ/BAGELS/DSC00895.jpg') }}" alt="Bagels frais Factory & Co Aéroville" loading="lazy">
                     <figcaption>Bagels</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/milkshake.png" alt="Milkshakes artisanaux Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/BOISSONS/MILKSHAKE/DSC01369.jpg') }}" alt="Milkshakes artisanaux Factory & Co Aéroville" loading="lazy">
                     <figcaption>Milkshakes</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/Factory_And_Co_Claye_Souilly_Jon_Filin_Burger_Cheesecake_Sports_Bar-6.png" alt="Cheesecake New-Yorkais signature Factory & Co Aéroville" loading="lazy">
+                    <img src="{{ asset('menu/SUCRÉ/CHEESECAKE/Factory_Claye 1.JPG') }}" alt="Cheesecake New-Yorkais Factory & Co Aéroville" loading="lazy">
                     <figcaption>Cheesecake</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/Bowl-768x1086.png" alt="Bowl healthy et salade saine chez Factory & Co" loading="lazy">
-                    <figcaption>Bowl</figcaption>
+                    <img src="{{ asset('menu/SALÉ/BOWLS/DSC00513.jpg') }}" alt="Bowl healthy Factory & Co Aéroville" loading="lazy">
+                    <figcaption>Bowls</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/Cheesecake-1.png" alt="Cheesecake artisanal recette exclusive Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/SUCRÉ/CHEESECAKE/Factory_Claye 5.JPG') }}" alt="Cheesecake artisanal Factory & Co Aéroville" loading="lazy">
                     <figcaption>Cheesecake</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/Coffee.png" alt="Café artisanal et boissons chaudes Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/BOISSONS/COFFESHOP/DSC09737B copie.jpg') }}" alt="Café de spécialité Factory & Co Aéroville" loading="lazy">
                     <figcaption>Coffeeshop</figcaption>
                 </div>
             </div>
