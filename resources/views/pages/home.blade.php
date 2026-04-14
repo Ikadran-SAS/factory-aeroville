@@ -57,7 +57,7 @@
         </p>
         <h1 class="hero-title">Factory &amp; Co Aéroville : <em>L'authentique diner américain</em></h1>
         <p class="hero-sub">Smash burgers &amp; New York cheesecakes</p>
-        <p class="hero-hours">Lun-Jeu, Dim: 8h30 - 22h · Ven-Sam: 8h30 - 23h · Delicious since 1989</p>
+        <p class="hero-hours">Dim-Jeu : 8h30 - 22h · Ven-Sam : 8h30 - 23h · Delicious since 1989</p>
         <div class="hero-ctas">
             <a href="javascript:void(0)" onclick="window.factoryCoNav && window.factoryCoNav.openNavigationModal()" class="btn btn-pink">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>

@@ -66,7 +66,7 @@
                 'name' => 'Quels sont les horaires d\'ouverture ?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Nous sommes ouverts 7 jours sur 7. Lun-Mar-Mer-Jeu-Dim: 8h30-22h. Ven-Sam: 8h30-23h.'
+                    'text' => 'Nous sommes ouverts 7 jours sur 7. Dim-Jeu : 8h30-22h. Ven-Sam : 8h30-23h.'
                 ]
             ],
             [
