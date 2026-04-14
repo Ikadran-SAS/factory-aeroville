@@ -58,7 +58,7 @@
                 'name' => 'Depuis quand existe Factory & Co ?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Factory & Co existe depuis 1989. Nous sommes présent à Aéroville depuis 2013, au cœur du centre commercial.'
+                    'text' => 'Factory & Co a été créé en 2009. "Since 1989" est notre tagline, un clin d'œil à l'inspiration new-yorkaise du fondateur. Nous sommes présents à Aéroville depuis 2013.'
                 ]
             ],
             [
@@ -99,7 +99,7 @@
     <div class="hero-content">
         <span class="section-tag">🍔</span>
         <h1>Le diner new-yorkais qui ne fait rien comme les autres.</h1>
-        <p>Brooklyn s'installe au cœur d'Aéroville. Montez à bord.</p>
+        <p>New York s'installe au cœur d'Aéroville. Montez à bord.</p>
     </div>
 </section>
 
@@ -171,7 +171,7 @@
             <h2 class="concept-title-redesigned">
                 Notre <span class="concept-highlight">ADN</span>
             </h2>
-            <p class="concept-subtitle-redesigned">Né à Brooklyn, grandi en France</p>
+            <p class="concept-subtitle-redesigned">Né à New York, grandi en France</p>
         </div>
 
         {{-- Intro text en citation --}}
@@ -764,7 +764,7 @@
 
         {{-- Intro Quote --}}
         <blockquote class="ambiance-intro-quote">
-            Les néons s'allument, la musique pulse, l'odeur du grill flotte dans l'air. Factory & Co, c'est un voyage express à Brooklyn sans quitter Aéroville.
+            Les néons s'allument, la musique pulse, l'odeur du grill flotte dans l'air. Factory & Co, c'est un voyage express à New York sans quitter Aéroville.
         </blockquote>
 
         {{-- 3 Premium Ambiance Cards avec images --}}
@@ -790,7 +790,7 @@
                             <rect x="42" y="20" width="6" height="6" stroke="url(#grad-ambiance-1)" stroke-width="2" fill="none"/>
                         </svg>
                     </div>
-                    <h3 class="ambiance-card-title">Esprit Brooklyn</h3>
+                    <h3 class="ambiance-card-title">Esprit New York</h3>
                     <p class="ambiance-card-description">Briques, métal, bois brut et néons : chaque matière raconte l'histoire des diners américains</p>
                     <div class="ambiance-card-accent"></div>
                 </div>
@@ -1264,7 +1264,7 @@
 
             {{-- Tagline finale ── --}}
             <p class="cta-tagline">
-                ✓ Factory & Co Depuis 1989<br>
+                ✓ Factory & Co Since 1989<br>
                 <span class="cta-tagline-small">Une vraie différence. Un vrai plaisir.</span>
             </p>
         </div>

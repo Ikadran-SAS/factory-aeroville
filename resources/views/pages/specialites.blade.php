@@ -31,7 +31,7 @@
         '@id' => route('specialites'),
         'url' => route('specialites'),
         'name' => 'Nos Spécialités – Factory & Co Aéroville',
-        'description' => 'Smash burgers Halal, bagels façon Brooklyn, cheesecakes maison et breakfast dès 8h30 au CC Westfield Aéroville, Tremblay-en-France, près de CDG et du Pathé.',
+        'description' => 'Smash burgers Halal, bagels authentiques du New Jersey, cheesecakes maison et breakfast dès 8h30 au CC Westfield Aéroville, Tremblay-en-France, près de CDG et du Pathé.',
         'isPartOf' => [
             '@type' => 'WebSite',
             '@id' => route('home')
@@ -64,7 +64,7 @@
                 'item' => [
                     '@type' => 'Product',
                     'name' => 'Bagels Authentiques',
-                    'description' => 'Recette authentique Brooklyn : bouillis puis dorés au four. Garnis frais chaque matin, à déguster au CC Westfield Aéroville.',
+                    'description' => 'Recette authentique du New Jersey, 36h de fermentation. Pétrissage artisanal, croquant dehors, moelleux dedans.',
                     'brand' => [
                         '@type' => 'Brand',
                         'name' => 'Factory & Co'
@@ -172,7 +172,7 @@
                     <em>une seule exigence</em>
                 </h2>
                 <p>Chez Factory &amp; Co Aéroville, chaque spécialité a été pensée pour aller à l'essentiel : des produits frais, une préparation à la minute et des recettes qui ne changent pas au gré des modes.</p>
-                <p>Viande Halal certifiée pour les burgers, bagels bouillis puis dorés comme à Brooklyn, cheesecakes crémeux préparés chaque jour. On ne coupe pas les coins.</p>
+                <p>Viande Halal certifiée pour les burgers, bagels authentiques du New Jersey (36h de fermentation), cheesecakes crémeux préparés chaque jour. On ne coupe pas les coins.</p>
                 <p><strong>Ce qui est dans la vitrine, c'est ce qui arrive dans l'assiette.</strong></p>
             </div>
             <div class="concept-image">
@@ -319,7 +319,7 @@
                 </div>
                 <div class="quality-card-content">
                     <h3>Craft</h3>
-                    <p class="quality-detail">Des recettes rodées depuis plus de 10 ans, inspirées des meilleurs diners de Brooklyn et adaptées aux palais français.</p>
+                    <p class="quality-detail">Des recettes rodées depuis plus de 10 ans, du chef Jonathan Jablonski, formé au New Jersey auprès d'artisans boulangers américains. 15+ ans d'expertise en cuisine américaine authentique.</p>
                     <span class="quality-badge">Savoir-faire</span>
                 </div>
             </div>

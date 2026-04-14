@@ -85,11 +85,11 @@
             <div class="stat-label">Préparé à la minute</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">4.5★</div>
+            <div class="stat-number">{{ number_format($averageRating, 1, ',', '') }}★</div>
             <div class="stat-label">Note Google</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">6 460</div>
+            <div class="stat-number">{{ number_format($totalReviews, 0, ',', ' ') }}+</div>
             <div class="stat-label">Avis Google</div>
         </div>
     </div>
@@ -107,7 +107,7 @@
                     Votre diner américain<br>
                     au cœur d'Aéroville
                 </h2>
-                <p>Entre deux boutiques ou avant une séance au <strong>Pathé</strong>, poussez la porte de Factory &amp; Co. Ici, l'ambiance <strong>Brooklyn</strong> n'est pas un décor : c'est une promesse. Celle de produits frais, travaillés à la minute, avec les vraies recettes des diners new-yorkais.</p>
+                <p>Entre deux boutiques ou avant une séance au <strong>Pathé</strong>, poussez la porte de Factory &amp; Co. Ici, l'ambiance <strong>New York</strong> n'est pas un décor : c'est une promesse. Celle de produits frais, travaillés à la minute, avec les vraies recettes des diners new-yorkais.</p>
                 <p><strong>Smash Burgers</strong> saisis sur plaque brûlante, <strong>bagels</strong> bouillis puis dorés chaque matin, <strong>cheesecakes</strong> crémeux préparés maison — rien n'est surgelé, rien n'est réchauffé. Chaque assiette est préparée à la commande.</p>
                 <p><strong>Bien manger en centre commercial, c'est possible. On vous le prouve depuis 2013.</strong></p>
                 <a href="{{ route('concept') }}" class="btn btn-pink">
