@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\FaqItem;
 use App\Models\OpeningHour;
 use App\Models\Product;
-use App\Models\Review;
 
 class HomeController extends Controller
 {
@@ -20,15 +19,18 @@ class HomeController extends Controller
             ->get()
             ->groupBy('category');
 
-        $featuredReviews = Review::featured()
-            ->orderBy('sort_order')
-            ->take(3)
-            ->get();
+        // Vrais avis Google uniquement
+        $googleBusinessController = new GoogleBusinessController;
+        $aggregateData = $googleBusinessController->getAggregateRating();
+        $averageRating = $aggregateData['rating'] ?? 4.5;
+        $totalReviews = $aggregateData['total'] ?? 6460;
 
-        $googleReviewsController = new GoogleReviewsController;
-        $aggregateData = $googleReviewsController->getAggregateRating();
-        $averageRating = $aggregateData['rating'] ?? ($featuredReviews->count() > 0 ? $featuredReviews->avg('rating') : 0);
-        $totalReviews = $aggregateData['total'] ?? Review::where('is_visible', true)->count();
+        $allReviews = $googleBusinessController->getReviews();
+        $featuredReviews = collect($allReviews)
+            ->filter(fn (array $r): bool => ($r['rating'] ?? 0) >= 4 && ! empty($r['content']))
+            ->take(3)
+            ->map(fn (array $r): object => (object) $r)
+            ->values();
 
         $openingHours = OpeningHour::orderBy('sort_order')->get();
 
@@ -43,26 +45,5 @@ class HomeController extends Controller
         ];
 
         return view('pages.home', compact('featuredProducts', 'featuredReviews', 'openingHours', 'faqs', 'seo', 'averageRating', 'totalReviews'));
-    }
-
-    /**
-     * Page Click & Collect
-     */
-    public function clickCollect()
-    {
-        $seo = [
-            'title' => 'Click & Collect Factory & Co Aéroville | Commander',
-            'description' => 'Click & Collect Factory & Co Aéroville : commandez en ligne, récupérez sans attente. Centre commercial Aéroville, Tremblay-en-France 93290. Burgers, bagels, cheesecakes.',
-            'keywords' => 'click collect aéroville, commander en ligne factory co tremblay-en-france, commande emporter aéroville, retrait aéroville roissy',
-            'canonical' => route('click-collect'),
-        ];
-
-        $popularProducts = Product::available()
-            ->featured()
-            ->ordered()
-            ->take(6)
-            ->get();
-
-        return view('pages.click-collect', compact('seo', 'popularProducts'));
     }
 }

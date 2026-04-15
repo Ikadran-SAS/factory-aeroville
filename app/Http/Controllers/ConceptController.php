@@ -2,21 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Review;
-
 class ConceptController extends Controller
 {
     public function index()
     {
-        $featuredReviews = Review::featured()
-            ->orderBy('sort_order')
-            ->take(3)
-            ->get();
+        // Vrais avis Google uniquement
+        $googleBusinessController = new GoogleBusinessController;
+        $aggregateData = $googleBusinessController->getAggregateRating();
+        $averageRating = $aggregateData['rating'] ?? 4.5;
+        $totalReviews = $aggregateData['total'] ?? 6460;
 
-        $googleReviewsController = new GoogleReviewsController;
-        $aggregateData = $googleReviewsController->getAggregateRating();
-        $averageRating = $aggregateData['rating'] ?? ($featuredReviews->count() > 0 ? $featuredReviews->avg('rating') : 0);
-        $totalReviews = $aggregateData['total'] ?? Review::where('is_visible', true)->count();
+        $allReviews = $googleBusinessController->getReviews();
+        $featuredReviews = collect($allReviews)
+            ->filter(fn (array $r): bool => ($r['rating'] ?? 0) >= 4 && ! empty($r['content']))
+            ->take(3)
+            ->map(fn (array $r): object => (object) $r)
+            ->values();
 
         $seo = [
             'title' => 'Notre Concept – Factory & Co Aéroville',

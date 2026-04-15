@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\FaqItem;
-use App\Models\Review;
 
 class AvisController extends Controller
 {
@@ -12,14 +11,17 @@ class AvisController extends Controller
         $faqsGrouped = FaqItem::grouped();
         $faqs = collect($faqsGrouped)->flatten(1)->values()->all();
 
-        $reviews = Review::where('is_visible', true)
-            ->orderBy('sort_order')
-            ->get();
+        // Vrais avis Google uniquement
+        $googleBusinessController = new GoogleBusinessController;
+        $aggregateData = $googleBusinessController->getAggregateRating();
+        $averageRating = $aggregateData['rating'] ?? 4.5;
+        $totalReviews = $aggregateData['total'] ?? 6460;
 
-        $googleReviewsController = new GoogleReviewsController;
-        $aggregateData = $googleReviewsController->getAggregateRating();
-        $averageRating = $aggregateData['rating'] ?? ($reviews->count() > 0 ? $reviews->avg('rating') : 0);
-        $totalReviews = $aggregateData['total'] ?? $reviews->count();
+        $googleReviews = $googleBusinessController->getReviews();
+        $reviews = collect($googleReviews)
+            ->filter(fn (array $r): bool => ! empty($r['content']))
+            ->map(fn (array $r): object => (object) $r)
+            ->values();
 
         $seo = [
             'title' => 'Avis Clients | Factory & Co – Nos Clients Témoignent',

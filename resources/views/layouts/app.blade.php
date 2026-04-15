@@ -104,6 +104,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Homestead';
+            src: url('{{ asset('Typos/Homestead/Homestead-Inline.ttf') }}') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Abolition';
+            src: url('{{ asset('Typos/Abolition/Abolition-Sharp.woff') }}') format('woff'),
+                 url('{{ asset('Typos/Abolition/Abolition-Sharp.ttf') }}') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
 
     {{-- ── Vite Assets (CSS + JS) ── --}}
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/modal-app.js'])

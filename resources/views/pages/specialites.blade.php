@@ -203,15 +203,15 @@
             {{-- SMASH BURGERS --}}
             <div class="specialite-card">
                 <div class="specialite-image">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/smash-burger.webp" alt="Smash Burgers Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/SAL%C3%89/BURGER/Smash%20Burgers/Monster/DSC03550.jpg') }}" alt="Smash Burgers Factory & Co Aéroville" loading="lazy">
                     <span class="specialite-badge">Signature</span>
                 </div>
                 <div class="specialite-content">
                     <h3>Smash Burgers</h3>
-                    <p>Viande smashée sur plaque à 200°C, cheddar fondu, brioche toastée. Préparé devant vous en quelques minutes.</p>
+                    <p>Viande Halal certifiée, smashée sur plaque brûlante. Cheddar fondant, brioche dorée, sauces maison. Le burger qui vous fait revenir.</p>
                     <div class="specialite-meta">
-                        <span>⏱️ Rapide</span>
-                        <span>🔥 Gourmand</span>
+                        <span>Rapide</span>
+                        <span>Gourmand</span>
                     </div>
                     <a href="{{ route('menu.index') }}" class="btn btn-pink btn-sm">
                         Découvrir
@@ -223,15 +223,15 @@
             {{-- BAGELS --}}
             <div class="specialite-card">
                 <div class="specialite-image">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/BLT-SEUL-2.jpg" alt="Bagels Authentiques Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/SAL%C3%89/BAGELS/DSC00828.jpg') }}" alt="Bagels Authentiques Factory & Co Aéroville" loading="lazy">
                     <span class="specialite-badge">Star</span>
                 </div>
                 <div class="specialite-content">
                     <h3>Bagels Authentiques</h3>
-                    <p>Bouillis puis dorés au four chaque matin. Garnis de produits frais, du saumon fumé au poulet grillé. La vraie recette new-yorkaise.</p>
+                    <p>Recette du New Jersey, 36 heures de fermentation. Pétrissage artisanal, croquant dehors, moelleux dedans. Une texture introuvable ailleurs.</p>
                     <div class="specialite-meta">
-                        <span>🌅 Breakfast</span>
-                        <span>✨ Artisanal</span>
+                        <span>Breakfast</span>
+                        <span>36h fermentation</span>
                     </div>
                     <a href="{{ route('menu.index') }}" class="btn btn-pink btn-sm">
                         Découvrir
@@ -243,15 +243,15 @@
             {{-- CHEESECAKE --}}
             <div class="specialite-card">
                 <div class="specialite-image">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/cheesecake.webp" alt="Cheesecake Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/SUCR%C3%89/CHEESECAKE/Factory_Claye%204.JPG') }}" alt="New York Cheesecake Factory & Co Aéroville" loading="lazy">
                     <span class="specialite-badge">Must-try</span>
                 </div>
                 <div class="specialite-content">
-                    <h3>Cheesecake Factory</h3>
-                    <p>Base biscuitée croustillante, cœur crémeux. Classique, Oreo, Kinder Bueno, Spéculoos : il y en a pour tous les gourmands.</p>
+                    <h3>New York Cheesecake</h3>
+                    <p>Texture dense et onctueuse, base biscuitée maison. Classique, Oreo, Kinder Bueno, Spéculoos, framboise : fabriqués dans notre atelier.</p>
                     <div class="specialite-meta">
-                        <span>🎂 Dessert</span>
-                        <span>💎 Iconique</span>
+                        <span>Signature</span>
+                        <span>Fait maison</span>
                     </div>
                     <a href="{{ route('menu.index') }}" class="btn btn-pink btn-sm">
                         Découvrir
@@ -263,15 +263,15 @@
             {{-- BREAKFAST --}}
             <div class="specialite-card">
                 <div class="specialite-image">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/smoothiee.jpeg" alt="Breakfast Américain Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/SUCR%C3%89/BREAKFAST/DSC01073.jpg') }}" alt="Breakfast Américain Factory & Co Aéroville" loading="lazy">
                     <span class="specialite-badge">Premium</span>
                 </div>
                 <div class="specialite-content">
                     <h3>Breakfast Américain</h3>
-                    <p>Dès 8h30 à Aéroville : bagels du jour, pancakes, viennoiseries et café de spécialité. Idéal avant une journée de shopping ou un vol depuis CDG.</p>
+                    <p>Dès 8h30 au CC Westfield Aéroville : bagels frais, pancakes, viennoiseries et cafés de spécialité. Idéal avant le shopping ou un vol depuis CDG.</p>
                     <div class="specialite-meta">
-                        <span>☕ Matinal</span>
-                        <span>🥓 Copieux</span>
+                        <span>Matinal</span>
+                        <span>Copieux</span>
                     </div>
                     <a href="{{ route('menu.index') }}" class="btn btn-pink btn-sm">
                         Découvrir

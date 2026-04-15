@@ -4,6 +4,24 @@
    Typographie : Lexend (Google Fonts) + Homestead (custom, fallback Georgia)
    ═══════════════════════════════════════════════════════════════ */
 
+/* ── Custom Fonts ── */
+@font-face {
+  font-family: 'Homestead';
+  src: url('/Typos/Homestead/Homestead-Inline.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Abolition';
+  src: url('/Typos/Abolition/Abolition-Sharp.woff') format('woff'),
+       url('/Typos/Abolition/Abolition-Sharp.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ── Variables CSS ── */
 :root {
   --navy:       #1B263A;
@@ -3163,6 +3181,16 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
 .hero-sub { color: rgba(255,255,255,.6); font-size: .75rem; margin-bottom: .5rem; }
 .hero-hours { color: rgba(255,255,255,.5); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 2.5rem; }
 .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+.hero-ctas-secondary { margin-top: 1.25rem; text-align: center; }
+.hero-badge-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: rgba(255,255,255,.7); font-size: 13px; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  padding-bottom: 2px;
+  transition: all var(--transition);
+}
+.hero-badge-link:hover { color: var(--white); border-bottom-color: var(--white); }
 
 /* ── Ticker ── */
 .ticker { background: var(--pink); overflow: hidden; padding: .75rem 0; white-space: nowrap; }
@@ -8304,3 +8332,389 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
     font-size: 1.5rem;
   }
 }
+
+/* ── Menu Main Tabs ── */
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  background: var(--white);
+  border-bottom: 2px solid var(--border);
+  position: sticky;
+  top: 60px;
+  z-index: 100;
+}
+
+.menu-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.menu-tab:hover {
+  color: var(--pink);
+  background: rgba(245, 195, 219, 0.08);
+}
+
+.menu-tab.active {
+  color: var(--pink-dark);
+  border-bottom-color: var(--pink-dark);
+  background: rgba(245, 195, 219, 0.06);
+}
+
+.menu-tab .tab-icon {
+  font-size: 1.3rem;
+}
+
+.menu-tab-panel {
+  display: none;
+}
+
+.menu-tab-panel.active {
+  display: block;
+}
+
+/* Sub-category gallery card */
+.subcategory-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.subcategory-card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  aspect-ratio: 4/3;
+}
+
+.subcategory-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.subcategory-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.subcategory-card:hover img {
+  transform: scale(1.05);
+}
+
+.subcategory-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(27, 38, 58, 0.85) 0%, rgba(27, 38, 58, 0.2) 50%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+
+.subcategory-card-overlay h3 {
+  color: var(--white);
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.subcategory-card-overlay p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Section divider within a tab */
+.menu-subsection {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.menu-subsection:last-child {
+  border-bottom: none;
+}
+
+.subsection-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.subsection-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(245, 195, 219, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.subsection-header h3 {
+  font-size: 1.6rem;
+  color: var(--navy);
+  margin: 0;
+  font-weight: 700;
+}
+
+.subsection-header p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 0.25rem 0 0 0;
+}
+
+/* Photo strip (horizontal scroll for sub-sub-categories) */
+.photo-strip {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+  margin-bottom: 2rem;
+}
+
+.photo-strip::-webkit-scrollbar {
+  height: 4px;
+}
+
+.photo-strip::-webkit-scrollbar-thumb {
+  background: var(--pink);
+  border-radius: 4px;
+}
+
+.photo-strip-item {
+  flex: 0 0 220px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.photo-strip-item:hover {
+  transform: scale(1.03);
+}
+
+.photo-strip-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-strip-item .photo-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 0.75rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Reviews aggregate */
+.reviews-aggregate {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.reviews-aggregate .aggregate-rating {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--navy);
+  font-family: 'Lexend', sans-serif;
+}
+
+.reviews-aggregate .aggregate-stars {
+  color: #f5c518;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+
+.reviews-aggregate .aggregate-count {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* Coming soon badge for categories without DB products */
+.coming-soon-badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  background: rgba(245, 195, 219, 0.15);
+  color: var(--pink-dark);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 0.75rem;
+}
+
+/* Responsive adjustments for tabs */
+@media (max-width: 768px) {
+  .menu-tabs {
+    top: 50px;
+    gap: 0;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .menu-tab {
+    padding: 1rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .subcategory-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-strip-item {
+    flex: 0 0 180px;
+  }
+
+  .subsection-header h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-tab {
+    padding: 0.85rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .photo-strip-item {
+    flex: 0 0 150px;
+  }
+
+  .photo-strip-item img {
+    height: 120px;
+  }
+}
+
+/* Category Sections */
+.category-section {
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.category-section-alt {
+  background: var(--bg-light);
+}
+
+.category-hero {
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+}
+
+.badge-icon {
+  font-size: 1.5rem;
+}
+
+.category-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--navy);
+}
+
+.category-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.category-description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  max-width: 600px;
+}
+
+/* Items Grid */
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.item-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid var(--border);
+}
+
+.category-section-alt .item-card {
+  background: var(--white);
+}
+
+.item-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.item-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.price-badge {
+  background: var(--pink-dark);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+

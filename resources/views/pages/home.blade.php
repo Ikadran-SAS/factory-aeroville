@@ -63,8 +63,14 @@
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 Venir chez nous
             </a>
-            <a href="{{ route('menu.index') }}" class="btn btn-outline-white">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            <a href="https://www.ubereats.com/fr" target="_blank" rel="noopener" class="btn btn-pink">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>
+                Se faire livrer
+            </a>
+        </div>
+        <div class="hero-ctas-secondary">
+            <a href="{{ route('menu.index') }}" class="hero-badge-link">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
                 Découvrir la carte
             </a>
         </div>
@@ -143,35 +149,35 @@
         <div class="products-slider-wrapper">
             <div class="products-slider">
                 <div class="product-item-slide">
-                    <img src="{{ asset('menu/SALÉ/BURGER/Smash Burgers/Cheeseburger/Cheeseburger Regular/DSC03883.jpg') }}" alt="Cheeseburger smashé Factory & Co Aéroville" loading="lazy">
+                    <img src="{{ asset('menu/SAL%C3%89/BURGER/Smash%20Burgers/Monster/DSC03550.jpg') }}" alt="Smash Burgers préparés à la minute au restaurant Factory & Co Aéroville" loading="lazy">
                     <figcaption>Smash Burgers</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="{{ asset('menu/SALÉ/BURGER/Smash Burgers/Golden/Golden Regular/DSC03736.jpg') }}" alt="Golden Burger signature Factory & Co Aéroville" loading="lazy">
-                    <figcaption>Golden Burger</figcaption>
+                    <img src="{{ asset('menu/SUCR%C3%89/CHEESECAKE/Factory_Claye%204.JPG') }}" alt="New York Cheesecake signature Factory & Co Aéroville" loading="lazy">
+                    <figcaption>Cheesecake</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="{{ asset('menu/SALÉ/BAGELS/DSC00895.jpg') }}" alt="Bagels frais Factory & Co Aéroville" loading="lazy">
+                    <img src="{{ asset('menu/SUCR%C3%89/BREAKFAST/DSC01073.jpg') }}" alt="Petit-déjeuner américain chez Factory & Co Aéroville" loading="lazy">
+                    <figcaption>Breakfast</figcaption>
+                </div>
+                <div class="product-item-slide">
+                    <img src="{{ asset('menu/SAL%C3%89/BAGELS/DSC00828.jpg') }}" alt="Bagels New-Yorkais frais de Factory & Co Aéroville" loading="lazy">
                     <figcaption>Bagels</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="{{ asset('menu/BOISSONS/MILKSHAKE/DSC01369.jpg') }}" alt="Milkshakes artisanaux Factory & Co Aéroville" loading="lazy">
+                    <img src="{{ asset('menu/BOISSONS/MILKSHAKE/DSC01354.jpg') }}" alt="Milkshakes artisanaux Factory & Co Aéroville" loading="lazy">
                     <figcaption>Milkshakes</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="{{ asset('menu/SUCRÉ/CHEESECAKE/Factory_Claye 1.JPG') }}" alt="Cheesecake New-Yorkais Factory & Co Aéroville" loading="lazy">
-                    <figcaption>Cheesecake</figcaption>
+                    <img src="{{ asset('menu/BOISSONS/SMOOTHIE/Ban_a%20Manga%202.jpg') }}" alt="Smoothies frais Factory & Co Aéroville" loading="lazy">
+                    <figcaption>Smoothie</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="{{ asset('menu/SALÉ/BOWLS/DSC00513.jpg') }}" alt="Bowl healthy Factory & Co Aéroville" loading="lazy">
-                    <figcaption>Bowls</figcaption>
+                    <img src="{{ asset('menu/SAL%C3%89/BOWLS/DSC00510.jpg') }}" alt="Bowl salade chez Factory & Co Aéroville" loading="lazy">
+                    <figcaption>Bowl</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="{{ asset('menu/SUCRÉ/CHEESECAKE/Factory_Claye 5.JPG') }}" alt="Cheesecake artisanal Factory & Co Aéroville" loading="lazy">
-                    <figcaption>Cheesecake</figcaption>
-                </div>
-                <div class="product-item-slide">
-                    <img src="{{ asset('menu/BOISSONS/COFFESHOP/DSC09737B copie.jpg') }}" alt="Café de spécialité Factory & Co Aéroville" loading="lazy">
+                    <img src="{{ asset('menu/BOISSONS/COFFESHOP/DSC09733%20(Caf%C3%A9%203).jpg') }}" alt="Coffeeshop Factory & Co Aéroville, cafés signature" loading="lazy">
                     <figcaption>Coffeeshop</figcaption>
                 </div>
             </div>
