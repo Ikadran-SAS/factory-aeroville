@@ -909,7 +909,11 @@
         <div class="reviews-grid">
             @forelse($featuredReviews as $review)
                 <div class="review-card">
-                    <div class="review-stars">{!! $review->stars_html !!}</div>
+                    <div class="review-stars">
+                        @for ($i = 1; $i <= 5; $i++)
+                            <span>@if($i <= $review->rating)&#9733;@else&#9734;@endif</span>
+                        @endfor
+                    </div>
                     <p class="review-text">"{{ $review->content }}"</p>
                     <p class="review-author">
                         — {{ $review->author_name }}
