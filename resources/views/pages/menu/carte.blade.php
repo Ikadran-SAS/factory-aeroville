@@ -57,8 +57,7 @@
                     ['@type' => 'MenuSection', 'name' => 'Bagels', 'description' => 'Recette authentique, fabriqués en atelier avec une farine canadienne riche en protéines', 'position' => 2],
                     ['@type' => 'MenuSection', 'name' => 'Bowls', 'description' => 'Bowls sains, vegan et végétariens', 'position' => 3],
                     ['@type' => 'MenuSection', 'name' => 'Sides', 'description' => 'Frites crinkle et accompagnements gourmands', 'position' => 4],
-                    ['@type' => 'MenuSection', 'name' => 'Plateau à partager', 'description' => 'Plateaux gourmands à partager entre amis', 'position' => 5],
-                    ['@type' => 'MenuSection', 'name' => 'Menu kids', 'description' => 'Menus pour les enfants', 'position' => 6],
+                    ['@type' => 'MenuSection', 'name' => 'Pièces de poulet crunchy', 'description' => 'Nuggets et tenders marinés 12h, panés à la main', 'position' => 5],
                 ]
             ],
             [
@@ -166,8 +165,8 @@
                     NYC SMASH BURGERS
                 </div>
                 <h2 class="category-title">Smash and chicken burgers</h2>
-                <p class="category-subtitle">Buns briochés fabriqués en atelier, certifiés halal</p>
-                <p class="category-description">Garnis d'un steak de bœuf Angus smashé et grillé, ou d'un poulet mariné 12h, grillé ou frit dans notre panure secrète ultra croustillante.</p>
+                <p class="category-subtitle">Buns briochés fabriqués en atelier, garnis d'un steak de bœuf Angus smashé et grillé, ou d'un poulet mariné 12h</p>
+                <p class="category-description">Little (1 steak 80g) · Regular (2 steaks 160g) · Big (3 steaks 240g). Combo burger : frites crinkle + soft +5€. Pimp ton burger dès 0,50€.</p>
             </div>
 
             {{-- Product cards from database --}}
@@ -204,7 +203,7 @@
                 </div>
                 <h2 class="category-title">Bagels</h2>
                 <p class="category-subtitle">Recette authentique, fabriqués en atelier avec une farine canadienne riche en protéines</p>
-                <p class="category-description"></p>
+                <p class="category-description">Combo bagel : frites crinkle + soft +5€.</p>
             </div>
 
             <div class="items-grid">
@@ -274,31 +273,31 @@
                     <span class="badge-icon">&#x1F35F;</span>
                     SIDES
                 </div>
-                <h2 class="category-title">Accompagnements</h2>
-                <p class="category-subtitle">Frites crinkle, onion rings et dips gourmands</p>
-                <p class="category-description">Parce qu'un bon burger mérite les meilleurs à-côtés.</p>
+                <h2 class="category-title">Sides</h2>
+                <p class="category-subtitle">Accompagnements</p>
+                <p class="category-description">Frites Crinkle 3,50€ · Frites Patate Douce 5,50€ · Onion Rings par 6 : 3,50€ / par 9 : 4,50€ · Chili Cheese Nuggets par 4 : 3,50€ / par 6 : 5,50€ / par 9 : 7,50€ · Coleslaw Californien 3,50€</p>
             </div>
 
             <div class="subcategory-gallery">
                 <div class="subcategory-card">
-                    <img src="{{ asset('menu/SAL%C3%89/SIDES/DSC00840.jpg') }}" alt="Frites crinkle Factory and Co" loading="lazy">
+                    <img src="{{ asset('menu/SAL%C3%89/SIDES/DSC00840.jpg') }}" alt="Frites Crinkle Factory and Co" loading="lazy">
                     <div class="subcategory-card-overlay">
-                        <h3>Frites crinkle</h3>
-                        <p>Croustillantes et gourmandes</p>
+                        <h3>Frites crinkle — 3,50€</h3>
+                        <p>Ultra croustillantes</p>
                     </div>
                 </div>
                 <div class="subcategory-card">
-                    <img src="{{ asset('menu/SAL%C3%89/SIDES/DSC00879.jpg') }}" alt="Onion rings" loading="lazy">
+                    <img src="{{ asset('menu/SAL%C3%89/SIDES/DSC00844.jpg') }}" alt="Frites Patate Douce" loading="lazy">
                     <div class="subcategory-card-overlay">
-                        <h3>Onion rings et dips</h3>
-                        <p>Croustillants et irrésistibles</p>
+                        <h3>Patate douce — 5,50€</h3>
+                        <p>Légèrement sucrées</p>
                     </div>
                 </div>
                 <div class="subcategory-card">
-                    <img src="{{ asset('menu/SAL%C3%89/SIDES/DSC00904.jpg') }}" alt="Sides assortis" loading="lazy">
+                    <img src="{{ asset('menu/SAL%C3%89/SIDES/DSC00854.jpg') }}" alt="Coleslaw Californien" loading="lazy">
                     <div class="subcategory-card-overlay">
-                        <h3>Les classiques</h3>
-                        <p>Cheese fries, nuggets et plus encore</p>
+                        <h3>Coleslaw — 3,50€</h3>
+                        <p>Chou, carottes, raisins secs</p>
                     </div>
                 </div>
             </div>
@@ -323,100 +322,33 @@
         </div>
     </section>
 
-    {{-- ── PLATEAU A PARTAGER ── --}}
-    <section class="category-section" id="plateau">
+    {{-- ── PIÈCES DE POULET CRUNCHY ── --}}
+    <section class="category-section" id="poulet">
         <div class="container">
             <div class="category-hero">
                 <div class="category-badge">
-                    <span class="badge-icon">&#x1F37D;&#xFE0F;</span>
-                    PLATEAU A PARTAGER
+                    <span class="badge-icon">&#x1F357;</span>
+                    PIÈCES DE POULET CRUNCHY
                 </div>
-                <h2 class="category-title">À partager entre amis</h2>
-                <p class="category-subtitle">Idéal pour les grandes tablées</p>
-                <p class="category-description">Nos plateaux généreux rassemblent le meilleur de Factory & Co pour des moments de convivialité inoubliables.</p>
+                <h2 class="category-title">Poulet crunchy</h2>
+                <p class="category-subtitle">Nuggets (version veggie disponible) et tenders marinés 12h, panés à la main</p>
+                <p class="category-description">Combo poulet crunchy : frites crinkle + soft +5€.</p>
             </div>
 
             <div class="subcategory-gallery">
                 <div class="subcategory-card">
-                    <img src="{{ asset('menu/SAL%C3%89/PLATEAU%20%C3%80%20PARTAGER/DSC01329.jpg') }}" alt="Plateau à partager Factory and Co" loading="lazy">
+                    <img src="{{ asset('menu/SAL%C3%89/MENU%20KIDS/DSC01289.jpg') }}" alt="Nuggets Factory and Co" loading="lazy">
                     <div class="subcategory-card-overlay">
-                        <h3>Le grand plateau</h3>
-                        <p>Burgers, sides et dips pour toute la table</p>
+                        <h3>Nuggets</h3>
+                        <p>Par 4 : 3,50€ · Par 6 : 5,90€ · Par 9 : 7,90€</p>
                     </div>
                 </div>
                 <div class="subcategory-card">
-                    <img src="{{ asset('menu/SAL%C3%89/PLATEAU%20%C3%80%20PARTAGER/DSC01336.jpg') }}" alt="Plateau gourmand" loading="lazy">
+                    <img src="{{ asset('menu/SAL%C3%89/PLATEAU%20%C3%80%20PARTAGER/DSC01329.jpg') }}" alt="Tenders Factory and Co" loading="lazy">
                     <div class="subcategory-card-overlay">
-                        <h3>Plateau gourmand</h3>
-                        <p>Un assortiment de nos meilleurs plats</p>
+                        <h3>Tenders</h3>
+                        <p>Par 2 : 4,50€ · Par 4 : 7,90€ · Par 9 : 16,90€</p>
                     </div>
-                </div>
-                <div class="subcategory-card">
-                    <img src="{{ asset('menu/SAL%C3%89/PLATEAU%20%C3%80%20PARTAGER/DSC01342.jpg') }}" alt="Plateau convivial" loading="lazy">
-                    <div class="subcategory-card-overlay">
-                        <h3>Plateau convivial</h3>
-                        <p>Parfait pour un apéritif entre amis</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- ── MENU KIDS ── --}}
-    <section class="category-section category-section-alt" id="kids">
-        <div class="container">
-            <div class="category-hero">
-                <div class="category-badge">
-                    <span class="badge-icon">&#x1F476;</span>
-                    MENU KIDS
-                </div>
-                <h2 class="category-title">Pour les petits aventuriers</h2>
-                <p class="category-subtitle">Des menus adaptés aux enfants, savoureux et équilibrés</p>
-                <p class="category-description">Nos menus enfants sont pensés pour ravir les petits gourmands avec des portions adaptées et des ingrédients de qualité.</p>
-            </div>
-
-            <div class="subcategory-gallery">
-                <div class="subcategory-card">
-                    <img src="{{ asset('menu/SAL%C3%89/MENU%20KIDS/DSC01282.jpg') }}" alt="Menu kids Factory and Co" loading="lazy">
-                    <div class="subcategory-card-overlay">
-                        <h3>Menu kids burger</h3>
-                        <p>Mini burger, frites et boisson</p>
-                    </div>
-                </div>
-                <div class="subcategory-card">
-                    <img src="{{ asset('menu/SAL%C3%89/MENU%20KIDS/DSC01296.jpg') }}" alt="Menu enfant" loading="lazy">
-                    <div class="subcategory-card-overlay">
-                        <h3>Menu kids nuggets</h3>
-                        <p>Nuggets maison, frites et boisson</p>
-                    </div>
-                </div>
-                <div class="subcategory-card">
-                    <img src="{{ asset('menu/SAL%C3%89/MENU%20KIDS/DSC01303.jpg') }}" alt="Menu kids dessert" loading="lazy">
-                    <div class="subcategory-card-overlay">
-                        <h3>Menu kids complet</h3>
-                        <p>Plat, frites, boisson et dessert</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="photo-strip">
-                <div class="photo-strip-item">
-                    <img src="{{ asset('menu/SAL%C3%89/MENU%20KIDS/DSC01283.jpg') }}" alt="Kids 1" loading="lazy">
-                </div>
-                <div class="photo-strip-item">
-                    <img src="{{ asset('menu/SAL%C3%89/MENU%20KIDS/DSC01284.jpg') }}" alt="Kids 2" loading="lazy">
-                </div>
-                <div class="photo-strip-item">
-                    <img src="{{ asset('menu/SAL%C3%89/MENU%20KIDS/DSC01289.jpg') }}" alt="Kids 3" loading="lazy">
-                </div>
-                <div class="photo-strip-item">
-                    <img src="{{ asset('menu/SAL%C3%89/MENU%20KIDS/DSC01292.jpg') }}" alt="Kids 4" loading="lazy">
-                </div>
-                <div class="photo-strip-item">
-                    <img src="{{ asset('menu/SAL%C3%89/MENU%20KIDS/DSC01299.jpg') }}" alt="Kids 5" loading="lazy">
-                </div>
-                <div class="photo-strip-item">
-                    <img src="{{ asset('menu/SAL%C3%89/MENU%20KIDS/DSC01302.jpg') }}" alt="Kids 6" loading="lazy">
                 </div>
             </div>
         </div>
@@ -473,53 +405,51 @@
                     <span class="badge-icon">&#x1F36A;</span>
                     DESSERTS
                 </div>
-                <h2 class="category-title">Douceurs sucrées</h2>
-                <p class="category-subtitle">Cookies, pâtisseries artisanales et gourmandises</p>
-                <p class="category-description">Des desserts faits maison pour conclure votre repas en beauté. Nos cookies sont cuits sur place, dorés et fondants.</p>
+                <h2 class="category-title">Pâtisseries</h2>
+                <p class="category-subtitle">Fabriquées en atelier</p>
+                <p class="category-description">Key Lime Pie 5,50€ · Sundae 2,90€ · Cookies dès 3,90€ · Fudgy Brownie 3,90€ · Millionaire Shortbread 4,20€ · Carrot Cake 3,90€ · Banana Cake 3,90€ · Muffins dès 3,90€ · Cinnamon Roll 5,90€</p>
             </div>
 
             <div class="subcategory-gallery">
                 <div class="subcategory-card">
-                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/Factory%20x%20Plateforme%20026.JPG') }}" alt="Desserts Factory and Co" loading="lazy">
+                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/Factory%20x%20Plateforme%20026.JPG') }}" alt="Carrot Cake Factory and Co" loading="lazy">
                     <div class="subcategory-card-overlay">
-                        <h3>Pâtisseries maison</h3>
-                        <p>Créations gourmandes du jour</p>
+                        <h3>Carrot Cake — 3,90€</h3>
+                        <p>Glaçage mascarpone et cream cheese vanillé</p>
+                    </div>
+                </div>
+                <div class="subcategory-card">
+                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/Factory%20x%20Plateforme%20030.JPG') }}" alt="Fudgy Brownie Factory and Co" loading="lazy">
+                    <div class="subcategory-card-overlay">
+                        <h3>Fudgy Brownie — 3,90€</h3>
+                        <p>Brownie au chocolat fondant</p>
                     </div>
                 </div>
                 <div class="subcategory-card">
                     <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/COOKIES/DSC00391.jpg') }}" alt="Cookies Factory and Co" loading="lazy">
                     <div class="subcategory-card-overlay">
-                        <h3>Cookies</h3>
-                        <p>Cuits sur place, fondants à souhait</p>
-                    </div>
-                </div>
-                <div class="subcategory-card">
-                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/Factory%20x%20Social%20Media%204.JPG') }}" alt="Dessert gourmand" loading="lazy">
-                    <div class="subcategory-card-overlay">
-                        <h3>Nos créations</h3>
-                        <p>Brownies, muffins et douceurs variées</p>
+                        <h3>Cookies — dès 3,90€</h3>
+                        <p>Trois chocolats, chocolat au lait et noix</p>
                     </div>
                 </div>
             </div>
 
             <div class="photo-strip">
                 <div class="photo-strip-item">
-                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/Factory%20x%20Plateforme%20027.JPG') }}" alt="Dessert 1" loading="lazy">
+                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/MUFFINS/DSC00309.jpg') }}" alt="Muffins" loading="lazy">
+                    <span class="photo-label">Muffins</span>
                 </div>
                 <div class="photo-strip-item">
-                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/Factory%20x%20Plateforme%20030.JPG') }}" alt="Dessert 2" loading="lazy">
+                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/Factory%20x%20Plateforme%20031.JPG') }}" alt="Cinnamon Roll" loading="lazy">
+                    <span class="photo-label">Cinnamon Roll</span>
                 </div>
                 <div class="photo-strip-item">
-                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/Factory%20x%20Plateforme%20031.JPG') }}" alt="Dessert 3" loading="lazy">
+                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/Factory%20x%20Social%20Media%204.JPG') }}" alt="Key Lime Pie" loading="lazy">
+                    <span class="photo-label">Key Lime Pie</span>
                 </div>
                 <div class="photo-strip-item">
-                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/Factory%20x%20Social%20Media%205.JPG') }}" alt="Dessert 4" loading="lazy">
-                </div>
-                <div class="photo-strip-item">
-                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/Factory%20x%20Social%20Media%206.JPG') }}" alt="Dessert 5" loading="lazy">
-                </div>
-                <div class="photo-strip-item">
-                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/COOKIES/DSC00411.jpg') }}" alt="Cookies" loading="lazy">
+                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/Factory%20x%20Social%20Media%205.JPG') }}" alt="Banana Cake" loading="lazy">
+                    <span class="photo-label">Banana Cake</span>
                 </div>
             </div>
         </div>
@@ -533,31 +463,31 @@
                     <span class="badge-icon">&#x2615;</span>
                     BREAKFAST
                 </div>
-                <h2 class="category-title">Formules petit-déjeuner</h2>
-                <p class="category-subtitle">Dès 8h30, le meilleur du brunch new-yorkais</p>
-                <p class="category-description">Commencez votre journée avec nos formules breakfast généreuses. Pancakes, granola, fruits frais et bien plus.</p>
+                <h2 class="category-title">Breakfast</h2>
+                <p class="category-subtitle">Dès 8h30</p>
+                <p class="category-description">Formule Express (croissant ou pain au chocolat + expresso) 1,90€ · Formule Pancakes (2 pancakes + spécialité coffee shop) 3,90€ · Pancakes dès 2,90€ · Croissant 1,10€ · Pain au chocolat 1,30€ · Cream Cheese Saumon 7,00€</p>
             </div>
 
             <div class="subcategory-gallery">
                 <div class="subcategory-card">
-                    <img src="{{ asset('menu/SUCR%C3%89/BREAKFAST/DSC01073.jpg') }}" alt="Breakfast Factory and Co" loading="lazy">
+                    <img src="{{ asset('menu/SUCR%C3%89/BREAKFAST/DSC01073.jpg') }}" alt="Formule Express Factory and Co" loading="lazy">
                     <div class="subcategory-card-overlay">
-                        <h3>Brunch complet</h3>
-                        <p>Pancakes, fruits frais et boisson chaude</p>
+                        <h3>Formule Express — 1,90€</h3>
+                        <p>Croissant ou pain au chocolat + expresso</p>
                     </div>
                 </div>
                 <div class="subcategory-card">
-                    <img src="{{ asset('menu/SUCR%C3%89/BREAKFAST/DSC01092.jpg') }}" alt="Petit déjeuner sucré" loading="lazy">
+                    <img src="{{ asset('menu/SUCR%C3%89/BREAKFAST/DSC01092.jpg') }}" alt="Formule Pancakes Factory and Co" loading="lazy">
                     <div class="subcategory-card-overlay">
-                        <h3>Formule sucrée</h3>
-                        <p>Granola, yaourt et fruits de saison</p>
+                        <h3>Formule Pancakes — 3,90€</h3>
+                        <p>2 pancakes + spécialité coffee shop</p>
                     </div>
                 </div>
                 <div class="subcategory-card">
-                    <img src="{{ asset('menu/SUCR%C3%89/BREAKFAST/DSC01094.jpg') }}" alt="Breakfast gourmand" loading="lazy">
+                    <img src="{{ asset('menu/SUCR%C3%89/BREAKFAST/DSC01094.jpg') }}" alt="Pancakes Factory and Co" loading="lazy">
                     <div class="subcategory-card-overlay">
-                        <h3>Le gourmand</h3>
-                        <p>Notre formule la plus complète</p>
+                        <h3>Pancakes — dès 2,90€</h3>
+                        <p>Nutella, sirop d'érable ou peanut butter</p>
                     </div>
                 </div>
             </div>
@@ -579,31 +509,31 @@
                     <span class="badge-icon">&#x1F964;</span>
                     MILKSHAKES
                 </div>
-                <h2 class="category-title">Milkshakes onctueux</h2>
-                <p class="category-subtitle">Glace artisanale, lait frais et toppings gourmands</p>
-                <p class="category-description">Nos milkshakes sont préparés avec de la vraie glace artisanale. Classiques, fruités ou ultra-gourmands, il y en a pour tous les goûts.</p>
+                <h2 class="category-title">Milkshakes</h2>
+                <p class="category-subtitle">Classiques, deluxes et freak shakes</p>
+                <p class="category-description">Classiques 5,90€ (chocolat, vanille, fraise, framboise, mangue, coco, chocolat blanc, pistache) · Deluxes 6,90€ (Kinder Bueno, Oréo, Peanut Butter, Nutella) · Freak Shake 10,50€ (milkshake + part de cheesecake)</p>
             </div>
 
             <div class="subcategory-gallery">
                 <div class="subcategory-card">
                     <img src="{{ asset('menu/BOISSONS/MILKSHAKE/DSC01318.jpg') }}" alt="Milkshake classique" loading="lazy">
                     <div class="subcategory-card-overlay">
-                        <h3>Milkshakes classiques</h3>
-                        <p>Vanille, chocolat, fraise</p>
+                        <h3>Classiques — 5,90€</h3>
+                        <p>Chocolat, vanille, fraise, framboise, mangue, coco, chocolat blanc, pistache</p>
                     </div>
                 </div>
                 <div class="subcategory-card">
-                    <img src="{{ asset('menu/BOISSONS/MILKSHAKE/DSC01351.jpg') }}" alt="Milkshake gourmand" loading="lazy">
+                    <img src="{{ asset('menu/BOISSONS/MILKSHAKE/DSC01351.jpg') }}" alt="Milkshake deluxe" loading="lazy">
                     <div class="subcategory-card-overlay">
-                        <h3>Milkshakes gourmands</h3>
-                        <p>Oreo, Kinder, Spéculoos</p>
+                        <h3>Deluxes — 6,90€</h3>
+                        <p>Kinder Bueno, Oréo, Peanut Butter, Nutella</p>
                     </div>
                 </div>
                 <div class="subcategory-card">
-                    <img src="{{ asset('menu/BOISSONS/MILKSHAKE/DSC01377.jpg') }}" alt="Milkshake fruité" loading="lazy">
+                    <img src="{{ asset('menu/BOISSONS/MILKSHAKE/DSC01377.jpg') }}" alt="Freak Shake" loading="lazy">
                     <div class="subcategory-card-overlay">
-                        <h3>Milkshakes fruités</h3>
-                        <p>Fruits frais mixés avec de la glace</p>
+                        <h3>Freak Shake — 10,50€</h3>
+                        <p>Milkshake surplombé d'une part de cheesecake</p>
                     </div>
                 </div>
             </div>
@@ -642,9 +572,9 @@
                     <span class="badge-icon">&#x1F353;</span>
                     SMOOTHIES
                 </div>
-                <h2 class="category-title">Smoothies vitaminés</h2>
-                <p class="category-subtitle">Fruits frais, sans sucre ajouté</p>
-                <p class="category-description">Nos smoothies sont mixés à la commande avec des fruits frais de saison. Énergie et saveurs à chaque gorgée.</p>
+                <h2 class="category-title">Smoothies — 5,50€</h2>
+                <p class="category-subtitle">Mixés à la commande</p>
+                <p class="category-description">Super Sayan · Sonic Boom · Ban'a Manga · Red Forest. Jus d'orange pressé 36cl : 4,90€.</p>
             </div>
 
             <div class="subcategory-gallery">
@@ -652,21 +582,21 @@
                     <img src="{{ asset('menu/BOISSONS/SMOOTHIE/Red%20Forest.jpg') }}" alt="Smoothie Red Forest" loading="lazy">
                     <div class="subcategory-card-overlay">
                         <h3>Red Forest</h3>
-                        <p>Fruits rouges et baies sauvages</p>
+                        <p>Fraise, framboise, mûre et sundae</p>
                     </div>
                 </div>
                 <div class="subcategory-card">
                     <img src="{{ asset('menu/BOISSONS/SMOOTHIE/Ban_a%20Manga.jpg') }}" alt="Smoothie Ban'a Manga" loading="lazy">
                     <div class="subcategory-card-overlay">
                         <h3>Ban'a Manga</h3>
-                        <p>Banane et mangue tropicale</p>
+                        <p>Mangue, fraise, banane et soja vanille</p>
                     </div>
                 </div>
                 <div class="subcategory-card">
-                    <img src="{{ asset('menu/BOISSONS/SMOOTHIE/Sonic%20Boom.jpg') }}" alt="Smoothie Sonic Boom" loading="lazy">
+                    <img src="{{ asset('menu/BOISSONS/SMOOTHIE/Super%20Sayan.jpg') }}" alt="Smoothie Super Sayan" loading="lazy">
                     <div class="subcategory-card-overlay">
-                        <h3>Sonic Boom</h3>
-                        <p>Le boost d'énergie ultime</p>
+                        <h3>Super Sayan</h3>
+                        <p>Mangue, coco, gingembre frais et sundae</p>
                     </div>
                 </div>
             </div>
@@ -705,8 +635,8 @@
                     BIÈRES
                 </div>
                 <h2 class="category-title">Bières bouteilles</h2>
-                <p class="category-subtitle">Pression et bouteilles, sélection craft</p>
-                <p class="category-description">Une sélection de bières en bouteille pour accompagner vos burgers.</p>
+                <p class="category-subtitle">Notre sélection</p>
+                <p class="category-description">Bières en bouteille pour accompagner vos burgers.</p>
             </div>
 
             <div class="subcategory-gallery">
@@ -764,9 +694,9 @@
                     <span class="badge-icon">&#x2615;</span>
                     COFFEESHOP
                 </div>
-                <h2 class="category-title">Notre coffeeshop</h2>
-                <p class="category-subtitle">Espressos, lattés et boissons chaudes</p>
-                <p class="category-description">Un vrai coffee shop à l'américaine. Expresso, cappuccino, latté art et boissons chaudes réconfortantes.</p>
+                <h2 class="category-title">Coffee shop</h2>
+                <p class="category-subtitle">Nos classiques et spécialités</p>
+                <p class="category-description">Expresso 2,00€ · Américain 2,20€ · Cappuccino 3,60€ · Macchiato 3,60€ · Mocha 3,90€ · Café Latte 3,60€ · Ice Latte 3,60€ · Chaï Latte 4,20€ · Thé Dammann 2,90€ · Chocolat Chaud 3,90€</p>
             </div>
 
             <div class="subcategory-gallery">
@@ -803,9 +733,9 @@
                     <span class="badge-icon">&#x1F964;</span>
                     SOFT DRINKS
                 </div>
-                <h2 class="category-title">Boissons fraîches</h2>
-                <p class="category-subtitle">Sodas, jus frais et boissons maison</p>
-                <p class="category-description">Limonades artisanales, thés glacés maison, jus frais pressés et tous vos sodas préférés.</p>
+                <h2 class="category-title">Soft drinks</h2>
+                <p class="category-subtitle">Sodas et boissons fraîches</p>
+                <p class="category-description">Tous vos sodas préférés pour accompagner votre repas.</p>
             </div>
 
             <div class="subcategory-gallery">
