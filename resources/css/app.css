@@ -7132,6 +7132,11 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
   background: var(--bg-light);
 }
 
+.download-carte-wrapper {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
 .category-hero {
   margin-bottom: 3rem;
   text-align: left;
@@ -7222,6 +7227,19 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
   font-size: 0.9rem;
   font-weight: 700;
   white-space: nowrap;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+
+.price-badge small {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-top: 2px;
 }
 
 .item-content {
@@ -8626,6 +8644,11 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
   background: var(--bg-light);
 }
 
+.download-carte-wrapper {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
 .category-hero {
   margin-bottom: 3rem;
   text-align: left;
@@ -8716,5 +8739,18 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
   font-size: 0.9rem;
   font-weight: 700;
   white-space: nowrap;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+
+.price-badge small {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-top: 2px;
 }
 

@@ -175,7 +175,14 @@
                     @foreach ($items as $product)
                         <div class="item-card">
                             <div class="item-image" style="background-image: url('{{ asset($product->image_url) }}')">
-                                <span class="price-badge">{{ number_format($product->price, 2, ',', '') }}€</span>
+                                <span class="price-badge">
+                                    {{ number_format($product->price, 2, ',', '') }}€
+                                    @if($product->subcategory === 'smash' && $product->name !== 'Big Monster Truck')
+                                        <small>Regular</small>
+                                    @elseif($product->name === 'Big Monster Truck')
+                                        <small>Big</small>
+                                    @endif
+                                </span>
                             </div>
                             <div class="item-content">
                                 <h3>{{ $product->name }}</h3>
@@ -190,6 +197,7 @@
                     <p class="text-center">Aucun burger disponible</p>
                 @endforelse
             </div>
+            @include('pages.menu.partials.download-carte-btn')
         </div>
     </section>
 
@@ -226,6 +234,7 @@
                     <p class="text-center">Aucun bagel disponible</p>
                 @endforelse
             </div>
+            @include('pages.menu.partials.download-carte-btn')
         </div>
     </section>
 
@@ -262,6 +271,7 @@
                     <p class="text-center">Aucun bowl disponible</p>
                 @endforelse
             </div>
+            @include('pages.menu.partials.download-carte-btn')
         </div>
     </section>
 
@@ -319,6 +329,7 @@
                     <img src="{{ asset('menu/SAL%C3%89/SIDES/DSC00898.jpg') }}" alt="Sides 5" loading="lazy">
                 </div>
             </div>
+            @include('pages.menu.partials.download-carte-btn')
         </div>
     </section>
 
@@ -351,6 +362,7 @@
                     </div>
                 </div>
             </div>
+            @include('pages.menu.partials.download-carte-btn')
         </div>
     </section>
 
@@ -394,6 +406,7 @@
                     <p class="text-center">Aucun cheesecake disponible</p>
                 @endforelse
             </div>
+            @include('pages.menu.partials.download-carte-btn')
         </div>
     </section>
 
@@ -452,6 +465,7 @@
                     <span class="photo-label">Banana Cake</span>
                 </div>
             </div>
+            @include('pages.menu.partials.download-carte-btn')
         </div>
     </section>
 
@@ -491,6 +505,7 @@
                     </div>
                 </div>
             </div>
+            @include('pages.menu.partials.download-carte-btn')
         </div>
     </section>
 
@@ -561,6 +576,7 @@
                     <img src="{{ asset('menu/BOISSONS/MILKSHAKE/DSC01393.jpg') }}" alt="Milkshake 7" loading="lazy">
                 </div>
             </div>
+            @include('pages.menu.partials.download-carte-btn')
         </div>
     </section>
 
@@ -623,6 +639,7 @@
                     <span class="photo-label">Super Sayan</span>
                 </div>
             </div>
+            @include('pages.menu.partials.download-carte-btn')
         </div>
     </section>
 
@@ -683,6 +700,7 @@
                     <img src="{{ asset('menu/BOISSONS/BEER/Bouteilles/DSC09972.jpg') }}" alt="Bouteille 3" loading="lazy">
                 </div>
             </div>
+            @include('pages.menu.partials.download-carte-btn')
         </div>
     </section>
 
@@ -722,6 +740,7 @@
                     </div>
                 </div>
             </div>
+            @include('pages.menu.partials.download-carte-btn')
         </div>
     </section>
 
@@ -785,6 +804,7 @@
                     <img src="{{ asset('menu/BOISSONS/SOFT%20DRINKS/DSC00697.jpg') }}" alt="Soft 7" loading="lazy">
                 </div>
             </div>
+            @include('pages.menu.partials.download-carte-btn')
         </div>
     </section>
 

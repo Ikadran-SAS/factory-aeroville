@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMail;
 use App\Models\OpeningHour;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -39,7 +41,15 @@ class ContactController extends Controller
             'message.min' => 'Votre message doit contenir au moins 10 caractères.',
         ]);
 
-        // TODO: Envoyer l'e-mail via Mail::to('contact@factoryandco.com')->send(new ContactMail($validated));
+        try {
+            Mail::to('contact@factoryandco.com')->send(new ContactMail($validated));
+        } catch (\Throwable $e) {
+            \Log::error('Contact form email error: '.$e->getMessage());
+
+            return redirect()->route('contact')
+                ->withInput()
+                ->with('error', 'Une erreur est survenue lors de l\'envoi. Merci de réessayer ou de nous appeler au 01 74 25 78 52.');
+        }
 
         return redirect()->route('contact')
             ->with('success', 'Votre message a bien été envoyé ! Nous vous répondrons sous 4 heures.');
