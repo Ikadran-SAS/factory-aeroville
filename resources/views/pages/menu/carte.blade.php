@@ -178,7 +178,7 @@
                                 <span class="price-badge">
                                     {{ number_format($product->price, 2, ',', '') }}€
                                     @if($product->subcategory === 'smash' && $product->name !== 'Big Monster Truck')
-                                        <small>Regular</small>
+                                        <small>Little</small>
                                     @elseif($product->name === 'Big Monster Truck')
                                         <small>Big</small>
                                     @endif
@@ -186,7 +186,7 @@
                             </div>
                             <div class="item-content">
                                 <h3>{{ $product->name }}</h3>
-                                <p>{{ $product->description }}</p>
+                                @if($product->description)<p>{{ $product->description }}</p>@endif
                                 @if($product->badge)
                                     <span class="{{ $product->badge_class }}">{{ $product->badge }}</span>
                                 @endif
@@ -223,7 +223,7 @@
                             </div>
                             <div class="item-content">
                                 <h3>{{ $product->name }}</h3>
-                                <p>{{ $product->description }}</p>
+                                @if($product->description)<p>{{ $product->description }}</p>@endif
                                 @if($product->badge)
                                     <span class="{{ $product->badge_class }}">{{ $product->badge }}</span>
                                 @endif
@@ -260,7 +260,7 @@
                             </div>
                             <div class="item-content">
                                 <h3>{{ $product->name }}</h3>
-                                <p>{{ $product->description }}</p>
+                                @if($product->description)<p>{{ $product->description }}</p>@endif
                                 @if($product->badge)
                                     <span class="{{ $product->badge_class }}">{{ $product->badge }}</span>
                                 @endif
@@ -395,7 +395,7 @@
                             </div>
                             <div class="item-content">
                                 <h3>{{ $product->name }}</h3>
-                                <p>{{ $product->description }}</p>
+                                @if($product->description)<p>{{ $product->description }}</p>@endif
                                 @if($product->badge)
                                     <span class="{{ $product->badge_class }}">{{ $product->badge }}</span>
                                 @endif
@@ -420,7 +420,7 @@
                 </div>
                 <h2 class="category-title">Pâtisseries</h2>
                 <p class="category-subtitle">Fabriquées en atelier</p>
-                <p class="category-description">Key Lime Pie 5,50€ · Sundae 2,90€ · Cookies dès 3,90€ · Fudgy Brownie 3,90€ · Millionaire Shortbread 4,20€ · Carrot Cake 3,90€ · Banana Cake 3,90€ · Muffins dès 3,90€ · Cinnamon Roll 5,90€</p>
+                <p class="category-description">Key Lime Pie 5,50€ · Sundae 2,90€ · Cookies dès 3,90€ · Fudgy Brownie 3,90€ · Millionaire Shortbread 4,20€ · Carrot Cake 3,90€ · Banana Cake 3,90€ · Muffins dès 3,90€</p>
             </div>
 
             <div class="subcategory-gallery">
@@ -453,15 +453,11 @@
                     <span class="photo-label">Muffins</span>
                 </div>
                 <div class="photo-strip-item">
-                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/Factory%20x%20Plateforme%20031.JPG') }}" alt="Cinnamon Roll" loading="lazy">
-                    <span class="photo-label">Cinnamon Roll</span>
-                </div>
-                <div class="photo-strip-item">
-                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/Factory%20x%20Social%20Media%204.JPG') }}" alt="Key Lime Pie" loading="lazy">
+                    <img src="{{ asset('menu/SUCR%C3%89/CHEESECAKE/Key%20Lime%20Pie.JPG') }}" alt="Key Lime Pie" loading="lazy">
                     <span class="photo-label">Key Lime Pie</span>
                 </div>
                 <div class="photo-strip-item">
-                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/Factory%20x%20Social%20Media%205.JPG') }}" alt="Banana Cake" loading="lazy">
+                    <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/Banana%20Cake.JPG') }}" alt="Banana Cake" loading="lazy">
                     <span class="photo-label">Banana Cake</span>
                 </div>
             </div>
@@ -763,13 +759,6 @@
                     <div class="subcategory-card-overlay">
                         <h3>Sodas</h3>
                         <p>Coca-Cola, Fanta, Sprite et plus</p>
-                    </div>
-                </div>
-                <div class="subcategory-card">
-                    <img src="{{ asset('menu/BOISSONS/SOFT%20DRINKS/DSC00656.jpg') }}" alt="Limonade maison" loading="lazy">
-                    <div class="subcategory-card-overlay">
-                        <h3>Limonades maison</h3>
-                        <p>Fraîches et artisanales</p>
                     </div>
                 </div>
                 <div class="subcategory-card">

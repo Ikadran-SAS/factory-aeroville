@@ -62,7 +62,7 @@ class FaqSeeder extends Seeder
                 'category_label' => 'Horaires & Service',
                 'category_icon' => '🕐',
                 'question' => 'Puis-je manger chez Factory & Co très tôt le matin ?',
-                'answer' => 'Absolument ! Nous ouvrons à <strong>08h30</strong> tous les jours. Notre service breakfast (bagels, smoothie bowls, cafés) est disponible dès l\'ouverture. Idéal avant une journée de shopping à Aéroville ou un vol depuis Paris-CDG !',
+                'answer' => 'Absolument ! Nous ouvrons à <strong>08h30</strong> tous les jours. Notre service breakfast (bagels, smoothie bowls, cafés) est disponible dès l\'ouverture. Idéal avant une journée de shopping à Westfield Aéroville !',
                 'sort_order' => 6,
             ],
             // ALLERGÈNES
